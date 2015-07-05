@@ -2933,7 +2933,7 @@ WEAPON ATTACHABLES
         <property name="Group" value="Ammo/Weapons,Basics" />
 		<property class="Attributes">
 			<property name="GetQualityFromWeapon" value="true" />
-            <property name="EntityDamage" value="5,15" />
+            <property name="EntityDamage" value="10,35" />
             <property name="BlockDamage" value=".5,1" />
         </property>
     </item>
@@ -8820,7 +8820,7 @@ WEAPON ATTACHABLES
         <property name="Group" value="Ammo/Weapons" />
 		<property class="Attributes">
 			<property name="GetQualityFromWeapon" value="true" />
-            <property name="EntityDamage" value="15,45" />
+            <property name="EntityDamage" value="25,45" />
             <property name="BlockDamage" value=".6,1.1" />
         </property>
     </item>
@@ -8851,7 +8851,7 @@ WEAPON ATTACHABLES
         <property name="Group" value="Ammo/Weapons" />
 		<property class="Attributes">
 			<property name="GetQualityFromWeapon" value="true" />
-            <property name="EntityDamage" value="25,55" />
+            <property name="EntityDamage" value="35,65" />
             <property name="BlockDamage" value=".7,1.2" />
         </property>
     </item>
@@ -9766,6 +9766,10 @@ WEAPON ATTACHABLES
            <property name="Pos" value="0,-0.05" />
            <property name="Rot" value="90,45,0" />
        </property>
+       <property class="Attributes">
+               <property name="DegradationRate" value="1,1" />
+                <property name="DegradationMax" value="550,800" />
+           </property>
    </item>
 
  <item id="805" name="arrowBrass">

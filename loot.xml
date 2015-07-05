@@ -1729,7 +1729,8 @@ plentiful loot items in the game.
 	<!-- gas pump loot  -->
 
     <lootcontainer id="64"  count="1,4" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest">
-		<item group="gasPumps" count="1"/>
+		<!-- <item group="gasPumps" count="1"/> -->
+    <item group="tools" 				prob="0.2"/>
     </lootcontainer>
 
     <!-- bear -->
