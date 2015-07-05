@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- 
-     *** Materials definitions 
-     *** 
+<!--
+     *** Materials definitions
+     ***
      *** Attributes:
-     ***  id                    - mandatory, type: string, semantic: defines name of the material to be referenced within block tags         
+     ***  id                    - mandatory, type: string, semantic: defines name of the material to be referenced within block tags
      ***  lightopacity
      ***  hardness              - mandatory, float:, values go from 1 to infinite, hardnes="1" means one hit with current digger destroys the block
      ***  explosionresistance
@@ -17,13 +17,13 @@
 
      *** damage_category = wood, stone, metal, earth, glass
      *** => used to determine the damage category if an item hits this block
-     
+
      *** surface_category = stone, metal, earth, cloth, wood, water, glass
      *** => used to determine the sound + effect on impact
 		damage category = damage bonus from items.xml so this is used for bonus damage.
-		
+
 		An example for block hit points is if it has a hardness of 1 and the tool does 1 block damage, it takes 10 hits to destroy the block, in other words a block has 10 hit points.
-		
+
 	* DEFAULT SURFACE FRICTION = 0.454
 -->
 
@@ -41,7 +41,7 @@
       <property name="lightopacity" value="3" />
       <property name="stability_glue" value="0" />
       <property name="movement_factor" value="0.9" />
-      <property name="Mass" type="int" value="0" />	  
+      <property name="Mass" type="int" value="0" />
    </material>
    <!-- *** All fertile ground materials -->
    <material id="grass">
@@ -333,7 +333,7 @@
       <property name="Mass" type="int" value="20" />
       <property name="explosionresistance" value=".5" />
    </material>
-   
+
    <material id="steel">
       <property name="damage_category" value="metal" />
       <property name="surface_category" value="metal" />
@@ -343,7 +343,7 @@
       <property name="stability_glue" value="320" />
       <property name="Mass" type="int" value="20" />
       <property name="explosionresistance" value=".5" />
-   </material>   
+   </material>
    <!-- hardness was 20 -->
    <material id="tungsten">
       <property name="damage_category" value="metal" />
@@ -380,7 +380,7 @@
       <property name="Hardness" type="float" value=".6" />
       <property name="stepsound" value="leaves" />
       <property name="stability_glue" value="0" />
-      <property name="Mass" type="int" value="3" />      
+      <property name="Mass" type="int" value="3" />
    </material>
    <material id="dynamite">
       <property name="damage_category" value="cloth" />
@@ -400,7 +400,7 @@
       <property name="stability_glue" value="24" />
       <property name="Mass" type="int" value="6" />
    </material>
-   
+
    <material id="leather">
       <property name="damage_category" value="cloth" />
       <property name="surface_category" value="cloth" />
@@ -410,7 +410,7 @@
       <property name="stability_glue" value="24" />
       <property name="Mass" type="int" value="6" />
    </material>
-      
+
    <material id="wood">
       <property name="damage_category" value="wood" />
       <property name="surface_category" value="wood" />
@@ -472,7 +472,7 @@
       <property name="Mass" type="int" value="1" />
       <property name="StabilitySupport" value="false" />
    </material>
-   
+
    <material id="clothStable">
       <property name="damage_category" value="cloth" />
       <property name="surface_category" value="cloth" />
@@ -482,9 +482,9 @@
       <property name="stepsound" value="cloth" />
       <property name="lightopacity" value="4" />
       <property name="stability_glue" value="2" />
-      <property name="Mass" type="int" value="1" />      
+      <property name="Mass" type="int" value="1" />
    </material>
-      
+
    <material id="glass">
       <property name="damage_category" value="glass" />
       <property name="surface_category" value="glass" />
@@ -505,7 +505,7 @@
       <property name="stepsound" value="snow" />
       <property name="stability_glue" value="9" />
       <property name="fertile_level" value="1" />
-      <property name="Mass" type="int" value="3" />      
+      <property name="Mass" type="int" value="3" />
    </material>
    <material id="web">
       <property name="surface_category" value="cloth" />
@@ -573,6 +573,67 @@
       <property name="stepsound" value="stone" />
       <property name="stability_glue" value="0" />
       <property name="Mass" type="int" value="1" />
-      
    </material>
+         <!-- LT Mod Begins -->
+      <material id="metal_steel">
+      <property name="damage_category" value="metal" />
+      <property name="surface_category" value="metal" />
+      <property name="forge_category" value="steel" />
+      <property name="Hardness" type="float" value="15" />
+      <property name="stepsound" value="metal" />
+      <property name="stability_glue" value="320" />
+      <property name="Mass" type="int" value="30" />
+      <property name="explosionresistance" value=".7" />
+      </material>
+
+      <material id="copper">
+      <property name="damage_category" value="metal" />
+      <property name="surface_category" value="metal" />
+      <property name="forge_category" value="copper" />
+      <property name="Hardness" type="float" value="1" />
+      <property name="stepsound" value="metal" />
+      <property name="stability_glue" value="320" />
+      <property name="Mass" type="int" value="20" />
+      </material>
+
+      <material id="hardwood">
+      <property name="damage_category" value="wood" />
+      <property name="surface_category" value="wood" />
+      <property name="Hardness" type="float" value="4.0" />
+      <property name="stepsound" value="wood" />
+      <property name="stability_glue" value="90" />
+      <property name="Mass" type="int" value="10" />
+      </material>
+
+      <material id="hardwood+metal">
+      <property name="damage_category" value="metal" />
+      <property name="surface_category" value="metal" />
+      <property name="Hardness" type="float" value="6" />
+      <property name="stepsound" value="wood" />
+      <property name="stability_glue" value="100" />
+      <property name="Mass" type="int" value="6" />
+      </material>
+
+      <!-- LT Steel / Concrete Hybrid -->
+      <material id="concrete_steel">
+      <property name="damage_category" value="stone" />
+      <property name="surface_category" value="metal" />
+      <property name="Hardness" type="float" value="900.0" />
+      <property name="stepsound" value="stone" />
+      <property name="stability_glue" value="210" />
+      <property name="Mass" type="int" value="25" />
+      <property name="explosionresistance" value=".9" />
+      </material>
+
+      <!-- LT Steel / Hardened Doors -->
+      <material id="hardened_steel">
+       <property name="damage_category" value="metal" />
+       <property name="surface_category" value="metal" />
+       <property name="Hardness" type="float" value="300.0" />
+      <property name="stepsound" value="metal" />
+       <property name="stability_glue" value="210" />
+       <property name="Mass" type="int" value="25" />
+       <property name="explosionresistance" value=".9" />
+      </material>
+
 </materials>
