@@ -8154,7 +8154,7 @@ WEAPON ATTACHABLES
             <property name="DegradationRate" value="1,1" />
             <property name="DegradationMax" value="30,600" />
 			<property name="VehicleNoise" value="1,0.1" />
-			<property name="VehicleMaxSpeed" value="3,9" />
+			<property name="VehicleMaxSpeed" value="3,10" />
 			<property name="VehicleAcceleration" value="3,10" />
 			<property name="VehicleMetersPerLiter" value="800,1200" />
 			<property name="VehicleIdleSecondsPerLiter" value="600,1200" />
@@ -10358,12 +10358,26 @@ WEAPON ATTACHABLES
  <item id="826" name="FurukawaEngine">
    <property name="CustomIcon" value="smallEngine"/>
    <property name="CustomIconTint" value="3F3F40"/>
+   <property name="PartType" value="Receiver" />
        <property name="Meshfile" value="Items/Tools/smallEngine" />
+   <property name="VehicleSlotType" value="engine" />
        <property name="Material" value="metal" />
        <property name="HoldType" value="7" />
        <property name="Weight" value="250" />
        <property name="Group" value="Resources" />
-   </item>
+   <property class="Attributes">
+           <property name="DegradationRate" value="1,1" />
+           <property name="DegradationMax" value="30,600" />
+     <property name="VehicleNoise" value="1,0.1" />
+     <property name="VehicleMaxSpeed" value="5,12" />
+     <property name="VehicleAcceleration" value="4,12" />
+     <property name="VehicleMetersPerLiter" value="800,1200" />
+     <property name="VehicleIdleSecondsPerLiter" value="600,1200" />
+     <property name="VehicleStartDelayInSeconds" value="1,0.1" />
+     <property name="VehicleStartChance" value="0.2,0.99" />
+     <property name="VehicleTankSize" value="2, 8" />
+     <property name="FalloffRange" value="30,60" /><!-- used for auger and chainsaw -->
+       </property>
 
  <item id="827" name="FurukawaBlades">
    <property name="CustomIcon" value="augerBlade"/>
