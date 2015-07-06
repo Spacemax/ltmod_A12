@@ -2417,7 +2417,7 @@
         <ingredient name="sandpaper" count="1" grid="0, 0"/>
     </recipe>
 
-	<recipe name="Furukawa780RockDrill" count="1" scrapable="False" craft_time="10" craft_exp_gain="2" learn_exp_gain="500" >
+	<recipe name="Furukawa780RockDrill" count="1" scrapable="True" craft_time="10" craft_exp_gain="2" learn_exp_gain="500" >
         <ingredient name="Furukawa780Grips" count="1" grid="1, -1"/>
         <ingredient name="FurukawaEngine" count="1" grid="0, 0"/>
         <ingredient name="FurukawaBlades" count="1" grid="-1, 1"/>

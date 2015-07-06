@@ -159,8 +159,8 @@ Description of Options:
           <weather>
           		<Temperature min="-10" max="20" prob="1"/>
           		<Fog min="30" max="30" prob="1"/>
-          		<CloudThickness min="95" max="100" prob="1"/>
-          		<Precipitation min="100" max="100" prob="1"/>
+          		<CloudThickness min="50" max="100" prob="1"/>
+          		<Precipitation min="60" max="100" prob="1"/>
           		<Wind min="20" max="40" prob="0.9"/>
           		<Wind min="40" max="100" prob="0.1"/>
           </weather>
@@ -247,8 +247,8 @@ Description of Options:
           <weather>
           		<Temperature min="-10" max="101" prob="1"/>
           		<Fog min="10" max="40" prob="1"/>
-          		<CloudThickness min="10" max="70" prob="0.1"/>
-          		<CloudThickness min="70" max="100" prob="0.9"/>
+          		<CloudThickness min="10" max="70" prob="0.6"/>
+          		<CloudThickness min="70" max="100" prob="0.4"/>
           		<Precipitation min="100" max="100" prob="1"/>
           		<Wind min="10" max="20" prob="0.9"/>
           		<Wind min="20" max="100" prob="0.1"/>
@@ -321,8 +321,8 @@ Description of Options:
           <weather>
           		<Temperature min="-10" max="101" prob="1"/>
           		<Fog min="10" max="40" prob="1"/>
-          		<CloudThickness min="10" max="70" prob="0.1"/>
-          		<CloudThickness min="70" max="100" prob="0.9"/>
+          		<CloudThickness min="10" max="70" prob="0.5"/>
+          		<CloudThickness min="70" max="100" prob="0.5"/>
           		<Precipitation min="100" max="100" prob="1"/>
           		<Wind min="10" max="20" prob="0.9"/>
           		<Wind min="20" max="100" prob="0.1"/>
@@ -499,7 +499,7 @@ Description of Options:
           		<Wind min="20" max="100" prob="0.1"/>
           </weather>
        <!-- Desert Sub Biome Clustered Cactus and Desert Shrub -->
-         <subbiome prob="0.09">
+         <subbiome prob="0.11">
            <layers>
              <layer depth="1" blockname="desertGround" />
            </layers>
@@ -518,6 +518,24 @@ Description of Options:
              <decoration type="block" blockname="brownGrassDiagonal" prob =".01" />
            </decorations>
          </subbiome>
+
+				<!-- Forest Type Subbiome for fun -->
+
+				<subbiome prob="0.10">
+					<layers>
+						<layer depth="5" blockname="clay" />
+					</layers>
+					<decorations>
+						<decoration type="block" blockname="tallGrassDiagonal" prob =".5" />
+						<decoration type="block" blockname="goldenrod" prob="0.08"/>
+						<decoration type="block" blockname="cotton" prob="0.07"/>
+						<decoration type="block" blockname="rock01" prob =".01" />
+						<decoration type="block" blockname="rock02" prob =".01" />
+						<decoration type="block" blockname="rock04" prob =".01" />
+						<decoration type="block" blockname="rockResource" prob =".025" rotatemax="3"/>
+						<decoration type="block" blockname="rockResource02" prob =".025" rotatemax="3"/>
+					</decorations>
+				</subbiome>
 
          <!-- Desert Sub Biome Thick Grass and Shrubs-->
          <subbiome prob="0.04">
@@ -587,8 +605,8 @@ Description of Options:
           <weather>
           		<Temperature min="35" max="85" prob="1"/>
           		<Fog min="10" max="40" prob="1"/>
-          		<CloudThickness min="10" max="70" prob="0.1"/>
-          		<CloudThickness min="70" max="100" prob="0.9"/>
+          		<CloudThickness min="10" max="70" prob="0.4"/>
+          		<CloudThickness min="70" max="100" prob="0.6"/>
           		<Precipitation min="100" max="100" prob="1"/>
           		<Wind min="10" max="20" prob="0.9"/>
           		<Wind min="20" max="100" prob="0.1"/>

@@ -1253,7 +1253,7 @@ plentiful loot items in the game.
           <item name="radiator" count="0,1" />
           <item name="carBattery" count="0,1" />
           <item name="hubcap" count= "1,4" />
-          <item name="gasCan" count="1,3" />
+          <!-- <item name="gasCan" count="1,3" /> temp removed until Ashen gets to it-->
           <item name="headlight" />
           <item name="scrapCable" />
           <item name="oil" count="1,4" />
