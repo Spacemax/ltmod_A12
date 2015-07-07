@@ -140,12 +140,13 @@
 
 		<prefab_rule name="wastelandHub">
 			<prefab rule="cityBlocks" lot_type="CityBlock"/>
-			
+			<prefab rule="gasStations" max_count="3"/>
+			<prefab rule="CustomPoi" />
 			<!-- <prefab rule="cityBuildingsCommon" /> -->
 			<!-- <prefab rule="cityBuildingsUncommon" min_count="5" max_count="10" /> -->
 			<!-- <prefab rule="cityBuildingsRare" min_count="5" max_count="10" /> -->
 			
-			<prefab rule="pharmacies" max_count="3" />
+			<!-- <prefab rule="pharmacies" max_count="3" />
 			<prefab rule="gasStations" max_count="3"/>
 			<prefab rule="gunStores" max_count="2" />
 			<prefab rule="hardwareStores" max_count="2" />
@@ -154,19 +155,18 @@
 			<prefab rule="groceryStores" max_count="3" />
 			<prefab rule="apartments" max_count="4"/>
 			<prefab rule="governmentOffices" max_count="2"/>
-			<prefab rule="entertainment" max_count="1"/>
-			<prefab rule="gasStations" max_count="3"/>
+			<prefab rule="entertainment" max_count="1"/> -->
 			
 			<!-- Buildings from towns to fill out cities -->
 			
-			<prefab rule="businessBrick" max_count="7"/>
+			<!-- <prefab rule="businessBrick" max_count="7"/>
 			<prefab rule="upperClassHousing" max_count="6"/>
 			<prefab rule="middleClassHousing" max_count="5"/>
 			<prefab rule="rubbleBuildingsWhite" max_count="2"/>
 			<prefab rule="rubbleBuildingsRed" max_count="2"/>
 			<prefab rule="rubbleBuildingsTan" max_count="2"/>
 			<prefab rule="rubbleBuildingsGrey" max_count="2"/>
-			<prefab rule="rubbleBuildingsWaste" max_count="2"/>
+			<prefab rule="rubbleBuildingsWaste" max_count="2"/> -->
 
 		</prefab_rule>
 
