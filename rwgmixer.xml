@@ -4,17 +4,18 @@
 
 	<rulesets>
 		<ruleset name="vanilla" cell_cache_size="32" cell_size="3200" cell_offset="0.8" generation_distance="10000">
-			<cell_rule name="wastelandHub" position="0,0" prob="0.1"/>
+			<cell_rule name="wastelandHub" position="0,0" prob="1"/>
 			<cell_rule name="highDensity" position="0,1" prob="1.0"/>
-			<cell_rule name="highDensity" position="0,-1" prob="1.0"/>
+			<cell_rule name="lowDensity" position="0,-1" prob="1.0"/>
 			<cell_rule name="highDensity" position="1,1" prob="1.0"/>
 			<cell_rule name="highDensity" position="1,0" prob="1.0"/>
-			<cell_rule name="highDensity" position="-1,0" prob="1.0"/>
-			<cell_rule name="highDensity" position="-1,1" prob="1.0"/>
-			<cell_rule name="highDensity" position="-1,-1" prob="1.0"/>
+			<cell_rule name="lowDensity" position="-1,0" prob="1.0"/>
+			<cell_rule name="lowDensity" position="-1,1" prob="1.0"/>
+			<cell_rule name="lowDensity" position="-1,-1" prob="1.0"/>
 			<cell_rule name="highDensity" position="1,-1" prob="1.0"/>
-			<cell_rule name="lowDensity" prob="1"/>
-			<cell_rule name="highDensity" prob="0.5"/>
+			<cell_rule name="highDensity" prob="0.4"/>
+			<cell_rule name="lowDensity" prob="0.6"/>
+
 			<!--<cell_rule name="customHubTest" position="0,1" prob="0"/>-->
 		</ruleset>
 	</rulesets>
@@ -31,25 +32,25 @@
 		</cell_rule>
 
 		<cell_rule name="lowDensity">
-			<cave_count value="1,4"/>
+			<cave_count value="2,6"/>
 			<path_material value="asphalt" />
-			<path_radius value="7" />
+			<path_radius value="5" />
 
 			<hub_rule name="citySmall" prob="0.1"/>
-			<hub_rule name="ruralSmall" prob="0.5"/>
-			<hub_rule name="townSmall" prob="0.5"/>
+			<hub_rule name="townSmall" prob="0.3"/>
+			<hub_rule name="ruralSmall" prob="0.6"/>
 
 			<wilderness_rule name="wildernessDefault"/>
 		</cell_rule>
 
 		<cell_rule name="highDensity">
-			<cave_count value="2,6"/>
+			<cave_count value="1,3"/>
 			<path_material value="asphalt" />
-			<path_radius value="7" />
+			<path_radius value="6" />
 
+			<hub_rule name="ruralSmall" prob="0.1"/>
+			<hub_rule name="townSmall" prob="0.4"/>
 			<hub_rule name="citySmall" prob="0.5"/>
-			<hub_rule name="ruralSmall" prob="0.2"/>
-			<hub_rule name="townSmall" prob="0.3"/>
 
 			<wilderness_rule name="wildernessDefault" prob="1"/>
 		</cell_rule>
@@ -87,6 +88,8 @@
 			<prefab_rule name="townSmall" prob="1"/>
 		</hub_rule>
 
+		<!-- Town large is not currently called anywhere but could be added up at high density -->
+
 		<hub_rule name="townLarge">
 			<hub_type value="town"/>
 			<width value="200, 250" />
@@ -99,8 +102,8 @@
 
 		<hub_rule name="citySmall">
 			<hub_type value="city"/>
-			<width value="400, 600" />
-			<height value="400, 600" />
+			<width value="414, 414" />
+			<height value="414, 414" />
 			<path_material value="asphalt" />
 			<path_radius value="7" />
 
@@ -137,11 +140,29 @@
 
 		<prefab_rule name="wastelandHub">
 			<prefab rule="cityBlocks" lot_type="CityBlock"/>
-			<prefab rule="cityBuildingsCommon" prob="0.2"/>
-			<prefab rule="cityBuildingsUncommon" prob="0.4"/>
-			<prefab rule="cityBuildingsRare" prob="0.4"/>
-			<prefab rule="cityBuildingsRare" prob="0.4"/>
-			<prefab rule="cityBuildingsUncommon" prob="0.4"/>
+			<!-- <prefab rule="cityBuildingsCommon" /> -->
+			<!-- <prefab rule="cityBuildingsUncommon" min_count="5" max_count="10" /> -->
+			<!-- <prefab rule="cityBuildingsRare" min_count="5" max_count="10" /> -->
+			<prefab rule="pharmacies" max_count="3" />
+			<prefab rule="gasStations" max_count="3"/>
+			<prefab rule="gunStores" max_count="2" />
+			<prefab rule="hardwareStores" max_count="2" />
+			<prefab rule="bookStores" max_count="2" />
+			<prefab rule="parking" max_count="3"/>
+			<prefab rule="groceryStores" max_count="3" />
+			<prefab rule="apartments" max_count="4"/>
+			<prefab rule="governmentOffices" max_count="2"/>
+			<prefab rule="entertainment" max_count="1"/>
+			<!-- Buildings from towns to fill out cities -->
+			<prefab rule="businessBrick" max_count="7"/>
+			<prefab rule="upperClassHousing" max_count="6"/>
+			<prefab rule="middleClassHousing" max_count="5"/>
+			<prefab rule="rubbleBuildingsWhite" max_count="2"/>
+			<prefab rule="rubbleBuildingsRed" max_count="2"/>
+			<prefab rule="rubbleBuildingsTan" max_count="2"/>
+			<prefab rule="rubbleBuildingsGrey" max_count="2"/>
+			<prefab rule="rubbleBuildingsWaste" max_count="2"/>
+
 		</prefab_rule>
 
 		<prefab_rule name="townLarge">
@@ -173,45 +194,36 @@
 
 <!-- Moved rare first so that it reads the probabilities of these then moves on to boring stuff -->
 	<!-- Set a minimum for these so that there are at least 2, even though this seems to be able to be ignored -->
-	<prefab_rule name="cityMinimum">
-		<prefab rule="gunStores" />
-		<prefab rule="pharmacies" />
-		<prefab rule="hardwareStores" />
-		<prefab rule="bookStores" />
-		<prefab rule="groceryStores" />
-	</prefab_rule>
-
-
 
 		<prefab_rule name="cityBuildingsRare">
-			<prefab rule="gunStores" min_count="2" max_count="3"/>
-			<prefab rule="pharmacies" min_count="2" max_count="3"/>
-			<prefab rule="hardwareStores" min_count="2" max_count="3"/>
-			<prefab rule="bookStores" min_count="2" max_count="3"/>
-			<prefab rule="groceryStores" min_count="2" max_count="3"/>
+			<prefab rule="gunStores" max_count="2" />
+			<prefab rule="pharmacies" max_count="3" />
+			<prefab rule="hardwareStores" max_count="3" />
+			<prefab rule="bookStores" max_count="2" />
+			<prefab rule="groceryStores" max_count="3" />
 		</prefab_rule>
 
 		<!-- Added some town buildings in to the mix -->
 
 		<prefab_rule name="cityBuildingsUncommon">
-				<prefab rule="parking" min_count="2" max_count="3"/>
-				<prefab rule="apartments" min_count="2" max_count="3"/>
-				<prefab rule="governmentOffices" min_count="2" max_count="3"/>
-				<prefab rule="entertainment" min_count="3" max_count="4"/>
-				<prefab rule="gasStations" min_count="2" max_count="4"/>
-				<prefab rule="businessBrick" min_count="2" max_count="3"/>
-				<prefab rule="businessTan" min_count="2" max_count="3"/>
+				<prefab rule="parking" max_count="3"/>
+				<prefab rule="apartments" max_count="3"/>
+				<prefab rule="governmentOffices" max_count="2"/>
+				<prefab rule="entertainment" max_count="1"/>
+				<prefab rule="gasStations" max_count="3"/>
+				<prefab rule="businessBrick" max_count="2"/>
+				<prefab rule="businessTan" max_count="2"/>
 			</prefab_rule>
 
 			<!-- Set a max for these rubble buildings, they suck and are just filler -->
 
 		<prefab_rule name="cityBuildingsCommon">
-			<prefab rule="rubbleBuildingsWhite" max_count="4"/>
-			<prefab rule="rubbleBuildingsRed" max_count="4"/>
-			<prefab rule="rubbleBuildingsTan" max_count="4"/>
-			<prefab rule="rubbleBuildingsGrey" max_count="4"/>
-			<prefab rule="rubbleBuildingsWaste" max_count="4"/>
-			<prefab rule="middleClassHousing" max_count="2"/>
+			<prefab rule="rubbleBuildingsWhite" max_count="2"/>
+			<prefab rule="rubbleBuildingsRed" max_count="2"/>
+			<prefab rule="rubbleBuildingsTan" max_count="2"/>
+			<prefab rule="rubbleBuildingsGrey" max_count="2"/>
+			<prefab rule="rubbleBuildingsWaste" max_count="2"/>
+			<prefab rule="middleClassHousing" max_count="15"/>
 		</prefab_rule>
 
 		<prefab_rule name="townBuildings">
@@ -328,6 +340,7 @@
 		<prefab_rule name="apartments">
 			<prefab name="apartment_adobe_red_5_flr" max_count="1" />
 			<prefab name="apartment_brick_6_flr" max_count="1" />
+			<prefab name="brownstones_01" max_count="2" />
 		</prefab_rule>
 
 		<prefab_rule name="governmentOffices">
@@ -347,7 +360,7 @@
 		</prefab_rule>
 
 		<prefab_rule name="pharmacies">
-			<prefab name="store_pharmacy_sm_01" />
+			<prefab name="store_pharmacy_sm_01" prob="1" />
 		</prefab_rule>
 
 		<prefab_rule name="hardwareStores">
@@ -356,8 +369,8 @@
 		</prefab_rule>
 
 		<prefab_rule name="bookStores">
-			<prefab name="store_book_sm_01" prob="0.6"/>
-			<prefab name="store_book_lg_01" prob="0.4"/>
+			<prefab name="store_book_sm_01" prob="0.6" />
+			<prefab name="store_book_lg_01" prob="0.4" />
 		</prefab_rule>
 
 		<prefab_rule name="groceryStores">
@@ -365,6 +378,10 @@
 			<prefab name="store_grocery_sm_01" prob="0.6"/>
 		</prefab_rule>
 
+<!-- Quartered is just 4 equal quarters -->
+<!-- Half is just half half -->
+<!-- T is just 1 half and 2 quarters -->
+<!-- Full is just one big block -->
 		<prefab_rule name="cityBlocks">
 			<prefab name="rg_waste_hub_blk_quartered"/>
 			<prefab name="rg_waste_hub_blk_half"/>
