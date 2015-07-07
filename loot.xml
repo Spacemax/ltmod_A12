@@ -1237,7 +1237,7 @@ plentiful loot items in the game.
       	</lootgroup>
 
         <lootgroup name="rareAutomotive" count="1">
-            <item name="gasCan" count="1" prob="0.05" />
+            <item name="gasCan" count="1" prob="0.025" />
 			<item group="uncommonTools" prob="0.1" />
             <item group="commonTools" 	prob="0.1" />
             <item group="cannedfood" 	prob="0.1" />
@@ -1247,7 +1247,8 @@ plentiful loot items in the game.
         </lootgroup>
 
         <lootgroup name="commonAutomotive" count="all">
-          <item name="airFilter" count="0,1"/>
+          <item name="minibikeWheels" count="0,1" prob="0.05" />
+		  <item name="airFilter" count="0,1"/>
           <item name="radiator" count="0,1" />
           <item name="carBattery" count="0,1" />
           <item name="hubcap" count= "1,4" />

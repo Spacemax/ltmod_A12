@@ -171,7 +171,6 @@ Description of Options:
             </layers>
             <decorations>
               <decoration type="block" blockname="snowyGrassDiagonal" prob =".4" />
-
               <decoration type="block" blockname="rock05" prob =".001" />
               <decoration type="block" blockname="rock06" prob =".001" />
               <decoration type="block" blockname="rock07" prob =".001" />
@@ -189,7 +188,6 @@ Description of Options:
             </layers>
             <decorations>
               <decoration type="block" blockname="snowyGrassDiagonal" prob =".4" />
-
               <decoration type="block" blockname="rock05" prob =".001" />
               <decoration type="block" blockname="rock06" prob =".001" />
               <decoration type="block" blockname="rock07" prob =".001" />
@@ -204,13 +202,13 @@ Description of Options:
 				<layer filluptorg="60" blockname="water" />
                 <layer depth="4" blockname="snow" />
                 <layer depth="3" blockname="dirt" >
-					<resource blockname="clay" prob="0.2" />
+				<resource blockname="clay" prob="0.2" />
 				</layer>
                 <layer depth="*" blockname="stone" >
-            		<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-								<resource blockname="sphalerite" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
+            	<resource blockname="ironOre" cluster="2" prob="0.3" rwgGenerationType="caves" />
+            	<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+				<resource blockname="sphalerite" cluster="1" prob="0.1" rwgGenerationType="caves" />
+            	<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
                 </layer>
 
                 <layer depth="3" blockname="bedrock" />
@@ -275,10 +273,9 @@ Description of Options:
 
 				</layer>
                 <layer depth="*" blockname="stone" >
-            		<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="magnesiumOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="leadOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+            		<resource blockname="ironOre" cluster="1" prob="0.15" rwgGenerationType="caves" />
+            		<resource blockname="magnesiumOre" cluster="1" prob="0.2" rwgGenerationType="caves" />
+            		<resource blockname="leadOre" cluster="1" prob="0.2" rwgGenerationType="caves" />
             		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
                 </layer>
                 <layer depth="3" blockname="bedrock" />
@@ -370,9 +367,9 @@ Description of Options:
 					<resource blockname="clay" cluster="2" prob="0.2" />
 				</layer>
                 <layer depth="*" blockname="stone" >
-            		<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="copperOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+            		<resource blockname="ironOre" cluster="2" prob="0.15" rwgGenerationType="caves" />
+            		<resource blockname="coalOre" cluster="2" prob="0.15" rwgGenerationType="caves" />
+            		<resource blockname="copperOre" cluster="1" prob="0.15" rwgGenerationType="caves" />
             		<resource blockname="leadOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
             		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
                 </layer>
@@ -462,9 +459,9 @@ Description of Options:
                 <layer depth="3" blockname="dirt" >
 				</layer>
                 <layer depth="*" blockname="stone" >
-            		<resource blockname="leadOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
+            		<resource blockname="leadOre" cluster="1" prob="0.1" rwgGenerationType="all" />
+            		<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="all" />
+            		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="all" />
                 </layer>
 
                 <layer depth="3" blockname="bedrock" />
@@ -561,9 +558,9 @@ Description of Options:
 				</layer>
                 <layer depth="*" blockname="stone" >
             		<!---<resource blockname="crudeOil" cluster="1" prob="0.1" rwgGenerationType="caves" /> -->
-            		<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-								<resource blockname="copperOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
+            		<resource blockname="coalOre" cluster="2" prob="0.3"   rwgGenerationType="caves" />
+					<resource blockname="copperOre" cluster="1" prob="0.2" rwgGenerationType="caves" />
+            		<resource blockname="gravel" cluster="2" prob="0.1"    rwgGenerationType="caves" />
                 </layer>
 
 
@@ -647,19 +644,19 @@ Description of Options:
                 <layer filluptorg="58" blockname="water" />
 				<layer depth="6" blockname="dirt" />
                 <layer depth="6" blockname="dirt" >
-					<resource blockname="clay" prob="0.5" />
+				<resource blockname="clay" prob="0.5" />
 				</layer>
                 <layer depth="20" blockname="stone" >
-            		<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="coalOre" cluster="2" prob="0.1" rwgGenerationType="caves" />
+            	<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+            	<resource blockname="coalOre" cluster="2" prob="0.1" rwgGenerationType="caves" />
                 </layer>
                 <layer depth="20" blockname="stone" >
-                	<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-									<resource blockname="magnesiumOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+                <resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+				<resource blockname="magnesiumOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
                 </layer>
                 <layer depth="20" blockname="stone" >
-                	<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-            		<resource blockname="leadOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+                <resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+            	<resource blockname="leadOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
                 </layer>
                 <layer depth="*" blockname="stone" >
             		<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
@@ -748,14 +745,14 @@ Description of Options:
             		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
                 </layer>
                 <layer depth="20" blockname="stone" >
-									<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-	            		<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-	            		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
+					<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+	            	<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+	            	<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
                 </layer>
                 <layer depth="20" blockname="stone" >
-									<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-	            		<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-	            		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
+					<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+	            	<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+	            	<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
                 </layer>
                 <layer depth="*" blockname="stone" >
             		<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
@@ -844,7 +841,7 @@ Description of Options:
 				<layer filluptorg="60" blockname="water" />
 				<layer depth="1" blockname="burntForestGround" />
                 <layer depth="3" blockname="dirt" >
-					<resource blockname="clay" prob="0.2" />
+				<resource blockname="clay" prob="0.2" />
 				</layer>
                 <layer depth="20" blockname="stone" >
             		<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
@@ -852,14 +849,14 @@ Description of Options:
             		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
                 </layer>
                 <layer depth="20" blockname="stone" >
-									<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-	            		<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-	            		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
+					<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+	            	<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+	            	<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
                 </layer>
                 <layer depth="20" blockname="stone" >
-									<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-	            		<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
-	            		<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
+					<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+	            	<resource blockname="coalOre" cluster="1" prob="0.1" rwgGenerationType="caves" />
+	            	<resource blockname="gravel" cluster="2" prob="0.1" rwgGenerationType="caves" />
                 </layer>
                 <layer depth="*" blockname="stone" >
             		<resource blockname="ironOre" cluster="1" prob="0.1" rwgGenerationType="caves" />

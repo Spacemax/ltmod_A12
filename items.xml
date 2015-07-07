@@ -10484,8 +10484,6 @@ WEAPON ATTACHABLES
            <property name="DamageEntity" value="2" />
            <property name="DamageBlock" value="3" />
            <property name="Sound_start" value="swoosh" />
-           <property name="Buff" value="bleeding,bite,wound" />
-           <property name="Buff_chance" value="0.1,0.1,0.2" />
            <property name="DamageBonus.glass" value="25" />
            <property name="DamageBonus.earth" value="5" />
            <property name="DamageBonus.wood" value="3" />
