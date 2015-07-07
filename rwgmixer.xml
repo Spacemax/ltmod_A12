@@ -140,9 +140,11 @@
 
 		<prefab_rule name="wastelandHub">
 			<prefab rule="cityBlocks" lot_type="CityBlock"/>
+			
 			<!-- <prefab rule="cityBuildingsCommon" /> -->
 			<!-- <prefab rule="cityBuildingsUncommon" min_count="5" max_count="10" /> -->
 			<!-- <prefab rule="cityBuildingsRare" min_count="5" max_count="10" /> -->
+			
 			<prefab rule="pharmacies" max_count="3" />
 			<prefab rule="gasStations" max_count="3"/>
 			<prefab rule="gunStores" max_count="2" />
@@ -153,7 +155,10 @@
 			<prefab rule="apartments" max_count="4"/>
 			<prefab rule="governmentOffices" max_count="2"/>
 			<prefab rule="entertainment" max_count="1"/>
+			<prefab rule="gasStations" max_count="3"/>
+			
 			<!-- Buildings from towns to fill out cities -->
+			
 			<prefab rule="businessBrick" max_count="7"/>
 			<prefab rule="upperClassHousing" max_count="6"/>
 			<prefab rule="middleClassHousing" max_count="5"/>
@@ -194,7 +199,25 @@
 
 <!-- Moved rare first so that it reads the probabilities of these then moves on to boring stuff -->
 	<!-- Set a minimum for these so that there are at least 2, even though this seems to be able to be ignored -->
-
+		
+		<prefab_rule name="CustomPoi">
+			<!-- <prefab rule="magoli_bowlingcenter_a11_v2"/>  DNW 7/11/15 -->
+			<!-- <prefab rule="magoli_crematory_a11_v2" /> DNW 7/11/15 -->
+			<!-- <prefab rule="magoli_icestadium_a11_v2" /> DNW 7/11/15-->
+			<!-- <prefab rule="magoli_med_clinc_small_a11_v2" DNW 7/11/15/> -->
+			<!-- <prefab rule="RGPM_AsylumCity(by_Wsiegel)v2" /> DNW 7/11/15 -->
+			<!-- <prefab rule="RGPM_Bank(by_Limodor)v2" /> DNW 7/11/15-->
+			<!-- <prefab rule="RGPM_Firehouse(by_Warsaken)v2"  /> DNW 7/11/15-->
+			<!-- <prefab rule="RGPM_Dealership(by_P1ut0nium)v2"  /> DNW 7/11/15 -->
+			<!-- <prefab rule="RGPM_Firestation(by_Slick50)v2"  /> DNW 7/11/15 -->
+			<!-- <prefab rule="RGPM_FuneralHome(by_Wseigel)v2"  /> DNW 7/11/15 -->
+			<!-- <prefab rule="RGPM_FuneralParlor(byZombieman)v2"  DNW 7/11/15/> -->
+			<!-- <prefab rule="RGPM_House(by_LastI)v2"  DNW 7/11/15/> -->
+			<!-- <prefab rule="RGPM_House(by_ShoNuff)v2"  DNW 7/11/15/> -->
+			<!-- <prefab rule="RGPM_Gravetownstation(by_Caleb68)v2"  DNW 7/11/15/> -->
+		</prefab_rule>
+	
+	
 		<prefab_rule name="cityBuildingsRare">
 			<prefab rule="gunStores" max_count="2" />
 			<prefab rule="pharmacies" max_count="3" />
@@ -340,7 +363,7 @@
 		<prefab_rule name="apartments">
 			<prefab name="apartment_adobe_red_5_flr" max_count="1" />
 			<prefab name="apartment_brick_6_flr" max_count="1" />
-			<prefab name="brownstones_01" max_count="2" />
+			<!-- <prefab name="brownstones_01" max_count="2" /> removed due to no working-->
 		</prefab_rule>
 
 		<prefab_rule name="governmentOffices">
