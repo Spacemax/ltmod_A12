@@ -170,12 +170,14 @@
     </entitygroup>
 
     <entitygroup name="AnimalsBig">
-        <entity name="animalStag" />
+        <entity name="animalStag" prob="0.98" />
+        <entity name="animalBear" prob="0.02" />
     </entitygroup>
 
     <entitygroup name="CarsWild">
-      <entity name="car_Blue" />
-      <entity name="car_Red" />
+      <entity name="animalRabbit" prob="0.80" />
+      <entity name="car_Blue" prob="0.05" />
+      <entity name="car_Red" prob="0.05" />
       <entity name="car_White" prob="0.05" />
       <entity name="car_Orange" prob="0.05" />
   </entitygroup>
@@ -184,9 +186,9 @@
     	<entity name="animalRabbit" prob="0.50" />
         <entity name="animalStag" prob="0.20" />
         <entity name="animalPig" prob="0.15" />
-        <entity name="Boar" prob="0.05" />
+        <!-- <entity name="Boar" prob="0.05" /> boar removed until devs put its hitbox back in -->
         <entity name="animalBear" prob="0.07" />
-        <entity name="RaZorBack" prob="0.02" />
+        <!-- <entity name="RaZorBack" prob="0.02" /> same as boar -->
         <entity name="GhostBear" prob="0.01"/>
     </entitygroup>
 
