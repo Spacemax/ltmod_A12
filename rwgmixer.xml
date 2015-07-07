@@ -4,7 +4,7 @@
 
 	<rulesets>
 		<ruleset name="vanilla" cell_cache_size="32" cell_size="3200" cell_offset="0.8" generation_distance="10000">
-			<cell_rule name="wastelandHub" position="0,0" prob="1"/>
+			<cell_rule name="zeroZero" position="0,0" prob="0.1"/>
 			<cell_rule name="highDensity" position="0,1" prob="1.0"/>
 			<cell_rule name="lowDensity" position="0,-1" prob="1.0"/>
 			<cell_rule name="highDensity" position="1,1" prob="1.0"/>
@@ -13,8 +13,9 @@
 			<cell_rule name="lowDensity" position="-1,1" prob="1.0"/>
 			<cell_rule name="lowDensity" position="-1,-1" prob="1.0"/>
 			<cell_rule name="highDensity" position="1,-1" prob="1.0"/>
-			<cell_rule name="highDensity" prob="0.4"/>
-			<cell_rule name="lowDensity" prob="0.6"/>
+			<cell_rule name="highDensity" prob="0.2"/>
+			<cell_rule name="lowDensity" prob="0.85"/>
+			<!-- <cell_rule name="wastelandHub" prob="0.05"/> -->
 
 			<!--<cell_rule name="customHubTest" position="0,1" prob="0"/>-->
 		</ruleset>
@@ -34,11 +35,11 @@
 		<cell_rule name="lowDensity">
 			<cave_count value="2,6"/>
 			<path_material value="asphalt" />
-			<path_radius value="5" />
+			<path_radius value="7" />
 
-			<hub_rule name="citySmall" prob="0.1"/>
-			<hub_rule name="townSmall" prob="0.3"/>
-			<hub_rule name="ruralSmall" prob="0.6"/>
+			<!-- <hub_rule name="citySmall" prob="0.1"/> -->
+			<hub_rule name="townSmall" prob="0.6"/>
+			<hub_rule name="ruralSmall" prob="0.4"/>
 
 			<wilderness_rule name="wildernessDefault"/>
 		</cell_rule>
@@ -46,11 +47,11 @@
 		<cell_rule name="highDensity">
 			<cave_count value="1,3"/>
 			<path_material value="asphalt" />
-			<path_radius value="6" />
+			<path_radius value="7" />
 
-			<hub_rule name="ruralSmall" prob="0.1"/>
-			<hub_rule name="townSmall" prob="0.4"/>
-			<hub_rule name="citySmall" prob="0.5"/>
+			<hub_rule name="ruralSmall" prob="0.6"/>
+			<hub_rule name="townLarge" prob="0.45"/>
+			<!-- <hub_rule name="citySmall" prob="0.05"/> -->
 
 			<wilderness_rule name="wildernessDefault" prob="1"/>
 		</cell_rule>
@@ -62,6 +63,17 @@
 			<path_radius value="7" />
 
 			<hub_rule name="citySmall" />
+
+			<wilderness_rule name="wildernessDefault" prob="1"/>
+		</cell_rule>
+
+		<cell_rule name="zeroZero">
+			<cave_count value="0,0"/>
+
+			<path_material value="asphalt" />
+			<path_radius value="7" />
+
+			<hub_rule name="zeroCity" />
 
 			<wilderness_rule name="wildernessDefault" prob="1"/>
 		</cell_rule>
@@ -101,6 +113,17 @@
 		</hub_rule>
 
 		<hub_rule name="citySmall">
+			<hub_type value="city"/>
+			<width value="206, 414" />
+			<height value="206, 414" />
+			<path_material value="asphalt" />
+			<path_radius value="7" />
+
+
+			<prefab_rule name="wastelandHub" prob="1"/>
+		</hub_rule>
+
+		<hub_rule name="zeroCity">
 			<hub_type value="city"/>
 			<width value="414, 414" />
 			<height value="414, 414" />
@@ -143,25 +166,31 @@
 			<!-- <prefab rule="cityBuildingsCommon" /> -->
 			<!-- <prefab rule="cityBuildingsUncommon" min_count="5" max_count="10" /> -->
 			<!-- <prefab rule="cityBuildingsRare" min_count="5" max_count="10" /> -->
+			<prefab rule="cityHousing" max_count="6"/>
 			<prefab rule="pharmacies" max_count="3" />
 			<prefab rule="gasStations" max_count="3"/>
-			<prefab rule="gunStores" max_count="2" />
 			<prefab rule="hardwareStores" max_count="2" />
 			<prefab rule="bookStores" max_count="2" />
 			<prefab rule="parking" max_count="3"/>
 			<prefab rule="groceryStores" max_count="3" />
-			<prefab rule="apartments" max_count="4"/>
-			<prefab rule="governmentOffices" max_count="2"/>
-			<prefab rule="entertainment" max_count="1"/>
+			<prefab rule="governmentOffices" max_count="3"/>
 			<!-- Buildings from towns to fill out cities -->
 			<prefab rule="businessBrick" max_count="7"/>
 			<prefab rule="upperClassHousing" max_count="6"/>
-			<prefab rule="middleClassHousing" max_count="5"/>
-			<prefab rule="rubbleBuildingsWhite" max_count="2"/>
-			<prefab rule="rubbleBuildingsRed" max_count="2"/>
+			<prefab rule="cityHousing2" max_count="6"/>
+			<prefab rule="rubbleBuildingsWhite" max_count="3"/>
+			<prefab rule="gunStores" max_count="2" />
+			<prefab rule="rubbleBuildingsRed" max_count="3"/>
+			<prefab rule="apartments" max_count="4"/>
+			<!-- mod prefabs -->
+			<prefab rule="modtest" max_count="8"/>
+
+			<prefab rule="entertainment" max_count="2"/>
 			<prefab rule="rubbleBuildingsTan" max_count="2"/>
 			<prefab rule="rubbleBuildingsGrey" max_count="2"/>
 			<prefab rule="rubbleBuildingsWaste" max_count="2"/>
+			<prefab rule="countryHousing" max_count="6"/>
+
 
 		</prefab_rule>
 
@@ -171,9 +200,9 @@
 			<prefab rule="hardwareStores" min_count="2" max_count="3" prob="0.9"/>
 			<prefab rule="bookStores" mmin_count="2" max_count="3" prob="0.9"/>
 			<prefab rule="groceryStores" min_count="2" max_count="3" prob="0.9"/>
-			<prefab rule="middleClassHousing"/>
-			<prefab rule="countryHousing"/>
-			<prefab rule="townBuildings"/>
+			<prefab rule="middleClassHousing" max_count="5" />
+			<prefab rule="countryHousing" max_count="5" />
+			<prefab rule="townBuildings" max_count="20" />
 		</prefab_rule>
 
 		<prefab_rule name="townSmall">
@@ -227,24 +256,24 @@
 		</prefab_rule>
 
 		<prefab_rule name="townBuildings">
-			<prefab rule="gunStores" min_count="1" max_count="2"/>
-			<prefab rule="pharmacies" min_count="1" max_count="2"/>
-			<prefab rule="hardwareStores" min_count="1" max_count="2"/>
-			<prefab rule="bookStores" min_count="1" max_count="3"/>
-			<prefab rule="groceryStores" min_count="1" max_count="3"/>
-			<prefab rule="governmentOffices" min_count="1" max_count="2"/>
-			<prefab rule="gasStations" min_count="1" max_count="3"/>
+			<prefab rule="gunStores" max_count="2"/>
+			<prefab rule="pharmacies" max_count="2"/>
+			<prefab rule="hardwareStores" max_count="2"/>
+			<prefab rule="bookStores" max_count="2"/>
+			<prefab rule="groceryStores" max_count="2"/>
+			<prefab rule="governmentOffices" max_count="2"/>
+			<prefab rule="gasStations" max_count="2"/>
 			<prefab rule="oldWest" max_count="1"/>
-			<prefab rule="countryHousing" max_count="8"/>
-			<prefab rule="lowerClassHousing"/>
+			<prefab rule="countryHousing" max_count="6"/>
+			<prefab rule="lowerClassHousing" max_count="6" />
 			<prefab rule="middleClassHousing" max_count="5"/>
 			<prefab rule="upperClassHousing" max_count="5"/>
-			<prefab rule="businessBrick" min_count="2" max_count="5"/>
-			<prefab rule="businessTan" min_count="2" max_count="5"/>
+			<prefab rule="businessBrick" max_count="5"/>
+			<prefab rule="businessTan" max_count="5"/>
 			<prefab rule="garages" max_count="10"/>
 			<prefab rule="signsAndLights"/>
 
-			<prefab name="oldwest_watertower" min_count="1" max_count="1"/>
+			<prefab name="oldwest_watertower" max_count="1"/>
 			<prefab name="bombshelter_lg_01"/>
 
 			<prefab rule="burntHousing"/>
@@ -288,6 +317,21 @@
 			<prefab name="housetan2"/>
 		</prefab_rule>
 
+		<prefab_rule name="cityHousing">
+			<prefab name="houseyellow1"/>
+			<prefab name="housegreen1"/>
+			<prefab name="houseblue1"/>
+			<prefab name="housestucco1"/>
+			<prefab name="housestucco2"/>
+		</prefab_rule>
+
+		<prefab_rule name="cityHousing2">
+			<prefab name="housebrick1"/>
+			<prefab name="housewhite1"/>
+			<prefab name="housewhite2"/>
+			<prefab name="housetan2"/>
+		</prefab_rule>
+
 		<prefab_rule name="upperClassHousing">
 			<prefab name="house_new_mansion_01"/>
 			<prefab name="house_new_mansion_02"/>
@@ -302,6 +346,12 @@
 			<prefab name="business_red_brick_05"/>
 			<prefab name="business_red_brick_06"/>
 			<prefab name="business_red_brick_07"/>
+		</prefab_rule>
+
+		<prefab_rule name="modtest">
+			<prefab name="restaurant" max_count="2" prob="0.4" />
+			<prefab name="maccas" max_count="2" prob="0.4" />
+			<prefab name="RGPM_Nicehouse(by_BigC90210)v2" max_count="2" prob="0.4" />
 		</prefab_rule>
 
 		<prefab_rule name="businessTan">
@@ -349,9 +399,9 @@
 		</prefab_rule>
 
 		<prefab_rule name="parking">
-			<prefab name="parking_lot_01"/>
-			<prefab name="parking_lot_02"/>
-			<prefab name="parking_garage_01"/>
+			<prefab name="parking_lot_01" max_count="1" />
+			<prefab name="parking_lot_02" max_count="1" />
+			<prefab name="parking_garage_01" max_count="1" />
 		</prefab_rule>
 
 		<prefab_rule name="gunStores">
