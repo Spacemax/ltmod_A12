@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rwgmixer>
+	<!-- ****************Random World Mixer - Early Documentation by LT. Disclaimer: This is based on very early testing and some aspects may be wrong assumptions. Please contribute by posting your findings on the 7 days
+	forums.**************** -->
+
+	<!-- Area Number 1 - World Rulesets: A world rule set defines the highest level of the random gen structure, each time a player enters a new region the game asks this rule set - What cell rules should I use to generate POIs?
+	This is not about selecting Biomes - That is based on the algorithm which converts your world seed into random elevations and land features. -->
 	<world ruleset="vanilla" />
 
 	<rulesets>
 		<ruleset name="vanilla" cell_cache_size="32" cell_size="3200" cell_offset="0.8" generation_distance="10000">
-			<cell_rule name="zeroZero" position="0,0" prob="0.05"/>
+
+			<!-- Some behaviour is being noted that setting a position using position= contributes to forced repeated distribution of that cell rule per every cell. -->
+			<!-- <cell_rule name="zeroZero" position="0,0" prob="0.1"/> Question - would a max count work here to keep a true 0,0? LT. to test -->
+
+			<!-- Removing position from wasteland hub so it relies on probability. With the wide spawn area for new players in A12 there is perhaps no real need for a true 0,0 -->
+
+			<!-- Define all your rulesets for Cells, and make them add up to 100%, note how each of the below probabilities adds up to 100% - does 7 Days obey this? Yet to be proven like most of the code it seems
+			like voodoo sometimes. -->
+			<cell_rule name="wastelandHub" prob="0.05"/> <!-- These cities can have either a fixed size or a range, these will be the major wasteland cities that can be encountered. -->
+
+			<!-- High density is a chance for a larger town, or smaller city, low density will take care of smaller towns and rural outposts and possibly some small custom POI layouts -->
+			<cell_rule name="highDensity" prob="0.1"/>
+			<cell_rule name="lowDensity" prob="0.85"/>
+			<!-- <cell_rule name="wastelandHub" prob="0.05"/> -->
+
+<!-- Here is an example of having a standardised pattern generated within the below positions in EACH Cell (previously known as biomes), Not the positions don't seem to mean 0,0 in the whole world, but 0,0
+per each cell in the world. Each cell being defined by the cell_size="" above. So in my example, for each 3200 of space, the below rules will be selected at the position coordinates, and then per
+each rule it will calculate probability of the city, small town, rural etc and place that there.  -->
+<!-- Behaviour Note: It has been noted that there is no real concept of 0,0 anymore. Every rule here will repeat in every cell around the world, meaning if you define WasteLandHub, or in my example "zeroZero"
+then that will have a chance of appearing in every Cell rather than just at the true 0,0 of the world. -->
 			<!-- <cell_rule name="highDensity" position="0,1" prob="1.0"/>
 			<cell_rule name="lowDensity" position="0,-1" prob="1.0"/>
 			<cell_rule name="highDensity" position="1,1" prob="1.0"/>
@@ -13,14 +37,16 @@
 			<cell_rule name="lowDensity" position="-1,1" prob="1.0"/>
 			<cell_rule name="lowDensity" position="-1,-1" prob="1.0"/>
 			<cell_rule name="highDensity" position="1,-1" prob="1.0"/> -->
-			<cell_rule name="highDensity" prob="0.3"/>
-			<cell_rule name="lowDensity" prob="0.65"/>
-			<!-- <cell_rule name="wastelandHub" prob="0.05"/> -->
 
+<!-- Here is where you can call that specific hub layout right at the bottom of this file -->
 			<!--<cell_rule name="customHubTest" position="0,1" prob="0"/>-->
 		</ruleset>
 	</rulesets>
 
+	<!-- Area Number 2 - Cell Rules - Ok above we know the engine decides which cell rule it is about to call when generating POIs, now here is where we start to define what those rules mean. -->
+
+	<!-- First we define some details for each cell Rule - things like how many caves, what the roads are made of, how wide are the roads, then it moves on and specifies which prefab rulesets to check,
+	and lastly it decides what the wilderness rulesets are. -->
 	<cell_rules>
 		<cell_rule name="customHubTest">
 			<cave_count value="1,4"/>
@@ -36,10 +62,10 @@
 			<cave_count value="2,6"/>
 			<path_material value="asphalt" />
 			<path_radius value="7" />
-
+			<!-- Disabling this, we'll let High Density provide small cities -->
 			<!-- <hub_rule name="citySmall" prob="0.1"/> -->
+			<hub_rule name="ruralSmall" prob="0.3"/>
 			<hub_rule name="townSmall" prob="0.6"/>
-			<hub_rule name="ruralSmall" prob="0.4"/>
 
 			<wilderness_rule name="wildernessDefault"/>
 		</cell_rule>
@@ -48,26 +74,17 @@
 			<cave_count value="1,3"/>
 			<path_material value="asphalt" />
 			<path_radius value="7" />
-
-			<hub_rule name="ruralSmall" prob="0.6"/>
-			<hub_rule name="townLarge" prob="0.45"/>
-			<!-- <hub_rule name="citySmall" prob="0.05"/> -->
+			<!-- As above, high density will be in charge of making a small city appear, Wasteland hub will be in charge of the more rare larger cities -->
+			<hub_rule name="ruralSmall" prob="0.1"/>
+			<hub_rule name="citySmall" prob="0.3"/>
+			<hub_rule name="townLarge" prob="0.6"/>
 
 			<wilderness_rule name="wildernessDefault" prob="1"/>
 		</cell_rule>
+
 
 		<cell_rule name="wastelandHub">
-			<cave_count value="0,0"/>
-
-			<path_material value="asphalt" />
-			<path_radius value="7" />
-
-			<hub_rule name="citySmall" />
-
-			<wilderness_rule name="wildernessDefault" prob="1"/>
-		</cell_rule>
-
-		<cell_rule name="zeroZero">
+			<!-- Big cities have no caves, there are enough PC resources being consumed here as it is -->
 			<cave_count value="0,0"/>
 
 			<path_material value="asphalt" />
@@ -77,8 +94,25 @@
 
 			<wilderness_rule name="wildernessDefault" prob="1"/>
 		</cell_rule>
-	</cell_rules>
 
+		<!-- Custom ruleset created by LT. to try rules specific to 0,0, before discovering that there is no real spoon.. 0,0 anymore. -->
+		<!-- <cell_rule name="zeroZero">
+			<cave_count value="0,0"/>
+
+			<path_material value="asphalt" />
+			<path_radius value="7" />
+
+			<hub_rule name="zeroCity" />
+
+			<wilderness_rule name="wildernessDefault" prob="1"/>
+		</cell_rule>
+	</cell_rules> -->
+
+	<!-- Area Number 3 - Ok so the game now knows which Cell rule it has randomly or not so randomly chosen, it knows what roads, caves and wilderness POIs to set up, now we must define what the hub rules
+	mean as far as setting up the POI area. -->
+
+	<!-- In this example below it is creating a small rural outpost, with a fixed area of 96 x 96, so basically enough for maybe 4 buildings. The road is asphalt, and the POI mix it'll select is "townSmall" which
+	is defined further down as far as what that really means for prefabs that will be selected. -->
 	<hub_rules>
 		<hub_rule name="ruralSmall">
 			<hub_type value="rural"/>
@@ -111,7 +145,7 @@
 
 			<prefab_rule name="townLarge"/>
 		</hub_rule>
-
+		<!-- This is our ranged size, smaller city -->
 		<hub_rule name="citySmall">
 			<hub_type value="city"/>
 			<width value="206, 414" />
@@ -123,6 +157,7 @@
 			<prefab_rule name="wastelandHub" prob="1"/>
 		</hub_rule>
 
+		<!-- This is our fixed size, big city, gauranteed to make a survivor pee themself. -->
 		<hub_rule name="zeroCity">
 			<hub_type value="city"/>
 			<width value="414, 414" />
@@ -150,6 +185,9 @@
 		</hub_rule>
 	</hub_rules>
 
+	<!-- Wilderness rules for all Cell rules above is defined just here. Now spawn_min_max would make sense to be per cell, rather than the whole world. So for each 3200 (or your cell size) there can be
+	between 25 and 30 wilderness type POIs.
+	We define what road block type for the smaller paths, how wide they are, and the prefab rule set to call that defines the list of POIs that can be selected -->
 	<wilderness_rules>
 		<wilderness_rule name="wildernessDefault" spawn_min_max="25,30">
 			<path_material value="gravel" />
@@ -166,33 +204,46 @@
 			<!-- <prefab rule="cityBuildingsCommon" /> -->
 			<!-- <prefab rule="cityBuildingsUncommon" min_count="5" max_count="10" /> -->
 			<!-- <prefab rule="cityBuildingsRare" min_count="5" max_count="10" /> -->
-			<prefab rule="cityHousing" max_count="6"/>
+			<!-- <prefab rule="cityHousing" max_count="6"/>
 			<prefab rule="pharmacies" max_count="3" />
 			<prefab rule="gasStations" max_count="3"/>
 			<prefab rule="hardwareStores" max_count="2" />
 			<prefab rule="bookStores" max_count="2" />
 			<prefab rule="parking" max_count="3"/>
 			<prefab rule="groceryStores" max_count="3" />
-			<prefab rule="governmentOffices" max_count="3"/>
+			<prefab rule="governmentOffices" max_count="3"/> -->
 			<!-- Buildings from towns to fill out cities -->
-			<prefab rule="businessBrick" max_count="7"/>
+			<!-- <prefab rule="businessBrick" max_count="7"/>
 			<prefab rule="upperClassHousing" max_count="6"/>
 			<prefab rule="cityHousing2" max_count="6"/>
 			<prefab rule="rubbleBuildingsWhite" max_count="3"/>
 			<prefab rule="gunStores" max_count="2" />
 			<prefab rule="rubbleBuildingsRed" max_count="3"/>
-			<prefab rule="apartments" max_count="4"/>
+			<prefab rule="apartments" max_count="4"/> -->
 			<!-- mod prefabs -->
 			<prefab rule="modtest" max_count="8"/>
 
-			<prefab rule="entertainment" max_count="2"/>
+			<!-- <prefab rule="entertainment" max_count="2"/>
 			<prefab rule="rubbleBuildingsTan" max_count="2"/>
 			<prefab rule="rubbleBuildingsGrey" max_count="2"/>
 			<prefab rule="rubbleBuildingsWaste" max_count="2"/>
-			<prefab rule="countryHousing" max_count="6"/>
+			<prefab rule="countryHousing" max_count="6"/> -->
 
 
 		</prefab_rule>
+
+		<!-- Prefab rules are how the game knows what to place in the world, once the conditions above are met.
+		These can be a "prefab rule=" which is basically defining a group, or they can directly refer to a prefab file e.g prefab name=
+		It is helpful understand how things like max_count work at this level, have a look at apartments for example
+
+		I want the basic ugly looking vanilla apartments to only appear once, so I put max_count="1" for each, for Laz Man's awesome prefab I allow it to be called twice
+		<prefab_rule name="apartments">
+			<prefab name="apartment_adobe_red_5_flr" max_count="1" /> Vanilla, big and resource intensive, don't want too many
+			<prefab name="apartment_brick_6_flr" max_count="1" /> Vanilla, big and resource intensive, don't want too many
+			<prefab name="brownstones_01" max_count="2" /> Laz Man's work can appear twice.
+		</prefab_rule>
+
+		Now this works by having the overall "Apartments" group called above with a max count of 4, 1 count each for vanilla, 2 for the brownstone. -->
 
 		<prefab_rule name="townLarge">
 			<prefab rule="gunStores" min_count="2" max_count="3" prob="0.9"/>
@@ -254,6 +305,9 @@
 			<prefab rule="rubbleBuildingsWaste" max_count="2"/>
 			<prefab rule="middleClassHousing" max_count="15"/>
 		</prefab_rule>
+
+		<!-- By setting max counts here we can achieve a preferred mix based on town size. -->
+		<!-- We then have a higher number allowance for buildings we want to act as filler once we've exhausted the supply of more unique stores etc -->
 
 		<prefab_rule name="townBuildings">
 			<prefab rule="gunStores" max_count="2"/>
@@ -348,10 +402,15 @@
 			<prefab name="business_red_brick_07"/>
 		</prefab_rule>
 
+		<!-- Here we can define our own rule to group up modded buildings and call them from Cell rules above. -->
+
+		<!-- call the prefab_rule name something that clearly defines what it is, so you recognise it when called above -->
+		<!-- Theory: By defining a probability we create an opportunity for the random gen engine to skip over a prefab, this possibly stops two of the same being placed next to each other. -->
 		<prefab_rule name="modtest">
-			<prefab name="restaurant" max_count="2" prob="0.4" />
+			<!-- <prefab name="restaurant" max_count="2" prob="0.4" />
 			<prefab name="maccas" max_count="2" prob="0.4" />
-			<prefab name="RGPM_Nicehouse(by_BigC90210)v2" max_count="2" prob="0.4" />
+			<prefab name="RGPM_Nicehouse(by_BigC90210)v2" max_count="2" prob="0.4" /> -->
+
 		</prefab_rule>
 
 		<prefab_rule name="businessTan">
@@ -390,6 +449,7 @@
 		<prefab_rule name="apartments">
 			<prefab name="apartment_adobe_red_5_flr" max_count="1" />
 			<prefab name="apartment_brick_6_flr" max_count="1" />
+			<!-- Laz Man's mod here, grouped because the buildings look good together -->
 			<prefab name="brownstones_01" max_count="2" />
 		</prefab_rule>
 
@@ -427,6 +487,9 @@
 			<prefab name="store_grocery_lg_01" prob="0.4"/>
 			<prefab name="store_grocery_sm_01" prob="0.6"/>
 		</prefab_rule>
+
+		<!-- City blocks are what the random gen engine draws first at 0,0 before it puts the mix of POIs on time.
+		The rule set runs through each type, and puts a mix of blocks with different street types, e.g a t intersection or even quartered streets. -->
 
 <!-- Quartered is just 4 equal quarters -->
 <!-- Half is just half half -->
@@ -562,6 +625,11 @@
 		</prefab_rule>
 	</prefab_rules>
 
+	<!-- Note on Biome elevation settings - At this stage we cannot control the elevation of the world, the game reads the world seed - game name in serverconfig.xml - and the algorithm extracts world elevations
+	 		based on that.
+	These settings below determine at what random elevations we introduce the specific block types of each biome type, from level 0 to 20 is desert, once it reaches 20 it'll start to blend in plains.
+	You can also then assume that many deserts can be found near plains. -->
+
 	<biome_spawn_rules>
 		<biome_spawn_rule name="desert">
 			<elevation_range value="0, 20" />
@@ -591,6 +659,10 @@
 		<biome_spawn_rule name="water"/>
 		-->
 	</biome_spawn_rules>
+
+	<!-- This appears to be a way of creating a pre-determined layout that can be called at the Cell Rule level.
+	So by calling this, the cell will draw the exact prefabs in the grid of your choosing. To fully exploit this I imagine we want to have a tool that reads Prefabs, understands their size, and maps them
+	into a grid with snap-in roads, which then can be exported in the format below. However, right now there exists an interesting possibility of creating small logical groupings of POIs. -->
 
 	<hub_layouts>
 		<hub_layout name="customHubTest">
