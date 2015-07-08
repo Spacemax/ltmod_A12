@@ -4,17 +4,17 @@
 
 	<rulesets>
 		<ruleset name="vanilla" cell_cache_size="32" cell_size="3200" cell_offset="0.8" generation_distance="10000">
-			<cell_rule name="zeroZero" position="0,0" prob="0.1"/>
-			<cell_rule name="highDensity" position="0,1" prob="1.0"/>
+			<cell_rule name="zeroZero" position="0,0" prob="0.05"/>
+			<!-- <cell_rule name="highDensity" position="0,1" prob="1.0"/>
 			<cell_rule name="lowDensity" position="0,-1" prob="1.0"/>
 			<cell_rule name="highDensity" position="1,1" prob="1.0"/>
 			<cell_rule name="highDensity" position="1,0" prob="1.0"/>
 			<cell_rule name="lowDensity" position="-1,0" prob="1.0"/>
 			<cell_rule name="lowDensity" position="-1,1" prob="1.0"/>
 			<cell_rule name="lowDensity" position="-1,-1" prob="1.0"/>
-			<cell_rule name="highDensity" position="1,-1" prob="1.0"/>
-			<cell_rule name="highDensity" prob="0.2"/>
-			<cell_rule name="lowDensity" prob="0.85"/>
+			<cell_rule name="highDensity" position="1,-1" prob="1.0"/> -->
+			<cell_rule name="highDensity" prob="0.3"/>
+			<cell_rule name="lowDensity" prob="0.65"/>
 			<!-- <cell_rule name="wastelandHub" prob="0.05"/> -->
 
 			<!--<cell_rule name="customHubTest" position="0,1" prob="0"/>-->
