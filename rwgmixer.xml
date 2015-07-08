@@ -8,11 +8,11 @@
 	<world ruleset="vanilla" />
 
 	<rulesets>
-		<ruleset name="vanilla" cell_cache_size="32" cell_size="3200" cell_offset="0.8" generation_distance="10000">
+		<ruleset name="vanilla" cell_cache_size="32" cell_size="1200" cell_offset="0.4" generation_distance="10000">
 
 			<!-- Some behaviour is being noted that setting a position using position= contributes to forced repeated distribution of that cell rule per every cell. -->
 			<!-- <cell_rule name="zeroZero" position="0,0" prob="0.1"/> Question - would a max count work here to keep a true 0,0? LT. to test -->
-
+			<cell_rule name="zeroZero" position="0,0" prob="0.1"/>
 			<!-- Removing position from wasteland hub so it relies on probability. With the wide spawn area for new players in A12 there is perhaps no real need for a true 0,0 -->
 
 			<!-- Define all your rulesets for Cells, and make them add up to 100%, note how each of the below probabilities adds up to 100% - does 7 Days obey this? Yet to be proven like most of the code it seems
@@ -121,7 +121,8 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<path_material value="asphalt" />
 			<path_radius value="7" />
 
-			<prefab_rule name="townSmall" prob="1"/>
+			<prefab_rule name="townSmall" prob="0.5"/>
+			<prefab_rule name="ruralMixed1" prob="0.5"/>
 		</hub_rule>
 
 		<hub_rule name="townSmall">
@@ -143,7 +144,8 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<path_material value="asphalt" />
 			<path_radius value="7" />
 
-			<prefab_rule name="townLarge"/>
+			<prefab_rule name="townLarge2" prob="0.5"/>
+			<prefab_rule name="townLarge" prob="0.5"/>
 		</hub_rule>
 		<!-- This is our ranged size, smaller city -->
 		<hub_rule name="citySmall">
@@ -153,8 +155,8 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<path_material value="asphalt" />
 			<path_radius value="7" />
 
-
-			<prefab_rule name="wastelandHub" prob="1"/>
+			<prefab_rule name="cityMixed1" prob="0.5"/>
+			<prefab_rule name="wastelandHub" prob="0.5"/>
 		</hub_rule>
 
 		<!-- This is our fixed size, big city, gauranteed to make a survivor pee themself. -->
@@ -204,31 +206,27 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<!-- <prefab rule="cityBuildingsCommon" /> -->
 			<!-- <prefab rule="cityBuildingsUncommon" min_count="5" max_count="10" /> -->
 			<!-- <prefab rule="cityBuildingsRare" min_count="5" max_count="10" /> -->
-			<!-- <prefab rule="cityHousing" max_count="6"/>
+			<prefab rule="cityHousing" max_count="6"/>
 			<prefab rule="pharmacies" max_count="3" />
 			<prefab rule="gasStations" max_count="3"/>
 			<prefab rule="hardwareStores" max_count="2" />
 			<prefab rule="bookStores" max_count="2" />
 			<prefab rule="parking" max_count="3"/>
 			<prefab rule="groceryStores" max_count="3" />
-			<prefab rule="governmentOffices" max_count="3"/> -->
+			<prefab rule="governmentOffices" max_count="3"/>
 			<!-- Buildings from towns to fill out cities -->
-			<!-- <prefab rule="businessBrick" max_count="7"/>
+			<prefab rule="businessBrick" max_count="7"/>
 			<prefab rule="upperClassHousing" max_count="6"/>
 			<prefab rule="cityHousing2" max_count="6"/>
 			<prefab rule="rubbleBuildingsWhite" max_count="3"/>
 			<prefab rule="gunStores" max_count="2" />
 			<prefab rule="rubbleBuildingsRed" max_count="3"/>
-			<prefab rule="apartments" max_count="4"/> -->
-			<!-- mod prefabs -->
-			<prefab rule="modtest" max_count="8"/>
-
-			<!-- <prefab rule="entertainment" max_count="2"/>
+			<prefab rule="apartments" max_count="4"/>
+			<prefab rule="entertainment" max_count="2"/>
 			<prefab rule="rubbleBuildingsTan" max_count="2"/>
 			<prefab rule="rubbleBuildingsGrey" max_count="2"/>
 			<prefab rule="rubbleBuildingsWaste" max_count="2"/>
-			<prefab rule="countryHousing" max_count="6"/> -->
-
+			<prefab rule="countryHousing" max_count="6"/>
 
 		</prefab_rule>
 
@@ -256,8 +254,20 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<prefab rule="townBuildings" max_count="20" />
 		</prefab_rule>
 
+		<prefab_rule name="townLarge2">
+			<prefab rule="gunStores" min_count="2" max_count="3" prob="0.9"/>
+			<prefab rule="pharmacies" min_count="2" max_count="3" prob="0.9"/>
+			<prefab rule="hardwareStores" min_count="2" max_count="3" prob="0.9"/>
+			<prefab rule="bookStores" mmin_count="2" max_count="3" prob="0.9"/>
+			<prefab rule="groceryStores" min_count="2" max_count="3" prob="0.9"/>
+			<prefab rule="middleClassHousing" max_count="5" />
+			<prefab rule="countryHousing" max_count="5" />
+			<prefab rule="townMixed1" max_count="20" />
+		</prefab_rule>
+
 		<prefab_rule name="townSmall">
-			<prefab rule="townBuildings"/>
+			<prefab rule="townBuildings" prob="0.5"/>
+			<prefab rule="townMixed1" prob="0.5"/>
 		</prefab_rule>
 
 		<prefab_rule name="wildernessPOIs">
@@ -270,6 +280,7 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<prefab rule="campsites" prob="0.2"/>
 			<prefab rule="cabins" prob="0.2"/>
 			<prefab rule="barnsAndSheds" prob="0.2"/>
+			<prefab rule="wildernessMixed1" prob="0.2"/>
 		</prefab_rule>
 
 <!-- Moved rare first so that it reads the probabilities of these then moves on to boring stuff -->
@@ -332,6 +343,148 @@ then that will have a chance of appearing in every Cell rather than just at the 
 
 			<prefab rule="burntHousing"/>
 		</prefab_rule>
+
+		<!--
+
+		Working POI list
+
+		City
+		Our current main city, has enough buildings
+
+		City2
+		<prefab name="xcostum_McDonalds(by_BigC90210)a12_v1" max_count="1" prob="0.3"/> Working 8/7/15 Could be rural, or city or town POI.
+		<prefab name="xcostum_Alms_house(ex_vanilla_ornate03)a12_v1" max_count="1" prob="1"/> Working 8/7/15 - Suits city maybe rural. Bit overbearing for town.
+		<prefab name="xcostum_StripClub(by_Wsiegel)a12_v1"  max_count="1" prob="1"/> Working 8/7/15 - Suits city, rural or a dodgey town.
+		<prefab name="xcostum_bowlingcenter(by_magoli)a12_v1"  max_count="1" prob="0.2"/> Working 8/7/15 - Suits city or town.
+		<prefab name="xcostum_House(by_LastI)a12_v1"  min_count="1" max_count="1" /> Working 8/7/15 - Suits city or town.
+		<prefab name="xcostum_kwikemartcity(by_magoli)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Suits city.
+		<prefab name="xcostum_Skycpraper(by_Peppino)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - City, not lit.
+		<prefab name="xcostum_shootingrange(by_magoli)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Working - suits city or town or rural.
+		<prefab name="xcostum_minigolf(by_magoli)a12_v1" /> Working 8/7/15 - Good for city, town or rural
+
+		City3
+		<prefab name="xcostum_3BlockStores(by_Leo_Liuos)a12_v1" /> 	Working 8/7/15 Unexplored interior, Good city POI
+		<prefab name="xcostum_Orphanage(ex_vanilla_ornate02)a12_v1" max_count="1" prob="1"/> Working 8/7/15 - Suits town or city or possibly rural.
+		<prefab name="xcostum_ArtGallery(by_Wsiegel)a12_v1"  max_count="1" prob="1"/> Working 8/7/15 - Suits city or town or rural.
+		<prefab name="xcostum_Firehouse(by_Warsaken)a12_v1" max_count="1" prob="1"/> Working 8/7/15 - Suits city
+		<prefab name="xcostum_stripclub(by_magoli)a12_v1"  max_count="1" prob="1"/> Working 8/7/15 - Suits city, rural or a dodgey town.
+		<prefab name="xcostum_House(by_ShoNuff)a12_v1"  min_count="1" max_count="1" /> Working 8/7/15 - Suits city or town.
+		<prefab name="xcostum_Manorhouse(by_WereWulfen)a12_v1" max_count="1" /> Working 8/7/15 - Suits city or town or rural.
+		<prefab name="xcostum_swimmingbath(by_magoli)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Suit town or rural or even city. Nice house.
+		<prefab name="xcostum_myhouse(by_magoli)a12_v1" max_count="1"  /> Working 8/7/15 - Good for city town or rurcal - Stairs are not rotated correctly.
+
+		Town
+		<prefab name="xcostum_Church(by_Guppycur)a12_v1" />     	Working	8/7/15 Stairs rotated wrong, Good city,town,rural
+		<prefab name="xcostum_crematory(by_magoli)a12_v1" /> 		Working	8/7/15 Stairs rotated wrong, Good city,town
+		<prefab name="xcostum_kuldlargehouse(by_Kuldiin)a12_v1" max_count="1" prob="1"/> Working 8/7/15 Better suited to rural or town due to style.
+		<prefab name="xcostum_med_clinic_small(by_magoli)a12_v1" max_count="1" prob="1"/> Working 8/7/15 town / rural - could be for small city. Set for town right now.
+		<prefab name="xcostum_Restaurant(by_Gertle)a12_v1" max_count="1" prob="1"/> Working 8/7/15 Better suited for town or rural, on the smaller side.
+		<prefab name="xcostum_kwikemart(by_magoli)a12_v1" max_count="1" prob="1"/> Working 8/7/15 - Suits city or town or rural.
+		<prefab name="xcostum_Firedepartment(by_Guppycur)a12_v1" max_count="1" prob="1"/> Working 8/7/15 - Suits town
+		<prefab name="xcostum_House(by_ShoNuff)a12_v1"  min_count="1" max_count="1" /> Working 8/7/15 - Suits city or town.
+		<prefab name="xcostum_FuneralHome(by_Wsiegel)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Good for city, town, rural.
+		<prefab name="xcostum_Dealership(by_P1ut0nium)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Good for rural or city or town.
+		<prefab name="xcostum_Bunker2(by_LazMan)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Working, suitable for rural or town.
+		<prefab name="xcostum_swimmingbath(by_magoli)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Suit town or rural or even city. Nice house.
+		<prefab name="xcostum_simpsonshouse(by_magoli)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Working - suits city or town.
+
+		Rural
+		<prefab name="xcostum_timbershop(by_magoli)a12_v1" />		Working 8/7/15	Good Rural POI
+		<prefab name="xcostum_moestaverne(by_magoli)a12_v1" max_count="1" prob="1"/> Working 8/7/15 Better as rural / town - on the smaller side.
+		<prefab name="xcostum_AsylumCity(by_Wsiegel)a12_v1" max_count="1" prob="1"/> Working 8/7/15 town / rural / wilderness -could be for small city, not set for wasteland hub right now.
+		<prefab name="xcostum_kuldbrickhouse(by_Kuldiin)a12_v1" max_count="1"/> Working 8/7/15 Better suited to town or rural, smallish house.
+		<prefab name="xcostum_tv_store(by_magoli)a12_v1" max_count="1" prob="1"/> Working 8/7/15 Better suited to small city, rural. Has working stiffs signs but is TV store?
+		<prefab name="xcostum_pistol_gunshop(by_magoli)a12_v1" max_count="1" prob="1"/> Working 8/7/15 Going to assume it is meant to be sunk into ground like a bunker (gun nuts would love it) Better suited to rural, has a small footprint (above ground) for city.
+		<prefab name="xcostum_School(by_LazMan)a12_v1" max_count="1" prob="1"/> Working 8/7/15 - Suits town or rural or city.
+		<prefab name="xcostum_circus(by_magoli)a12_v1"  max_count="1" prob="1"/> Working 8/7/15 - Suits rural better, outskirts of town.
+		<prefab name="xcostum_Firestation(by_Slick50)a12_v1" max_count="1" prob="1"/> Working 8/7/15 - Suits town or rural.
+		<prefab name="xcostum_Plant(by_Wsiegel)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Suits rural or maybe wilderness.
+		<prefab name="xcostum_GasStation(by_Warsaken)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Suits town or rural, Really good for rural.
+		<prefab name="xcostum_WulftownA(by_WereWulfen)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Better suited for rural.
+		<prefab name="xcostum_Dealership(by_P1ut0nium)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Good for rural or city or town.
+		<prefab name="xcostum_Farm(by_BigC90210)a12_v1"  min_count="1" max_count="1" /> Working 8/7/15 - Working, suitable for rural or town.
+		<prefab name="xcostum_Bunker1(by_LazMan)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Working, suitable for rural or town.
+		<prefab name="xcostum_Warehouse(by_Batman)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Stairs inside are rotated the wrong way. Suit town or Rural.
+		<prefab name="xcostum_Hospital(by_Wsiegel)a12_v1" /> Working 8/7/15 - rural suited because it is big.
+
+		Wilderness
+		<prefab name="xcostum_Science_lab(by_kinklade)a12_v1" max_count="1" prob="1"/> Working 8/7/15 Could really be in city, rural, or wilderness. Doesn't suit town. Needs .xml changes to make it city.
+		<prefab name="xcostum_stayouthouse(by_magoli)a12_v1" max_count="1"/> Working 8/7/15 Wilderness POI for sure, maybe town, too crazy for city and quite small. Set for town right now.
+		<prefab name="xcostum_Bunker3(by_LazMan)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Working, suitable for rural or town.
+
+
+
+		-->
+
+		<!-- Custom Prefabs start here -->
+		<prefab_rule name="cityMixed1">
+			<prefab name="xcostum_McDonalds(by_BigC90210)a12_v1" max_count="2" prob="0.3"/>
+			<prefab name="xcostum_Alms_house(ex_vanilla_ornate03)a12_v1" max_count="1" prob="1"/>
+			<prefab name="xcostum_StripClub(by_Wsiegel)a12_v1"  max_count="1" prob="1"/>
+			<prefab name="xcostum_bowlingcenter(by_magoli)a12_v1"  max_count="1" prob="0.2"/>
+			<prefab name="xcostum_House(by_LastI)a12_v1"  max_count="2" />
+			<prefab name="xcostum_kwikemartcity(by_magoli)a12_v1" max_count="2" />
+			<prefab name="xcostum_Skycpraper(by_Peppino)a12_v1" mmax_count="2" />
+			<prefab name="xcostum_shootingrange(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_minigolf(by_magoli)a12_v1" max_count="1" />
+		</prefab_rule>
+
+		<prefab_rule name="cityMixed2">
+			<prefab name="xcostum_3BlockStores(by_Leo_Liuos)a12_v1" max_count="2" />
+			<prefab name="xcostum_Orphanage(ex_vanilla_ornate02)a12_v1" max_count="1" prob="1"/>
+			<prefab name="xcostum_ArtGallery(by_Wsiegel)a12_v1"  max_count="1" prob="1"/>
+			<prefab name="xcostum_Firehouse(by_Warsaken)a12_v1" max_count="1" prob="1"/>
+			<prefab name="xcostum_stripclub(by_magoli)a12_v1"  max_count="1" prob="1"/>
+			<prefab name="xcostum_House(by_ShoNuff)a12_v1"  max_count="2" />
+			<prefab name="xcostum_Manorhouse(by_WereWulfen)a12_v1" max_count="2" />
+			<prefab name="xcostum_swimmingbath(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_myhouse(by_magoli)a12_v1" max_count="1"  />
+		</prefab_rule>
+
+		<prefab_rule name="ruralMixed1">
+			<prefab name="xcostum_timbershop(by_magoli)a12_v1" max_count="1" prob="0.2" />
+			<prefab name="xcostum_moestaverne(by_magoli)a12_v1" max_count="1" prob="0.2"/>
+			<prefab name="xcostum_AsylumCity(by_Wsiegel)a12_v1" max_count="1" prob="0.2"/>
+			<prefab name="xcostum_kuldbrickhouse(by_Kuldiin)a12_v1" max_count="1" prob="0.2" />
+			<prefab name="xcostum_tv_store(by_magoli)a12_v1" max_count="1" prob="0.2" />
+			<prefab name="xcostum_pistol_gunshop(by_magoli)a12_v1" max_count="1" prob="0.2"/>
+			<prefab name="xcostum_School(by_LazMan)a12_v1" max_count="1" prob="0.2"/>
+			<prefab name="xcostum_circus(by_magoli)a12_v1"  max_count="1" prob="0.2"/>
+			<prefab name="xcostum_Firestation(by_Slick50)a12_v1" max_count="1" prob="0.2"/>
+			<prefab name="xcostum_Plant(by_Wsiegel)a12_v1" max_count="1" prob="0.2" />
+			<prefab name="xcostum_GasStation(by_Warsaken)a12_v1" max_count="1" prob="0.2" />
+			<prefab name="xcostum_WulftownA(by_WereWulfen)a12_v1" max_count="1" prob="0.2" />
+			<prefab name="xcostum_Dealership(by_P1ut0nium)a12_v1" max_count="1" prob="0.2" />
+			<prefab name="xcostum_Farm(by_BigC90210)a12_v1"  max_count="1" prob="0.2" />
+			<prefab name="xcostum_Bunker1(by_LazMan)a12_v1" max_count="1" prob="0.2" />
+			<prefab name="xcostum_Warehouse(by_Batman)a12_v1" max_count="2" prob="0.2" />
+			<prefab name="xcostum_Hospital(by_Wsiegel)a12_v1" max_count="1" prob="0.2" />
+		</prefab_rule>
+
+		<prefab_rule name="townMixed1">
+			<prefab name="xcostum_Church(by_Guppycur)a12_v1" max_count="1" />
+			<prefab name="xcostum_crematory(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_kuldlargehouse(by_Kuldiin)a12_v1" max_count="2" prob="0.2" />
+			<prefab name="xcostum_med_clinic_small(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_Restaurant(by_Gertle)a12_v1" max_count="1" />
+			<prefab name="xcostum_kwikemart(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_Firedepartment(by_Guppycur)a12_v1" max_count="1" />
+			<prefab name="xcostum_House(by_ShoNuff)a12_v1"  max_count="2" prob="0.2" />
+			<prefab name="xcostum_FuneralHome(by_Wsiegel)a12_v1" max_count="1" />
+			<prefab name="xcostum_Dealership(by_P1ut0nium)a12_v1" max_count="1" />
+			<prefab name="xcostum_Bunker2(by_LazMan)a12_v1" max_count="1" />
+			<prefab name="xcostum_swimmingbath(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_simpsonshouse(by_magoli)a12_v1" max_count="1" />
+		</prefab_rule>
+
+		<prefab_rule name="wildernessMixed1">
+			<prefab name="xcostum_Science_lab(by_kinklade)a12_v1" max_count="1" />
+			<prefab name="xcostum_stayouthouse(by_magoli)a12_v1" max_count="1"/>
+			<prefab name="xcostum_Bunker3(by_LazMan)a12_v1" max_count="1" />
+			<prefab name="xcostum_AsylumCity(by_Wsiegel)a12_v1" max_count="1" />
+		</prefab_rule>
+
+		<!-- Custom Prefabs End here and start mostly vanilla -->
 
 		<prefab_rule name="countryHousing">
 			<prefab name="church_graveyard1"/>
