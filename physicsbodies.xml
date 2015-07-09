@@ -860,6 +860,7 @@
 			<property name="type" value="Detail"/>
 			<property name="flags" value="collision;ragdoll"/>
 		</collider>
+	</body>
 	<body name="FatZombie">
 		<collider>
 			<property name="tag" value="E_BP_Body"/>

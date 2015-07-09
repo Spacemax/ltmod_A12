@@ -96,7 +96,7 @@ then that will have a chance of appearing in every Cell rather than just at the 
 		</cell_rule>
 
 		<!-- Custom ruleset created by LT. to try rules specific to 0,0, before discovering that there is no real spoon.. 0,0 anymore. -->
-		<!-- <cell_rule name="zeroZero">
+		<cell_rule name="zeroZero">
 			<cave_count value="0,0"/>
 
 			<path_material value="asphalt" />
@@ -106,8 +106,8 @@ then that will have a chance of appearing in every Cell rather than just at the 
 
 			<wilderness_rule name="wildernessDefault" prob="1"/>
 		</cell_rule>
-	</cell_rules> -->
 
+</cell_rules>
 	<!-- Area Number 3 - Ok so the game now knows which Cell rule it has randomly or not so randomly chosen, it knows what roads, caves and wilderness POIs to set up, now we must define what the hub rules
 	mean as far as setting up the POI area. -->
 
