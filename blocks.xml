@@ -3472,6 +3472,7 @@
     <drop event="Destroy" name="trunkPine" count="2" prob="1" />
   </block>
   <block id="582" name="DeadTree02">
+    <property name="Class" value="ModelTree" />
     <property name="Material" value="wood" />
     <property name="Shape" value="ModelEntity" />
     <property name="Texture" value="116" />
@@ -3479,8 +3480,10 @@
     <property name="Collide" value="movement,rocket,melee" />
     <property name="IsTerrainDecoration" value="true" />
     <property name="Model" value="Entities/Trees/Haunted_Shrub_WastelandPrefab" />
+    <property name="UpwardsCount" value="2" />
     <property name="IsPlant" value="true" />
     <property name="ParticleOnDeath" value="treeGib_burnt" />
+    <property name="ModelOffset" value="0,-0.5,0" />
     <!-- uses dummy texture id from opaque atlas -->
      <drop event="Destroy" name="trunkPine" count="1" prob="1" />
   </block>
@@ -12023,5 +12026,90 @@
   <property name="DowngradeBlock" value="gunSafe" />
   <property name="Group" value="Building" />
 </block>
+
+<!--
+  <block id="1553" name="garageDoorMetal_v1">
+    <property name="Class" value="DoorSecure" />
+    <property name="Material" value="metal" />
+    <property name="Shape" value="ModelEntity" />
+    <property name="Texture" value="241" />
+    <property name="Tag" value="Door" />
+    <property name="Model" value="Entities/Doors/garage_metal_v1Prefab" />
+    <property name="Mesh-Damage-1" value="Door_Left/Door_DMG0" />
+	<property name="Mesh-Damage-2" value="Door_Left/Door_DMG1" />
+	<property name="Mesh-Damage-3" value="Door_Left/Door_DMG2" />
+	<property name="Mesh-Damage-4" value="Door_Left/Door_DMG3" />
+	<property name="Mesh-Damage-5" value="Door_Left/Door_DMG4" />
+    <property name="OpenSound" value="UseActions/open_door_metal" />
+    <property name="CloseSound" value="UseActions/close_door_metal" />
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="garageDoorMetal_v2" />
+      <property name="Item" value="scrapIron" />
+      <property name="ItemCount" value="4" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+    <drop event="Destroy" name="scrapIron" count="1,2" prob="1" />
+    <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
+    <property name="Group" value="Building,Basics" />
+    <property name="Place" value="Door" />
+  </block>
+
+  <block id="1554" name="garageDoorMetal_v2">
+    <property name="Class" value="DoorSecure" />
+    <property name="Material" value="metal" />
+    <property name="Shape" value="ModelEntity" />
+    <property name="Texture" value="241" />
+    <property name="Tag" value="Door" />
+    <property name="Model" value="Entities/Doors/garage_metal_v2Prefab" />
+    <property name="Mesh-Damage-1" value="Door_Left/Door_DMG0" />
+	<property name="Mesh-Damage-2" value="Door_Left/Door_DMG1" />
+	<property name="Mesh-Damage-3" value="Door_Left/Door_DMG2" />
+	<property name="Mesh-Damage-4" value="Door_Left/Door_DMG3" />
+	<property name="Mesh-Damage-5" value="Door_Left/Door_DMG4" />
+    <property name="OpenSound" value="UseActions/open_door_metal" />
+    <property name="CloseSound" value="UseActions/close_door_metal" />
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="garageDoorMetal_v2" />
+      <property name="Item" value="scrapIron" />
+      <property name="ItemCount" value="4" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+	<property name="DowngradeBlock" value="garageDoorMetal_v1" />
+    <drop event="Destroy" name="scrapIron" count="1,2" prob="1" />
+    <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
+    <property name="Group" value="Building,Basics" />
+    <property name="Place" value="Door" />
+  </block>
+-->
+
+
+  <block id="1555" name="garageDoorMetal_v3">
+    <property name="Class" value="DoorSecure" />
+    <property name="Material" value="metal" />
+    <property name="Shape" value="ModelEntity" />
+    <property name="Texture" value="241" />
+    <property name="Tag" value="Door" />
+    <property name="Model" value="Entities/Doors/garage_metal_v3Prefab" />
+    <property name="Mesh-Damage-1" value="Door/Door_DMG0" />
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1" />
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2" />
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3" />
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4" />
+    <property name="OpenSound" value="UseActions/open_door_metal" />
+    <property name="CloseSound" value="UseActions/close_door_metal" />
+<!--    <property class="UpgradeBlock">
+      <property name="ToBlock" value="garageDoorMetal_v3" />
+      <property name="Item" value="scrapIron" />
+      <property name="ItemCount" value="4" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+	<property name="DowngradeBlock" value="garageDoorMetal_v2" />
+	<property name="MultiBlockDim" value="3,2,1" /> -->
+    <drop event="Destroy" name="scrapIron" count="1,2" prob="1" />
+    <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
+    <property name="Group" value="Building,Basics" />
+    <property name="Place" value="Door" />
+    </block>
+
 
 </blocks>

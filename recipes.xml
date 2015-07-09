@@ -147,12 +147,12 @@
         <ingredient name="bottledWater" count="1"/>
     </recipe>
 
-    <recipe name="grainAlcohol" count="1" scrapable="False" craft_area="campfire" craft_tool="beaker" craft_time="150" learn_exp_gain="80" craft_exp_gain="100" >
+    <recipe name="grainAlcohol" count="1" scrapable="False" craft_area="campfire" craft_tool="beaker" craft_time="75" learn_exp_gain="80" craft_exp_gain="100" >
         <ingredient name="cornMeal" count="1"/>
         <ingredient name="bottledWater" count="1"/>
     </recipe>
 
-    <recipe name="bioFuel" count="1" scrapable="False" craft_area="campfire" craft_tool="beaker" craft_time="150" learn_exp_gain="60" craft_exp_gain="10" >
+    <recipe name="bioFuel" count="1" scrapable="False" craft_area="campfire" craft_tool="beaker" craft_time="75" learn_exp_gain="60" craft_exp_gain="10" >
         <ingredient name="tallow" count="1"/>
     </recipe>
 
@@ -198,12 +198,12 @@
 
     <recipe name="adobeTan" count="1" scrapable="False" craft_time="5" learn_exp_gain="20" craft_exp_gain="10" >
         <ingredient name="cement" count="1" grid="0, -1"/>
-        <ingredient name="sand" count="1" grid="0, 0"/>
+        <ingredient name="sandStone" count="1" grid="0, 0"/>
     </recipe>
 
     <recipe name="adobeTan" count="1" scrapable="False" craft_time="5" learn_exp_gain="20" craft_exp_gain="10" >
         <ingredient name="cement" count="1" grid="0, -1"/>
-        <ingredient name="sandStone" count="1" grid="0, 0"/>
+        <ingredient name="sand" count="1" grid="0, 0"/>
     </recipe>
 
     <recipe name="aloeCream" count="1" scrapable="False" craft_time="5" learn_exp_gain="20" craft_exp_gain="25" >
@@ -851,6 +851,7 @@
     </recipe>
 
     <recipe name="huntingRifle" count="1" scrapable="True" craft_time="5" learn_exp_gain="20" craft_exp_gain="2" >
+      <ingredient name="flashlight02" count="0" grid="0, -1"/>
         <ingredient name="huntingRifleBarrel" count="1" grid="1, -1"/>
         <ingredient name="huntingRifleStock" count="1" grid="0, 0"/>
         <ingredient name="huntingRifleBolt" count="1" grid="1, 0"/>
@@ -1756,6 +1757,7 @@
     </recipe>
 
     <recipe name="sniperRifle" count="1" scrapable="True" craft_time="5" learn_exp_gain="20" craft_exp_gain="20" >
+      <ingredient name="flashlight02" count="0" grid="0, -1"/>
         <ingredient name="sniperRifleBarrel" count="1" grid="1, -1"/>
         <ingredient name="sniperRifle_triggerHousing" count="1" grid="0, 0"/>
         <ingredient name="sniperRifle_stock" count="1" grid="-1, 1"/>

@@ -441,6 +441,7 @@
         <property name="NightWanderSpeed"   value="0.08" />
         <property name="NightApproachSpeed" value="0.75" />
 	    <property name="CanClimbLadders"     value="true" />
+      <property name="PhysicsBody" value="FatZombie" />
 
         <!-- AI properties -->
         <property name="AITask-1" value="BreakDoor" />
@@ -486,6 +487,7 @@
 	    <property name="CanClimbLadders"     value="true" />
 	    <property name="LootListOnDeath"  value="38" />
 		<property name="ExperienceGain" value="120"/>
+    <property name="PhysicsBody" value="FatZombie" />
     </entity_class>
 
     <entity_class name="hornet" extends="zombie04">
@@ -966,7 +968,7 @@
         <property name="Class"  value="EntityDriveable" />
         <property name="Parent" value="Cars" />
 		<property name="Prefab" value="Minibike" />
-		<property name="MaxHealth"    value="100" />
+		<property name="MaxHealth"    value="1000000" />
         <property name="SurfaceCategory"  value="metal" />
 		<property name="IgnoreTrigger" value="true" />
 
