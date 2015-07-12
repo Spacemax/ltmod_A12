@@ -11906,7 +11906,7 @@
   <property name="Texture" value="311" />
   <!-- Produced rawSteel is collectable on top of machine -->
   <property name="IsTerrainDecoration" value="true" />
-  <drop event="Harvest" name="bioDiesel" count="50" />
+  <drop event="Harvest" name="bioDiesel" count="100" />
   <drop event="Destroy" name="scrapIron" count="1" prob="0.8" />
 </block>
 

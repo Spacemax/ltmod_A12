@@ -8,20 +8,21 @@
 	<world ruleset="vanilla" />
 
 	<rulesets>
-		<ruleset name="vanilla" cell_cache_size="32" cell_size="1200" cell_offset="0.4" generation_distance="10000">
+		<ruleset name="vanilla" cell_cache_size="32" cell_size="1600" cell_offset="0.4" generation_distance="10000">
 
 			<!-- Some behaviour is being noted that setting a position using position= contributes to forced repeated distribution of that cell rule per every cell. -->
 			<!-- <cell_rule name="zeroZero" position="0,0" prob="0.1"/> Question - would a max count work here to keep a true 0,0? LT. to test -->
 			<cell_rule name="zeroZero" position="0,0" prob="0.1"/>
+			<!-- <cell_rule name="lowDensity" position="0,0" prob="0.1"/> -->
 			<!-- Removing position from wasteland hub so it relies on probability. With the wide spawn area for new players in A12 there is perhaps no real need for a true 0,0 -->
 
 			<!-- Define all your rulesets for Cells, and make them add up to 100%, note how each of the below probabilities adds up to 100% - does 7 Days obey this? Yet to be proven like most of the code it seems
 			like voodoo sometimes. -->
-			<cell_rule name="wastelandHub" prob="0.05"/> <!-- These cities can have either a fixed size or a range, these will be the major wasteland cities that can be encountered. -->
+			<cell_rule name="wastelandHub" prob="0.01"/> <!-- These cities can have either a fixed size or a range, these will be the major wasteland cities that can be encountered. -->
 
 			<!-- High density is a chance for a larger town, or smaller city, low density will take care of smaller towns and rural outposts and possibly some small custom POI layouts -->
-			<cell_rule name="highDensity" prob="0.1"/>
-			<cell_rule name="lowDensity" prob="0.85"/>
+			<cell_rule name="highDensity" prob="0.3"/>
+			<cell_rule name="lowDensity" prob="0.69"/>
 			<!-- <cell_rule name="wastelandHub" prob="0.05"/> -->
 
 <!-- Here is an example of having a standardised pattern generated within the below positions in EACH Cell (previously known as biomes), Not the positions don't seem to mean 0,0 in the whole world, but 0,0
@@ -59,13 +60,13 @@ then that will have a chance of appearing in every Cell rather than just at the 
 		</cell_rule>
 
 		<cell_rule name="lowDensity">
-			<cave_count value="2,6"/>
+			<cave_count value="4,8"/>
 			<path_material value="asphalt" />
 			<path_radius value="7" />
 			<!-- Disabling this, we'll let High Density provide small cities -->
 			<!-- <hub_rule name="citySmall" prob="0.1"/> -->
-			<hub_rule name="ruralSmall" prob="0.3"/>
-			<hub_rule name="townSmall" prob="0.6"/>
+			<!-- <hub_rule name="ruralSmall" prob="0.3"/> -->
+			<hub_rule name="townSmall" prob="1"/>
 
 			<wilderness_rule name="wildernessDefault"/>
 		</cell_rule>
@@ -75,9 +76,9 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<path_material value="asphalt" />
 			<path_radius value="7" />
 			<!-- As above, high density will be in charge of making a small city appear, Wasteland hub will be in charge of the more rare larger cities -->
-			<hub_rule name="ruralSmall" prob="0.1"/>
-			<hub_rule name="citySmall" prob="0.3"/>
-			<hub_rule name="townLarge" prob="0.6"/>
+			<hub_rule name="ruralSmall" prob="0.2"/>
+			<hub_rule name="citySmall" prob="0.2"/>
+			<hub_rule name="townSmall" prob="0.6"/>
 
 			<wilderness_rule name="wildernessDefault" prob="1"/>
 		</cell_rule>
@@ -85,7 +86,7 @@ then that will have a chance of appearing in every Cell rather than just at the 
 
 		<cell_rule name="wastelandHub">
 			<!-- Big cities have no caves, there are enough PC resources being consumed here as it is -->
-			<cave_count value="0,0"/>
+			<cave_count value="1,3"/>
 
 			<path_material value="asphalt" />
 			<path_radius value="7" />
@@ -127,8 +128,8 @@ then that will have a chance of appearing in every Cell rather than just at the 
 
 		<hub_rule name="townSmall">
 			<hub_type value="town"/>
-			<width value="100, 200" />
-			<height value="100, 200" />
+			<width value="146, 146" />
+			<height value="146, 146" />
 			<path_material value="asphalt" />
 			<path_radius value="7" />
 
@@ -139,8 +140,8 @@ then that will have a chance of appearing in every Cell rather than just at the 
 
 		<hub_rule name="townLarge">
 			<hub_type value="town"/>
-			<width value="200, 250" />
-			<height value="200, 250" />
+			<width value="220, 220" />
+			<height value="184, 220" />
 			<path_material value="asphalt" />
 			<path_radius value="7" />
 
@@ -207,26 +208,38 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<!-- <prefab rule="cityBuildingsUncommon" min_count="5" max_count="10" /> -->
 			<!-- <prefab rule="cityBuildingsRare" min_count="5" max_count="10" /> -->
 			<prefab rule="cityHousing" max_count="6"/>
-			<prefab rule="pharmacies" max_count="3" />
 			<prefab rule="gasStations" max_count="3"/>
 			<prefab rule="hardwareStores" max_count="2" />
 			<prefab rule="bookStores" max_count="2" />
 			<prefab rule="parking" max_count="3"/>
 			<prefab rule="groceryStores" max_count="3" />
+			<prefab rule="cityMixed1" max_count="3"/>
+			<prefab rule="rubbleBuildingsWaste" max_count="2"/>
+			<prefab rule="cityMixed3" max_count="3"/>
+			<prefab rule="cityMixed2" max_count="3"/>
+			<prefab rule="cityMixed1" max_count="3"/>
+			<prefab rule="rubbleBuildingsGrey" max_count="2"/>
+			<prefab rule="cityMixed3" max_count="3"/>
+			<prefab rule="cityMixed2" max_count="3"/>
+			<prefab rule="cityMixed3" max_count="3"/>
+			<prefab rule="cityMixed2" max_count="3"/>
+			<prefab rule="cityMixed1" max_count="3"/>
 			<prefab rule="governmentOffices" max_count="3"/>
 			<!-- Buildings from towns to fill out cities -->
-			<prefab rule="businessBrick" max_count="7"/>
 			<prefab rule="upperClassHousing" max_count="6"/>
 			<prefab rule="cityHousing2" max_count="6"/>
 			<prefab rule="rubbleBuildingsWhite" max_count="3"/>
 			<prefab rule="gunStores" max_count="2" />
-			<prefab rule="rubbleBuildingsRed" max_count="3"/>
+			<prefab rule="rubbleBuildingsRed" max_count="4"/>
 			<prefab rule="apartments" max_count="4"/>
 			<prefab rule="entertainment" max_count="2"/>
 			<prefab rule="rubbleBuildingsTan" max_count="2"/>
-			<prefab rule="rubbleBuildingsGrey" max_count="2"/>
-			<prefab rule="rubbleBuildingsWaste" max_count="2"/>
-			<prefab rule="countryHousing" max_count="6"/>
+			<prefab rule="cityMixed2" max_count="3"/>
+			<prefab rule="cityMixed1" max_count="3"/>
+			<prefab rule="apartments" max_count="4"/>
+			<prefab rule="parking" max_count="3"/>
+			<prefab rule="cityMixed3" max_count="3"/>
+
 
 		</prefab_rule>
 
@@ -266,13 +279,25 @@ then that will have a chance of appearing in every Cell rather than just at the 
 		</prefab_rule>
 
 		<prefab_rule name="townSmall">
-			<prefab rule="townBuildings" prob="0.5"/>
-			<prefab rule="townMixed1" prob="0.5"/>
+			<!-- <prefab rule="townBuildings" prob="0.5"/> -->
+			<prefab rule="townBuildings2" prob="1"/>
 		</prefab_rule>
 
 		<prefab_rule name="wildernessPOIs">
 			<path_material value="gravel" />
 			<path_radius value="2" />
+			<!-- <prefab rule="wildernessMixed1" prob="0.4"/> -->
+			<prefab name="xcostum_Science_lab(by_kinklade)a12_v1" max_count="3" prob="0.03" />
+			<prefab name="xcostum_stayouthouse(by_magoli)a12_v1" max_count="3" prob="0.03" />
+			<prefab name="xcostum_Bunker3(by_LazMan)a12_v1" max_count="3" prob="0.03"/>
+			<prefab name="xcostum_AsylumCity(by_Wsiegel)a12_v1" max_count="3" prob="0.03" />
+			<prefab name="xcostum_CrashedAirplane(by_LazMan)a12_v1" max_count="3" prob="0.03" />
+			<prefab name="xcostum_RocketLaunchPad(by_Saeid)a12_v1"  max_count="3" prob="0.03"/>
+			<prefab name="xcostum_strandresort(by_magoli)a12_v1" max_count="3" prob="0.03"/>
+			<prefab name="xcostum_strange_cornfield(by_magoli)a12_v1" max_count="3" prob="0.03" />
+			<prefab name="xcostum_LumberMill(by_IceJudge)a12_v1" max_count="3" prob="0.03" />
+			<prefab name="xcostum_MayaPyramide(by_Curbolt)a12_v1" max_count="3" prob="0.03"/>
+			<prefab name="xcostum_H0bbit(by_Limodor)a12_v1" max_count="3" prob="0.03"/>
 			<prefab name="indian_burial_grounds_01" prob="0.03"/>
 			<prefab rule="militaryCamps" prob="0.03"/>
 			<prefab rule="wildernessMisc" prob="0.14"/>
@@ -280,7 +305,6 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<prefab rule="campsites" prob="0.2"/>
 			<prefab rule="cabins" prob="0.2"/>
 			<prefab rule="barnsAndSheds" prob="0.2"/>
-			<prefab rule="wildernessMixed1" prob="0.2"/>
 		</prefab_rule>
 
 <!-- Moved rare first so that it reads the probabilities of these then moves on to boring stuff -->
@@ -335,6 +359,7 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<prefab rule="upperClassHousing" max_count="5"/>
 			<prefab rule="businessBrick" max_count="5"/>
 			<prefab rule="businessTan" max_count="5"/>
+			<prefab rule="townMixed1"/>
 			<prefab rule="garages" max_count="10"/>
 			<prefab rule="signsAndLights"/>
 
@@ -344,12 +369,51 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<prefab rule="burntHousing"/>
 		</prefab_rule>
 
+		<prefab_rule name="townBuildings2">
+			<!-- mod content -->
+			<prefab name="xcostum_med_clinic_small(by_magoli)a12_v1" max_count="1" prob="0.9" />
+			<prefab name="xcostum_Restaurant(by_Gertle)a12_v1" max_count="1" prob="0.9"  />
+			<prefab name="xcostum_kwikemart(by_magoli)a12_v1" max_count="1" prob="0.9"  />
+			<prefab name="xcostum_Firedepartment(by_Guppycur)a12_v1" max_count="1" prob="0.9"  />
+			<prefab name="xcostum_House(by_ShoNuff)a12_v1"  max_count="2" prob="0.9" />
+			<prefab name="xcostum_Dealership(by_P1ut0nium)a12_v1" max_count="1" prob="0.9"  />
+			<prefab name="xcostum_swimmingbath(by_magoli)a12_v1" max_count="1" prob="0.9"  />
+			<prefab name="xcostum_simpsonshouse(by_magoli)a12_v1" max_count="1" prob="0.9"  />
+			<prefab name="store_pharmacy_sm_01" max_count="1" prob="0.9" />
+			<prefab name="store_book_sm_01" prob="0.6" />
+			<prefab name="houseranchwhite1"/>
+			<prefab name="houseranchtan1"/>
+			<prefab name="houseranchtan2"/>
+			<prefab name="houseranchblue1"/>
+			<!-- <prefab rule="pharmacies" max_count="1"/>
+			<prefab rule="bookStores" max_count="1"/>
+			<prefab rule="groceryStores" max_count="1"/>
+			<prefab rule="garages" max_count="6"/>
+			<prefab rule="signsAndLights"/>
+			<prefab rule="countryHousing" max_count="2"/>
+			<prefab rule="lowerClassHousing" max_count="2" />
+			<prefab rule="middleClassHousing" max_count="2"/>
+			<prefab rule="upperClassHousing" max_count="2"/>
+			<prefab rule="businessBrick" max_count="2"/>
+			<prefab rule="businessTan" max_count="2"/> -->
+		</prefab_rule>
+
 		<!--
 
 		Working POI list
 
 		City
-		Our current main city, has enough buildings
+		<prefab name="xcostum_Citymix_01(grtown-strclub-burnth-h-gar)a12_v1" />         Working 8/7/15 Good city POI
+		<prefab name="xcostum_Citymix_02(gunst_sm-kuldlargeh-bunk)a12_v1" />            Working 8/7/15 Good city POI, Contains Shotgun messiah!!
+		<prefab name="xcostum_Citymix_03(wareh-pistol-moes-bunker2)a12_v1" />           Working 8/7/15 Good city POI  Not Got POI Gun building not good fit for world.
+		<prefab name="xcostum_Citymix_04(firedep-bookstore_sm_01)a12_v1" />             Working 8/7/15 Good city POI, Contains Shotgun Book store!!
+		<prefab name="xcostum_Citymix_05(niceh-businesstanh-garage)a12_v1" />           Working 8/7/15 Good city POI
+		<prefab name="xcostum_Citymix_06(simpsonh-gravey-brickh-camp-gar)a12_v1" />             Working 8/7/15 Good city POI, Stairs always face one direction in simpson house.
+		<prefab name="xcostum_Citymix_07(guildh-restaurant-firest-xxxclub)a12_v1" />            Working 8/7/15 Good city POI
+		<prefab name="xcostum_Citymix_08(myh-crema-gupchurch-farmsh1)a12_v1" />         Working 8/7/15 Good city POI
+		<prefab name="xcostum_Citymix_09(grocery_sm-barn01-medclinic_sm)a12_v1" />      Working 8/7/15 Good Town POI due to farm also has food store and clinic
+		<prefab name="xcostum_Citymix_10(scilab-firewatcht-stayouth)a12_v1" />          Working 7/7/15 Not sure where this mix fits as a POI, fire tower
+		<prefab name="xcostum_Citymix_11(mpwaste08-mpwaste04grey)a12_v1" />             Working 7/7/15 Good city POI Ruin Buildings
 
 		City2
 		<prefab name="xcostum_McDonalds(by_BigC90210)a12_v1" max_count="1" prob="0.3"/> Working 8/7/15 Could be rural, or city or town POI.
@@ -411,7 +475,13 @@ then that will have a chance of appearing in every Cell rather than just at the 
 		<prefab name="xcostum_Science_lab(by_kinklade)a12_v1" max_count="1" prob="1"/> Working 8/7/15 Could really be in city, rural, or wilderness. Doesn't suit town. Needs .xml changes to make it city.
 		<prefab name="xcostum_stayouthouse(by_magoli)a12_v1" max_count="1"/> Working 8/7/15 Wilderness POI for sure, maybe town, too crazy for city and quite small. Set for town right now.
 		<prefab name="xcostum_Bunker3(by_LazMan)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 - Working, suitable for rural or town.
-
+		<prefab name="xcostum_CrashedAirplane(by_LazMan)a12_v1" min_count="1" max_count="1" /> Working 8/7/15 Wilderness only.
+	  <prefab name="xcostum_RocketLaunchPad(by_Saeid)a12_v1" min_count="1" max_count="1" />  Wilderness only POI rare find
+	  <prefab name="xcostum_strandresort(by_magoli)a12_v1" min_count="1" max_count="1" />  Wilderness, but could be rural poi
+	  <prefab name="xcostum_strange_cornfield(by_magoli)a12_v1" min_count="1" max_count="1" />  Wilderness, plains only poi
+	  <prefab name="xcostum_LumberMill(by_IceJudge)a12_v1" />  Good wilderness POI forest and pine forest only
+	  <prefab name="xcostum_MayaPyramide(by_Curbolt)a12_v1" max_count="1"  />  Cool unique poi
+	  <prefab name="xcostum_H0bbit(by_Limodor)a12_v1" max_count="1"  />  Cool wilderness poi
 
 
 		-->
@@ -419,26 +489,38 @@ then that will have a chance of appearing in every Cell rather than just at the 
 		<!-- Custom Prefabs start here -->
 		<prefab_rule name="cityMixed1">
 			<prefab name="xcostum_McDonalds(by_BigC90210)a12_v1" max_count="2" prob="0.3"/>
-			<prefab name="xcostum_Alms_house(ex_vanilla_ornate03)a12_v1" max_count="1" prob="1"/>
-			<prefab name="xcostum_StripClub(by_Wsiegel)a12_v1"  max_count="1" prob="1"/>
+			<prefab name="xcostum_Alms_house(ex_vanilla_ornate03)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_StripClub(by_Wsiegel)a12_v1"  max_count="1" prob="0.3"/>
 			<prefab name="xcostum_bowlingcenter(by_magoli)a12_v1"  max_count="1" prob="0.2"/>
-			<prefab name="xcostum_House(by_LastI)a12_v1"  max_count="2" />
-			<prefab name="xcostum_kwikemartcity(by_magoli)a12_v1" max_count="2" />
-			<prefab name="xcostum_Skycpraper(by_Peppino)a12_v1" mmax_count="2" />
-			<prefab name="xcostum_shootingrange(by_magoli)a12_v1" max_count="1" />
-			<prefab name="xcostum_minigolf(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_House(by_LastI)a12_v1"  max_count="2" prob="0.3" />
+			<prefab name="xcostum_kwikemartcity(by_magoli)a12_v1" max_count="2" prob="0.3" />
+			<prefab name="xcostum_Skycpraper(by_Peppino)a12_v1" mmax_count="2" prob="0.3"/>
+			<prefab name="xcostum_shootingrange(by_magoli)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_minigolf(by_magoli)a12_v1" max_count="1" prob="0.3"/>
 		</prefab_rule>
 
 		<prefab_rule name="cityMixed2">
-			<prefab name="xcostum_3BlockStores(by_Leo_Liuos)a12_v1" max_count="2" />
-			<prefab name="xcostum_Orphanage(ex_vanilla_ornate02)a12_v1" max_count="1" prob="1"/>
-			<prefab name="xcostum_ArtGallery(by_Wsiegel)a12_v1"  max_count="1" prob="1"/>
-			<prefab name="xcostum_Firehouse(by_Warsaken)a12_v1" max_count="1" prob="1"/>
-			<prefab name="xcostum_stripclub(by_magoli)a12_v1"  max_count="1" prob="1"/>
-			<prefab name="xcostum_House(by_ShoNuff)a12_v1"  max_count="2" />
-			<prefab name="xcostum_Manorhouse(by_WereWulfen)a12_v1" max_count="2" />
-			<prefab name="xcostum_swimmingbath(by_magoli)a12_v1" max_count="1" />
-			<prefab name="xcostum_myhouse(by_magoli)a12_v1" max_count="1"  />
+			<prefab name="xcostum_3BlockStores(by_Leo_Liuos)a12_v1" max_count="2" prob="0.3"/>
+			<prefab name="xcostum_Orphanage(ex_vanilla_ornate02)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_ArtGallery(by_Wsiegel)a12_v1"  max_count="1" prob="0.3"/>
+			<prefab name="xcostum_Firehouse(by_Warsaken)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_stripclub(by_magoli)a12_v1"  max_count="1" prob="0.3"/>
+			<prefab name="xcostum_House(by_ShoNuff)a12_v1"  max_count="2" prob="0.3"/>
+			<prefab name="xcostum_Manorhouse(by_WereWulfen)a12_v1" max_count="2" prob="0.3"/>
+			<prefab name="xcostum_swimmingbath(by_magoli)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_myhouse(by_magoli)a12_v1" max_count="1"  prob="0.3"/>
+		</prefab_rule>
+
+		<prefab_rule name="cityMixed3">
+			<prefab name="xcostum_Citymix_01(grtown-strclub-burnth-h-gar)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_Citymix_02(gunst_sm-kuldlargeh-bunk)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_Citymix_04(firedep-bookstore_sm_01)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_Citymix_05(niceh-businesstanh-garage)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_Citymix_06(simpsonh-gravey-brickh-camp-gar)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_Citymix_07(guildh-restaurant-firest-xxxclub)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_Citymix_08(myh-crema-gupchurch-farmsh1)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_Citymix_09(grocery_sm-barn01-medclinic_sm)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_Citymix_11(mpwaste08-mpwaste04grey)a12_v1" max_count="1" prob="0.3"/>
 		</prefab_rule>
 
 		<prefab_rule name="ruralMixed1">
@@ -462,26 +544,33 @@ then that will have a chance of appearing in every Cell rather than just at the 
 		</prefab_rule>
 
 		<prefab_rule name="townMixed1">
-			<prefab name="xcostum_Church(by_Guppycur)a12_v1" max_count="1" />
-			<prefab name="xcostum_crematory(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_Church(by_Guppycur)a12_v1" max_count="1" prob="0.2" />
+			<prefab name="xcostum_crematory(by_magoli)a12_v1" max_count="1" prob="0.2"  />
 			<prefab name="xcostum_kuldlargehouse(by_Kuldiin)a12_v1" max_count="2" prob="0.2" />
-			<prefab name="xcostum_med_clinic_small(by_magoli)a12_v1" max_count="1" />
-			<prefab name="xcostum_Restaurant(by_Gertle)a12_v1" max_count="1" />
-			<prefab name="xcostum_kwikemart(by_magoli)a12_v1" max_count="1" />
-			<prefab name="xcostum_Firedepartment(by_Guppycur)a12_v1" max_count="1" />
+			<prefab name="xcostum_med_clinic_small(by_magoli)a12_v1" max_count="1" prob="0.2" />
+			<prefab name="xcostum_Restaurant(by_Gertle)a12_v1" max_count="1" prob="0.2"  />
+			<prefab name="xcostum_kwikemart(by_magoli)a12_v1" max_count="1" prob="0.2"  />
+			<prefab name="xcostum_Firedepartment(by_Guppycur)a12_v1" max_count="1" prob="0.2"  />
 			<prefab name="xcostum_House(by_ShoNuff)a12_v1"  max_count="2" prob="0.2" />
-			<prefab name="xcostum_FuneralHome(by_Wsiegel)a12_v1" max_count="1" />
-			<prefab name="xcostum_Dealership(by_P1ut0nium)a12_v1" max_count="1" />
-			<prefab name="xcostum_Bunker2(by_LazMan)a12_v1" max_count="1" />
-			<prefab name="xcostum_swimmingbath(by_magoli)a12_v1" max_count="1" />
-			<prefab name="xcostum_simpsonshouse(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_FuneralHome(by_Wsiegel)a12_v1" max_count="1" prob="0.2"  />
+			<prefab name="xcostum_Dealership(by_P1ut0nium)a12_v1" max_count="1" prob="0.2"  />
+			<prefab name="xcostum_Bunker2(by_LazMan)a12_v1" max_count="1" prob="0.2"  />
+			<prefab name="xcostum_swimmingbath(by_magoli)a12_v1" max_count="1" prob="0.2"  />
+			<prefab name="xcostum_simpsonshouse(by_magoli)a12_v1" max_count="1" prob="0.2"  />
 		</prefab_rule>
 
 		<prefab_rule name="wildernessMixed1">
 			<prefab name="xcostum_Science_lab(by_kinklade)a12_v1" max_count="1" />
 			<prefab name="xcostum_stayouthouse(by_magoli)a12_v1" max_count="1"/>
-			<prefab name="xcostum_Bunker3(by_LazMan)a12_v1" max_count="1" />
+			<prefab name="xcostum_Bunker3(by_LazMan)a12_v1" max_count="2" />
 			<prefab name="xcostum_AsylumCity(by_Wsiegel)a12_v1" max_count="1" />
+			<prefab name="xcostum_CrashedAirplane(by_LazMan)a12_v1" max_count="1" />
+			<prefab name="xcostum_RocketLaunchPad(by_Saeid)a12_v1" max_count="1" />
+			<prefab name="xcostum_strandresort(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_strange_cornfield(by_magoli)a12_v1" max_count="1" />
+			<prefab name="xcostum_LumberMill(by_IceJudge)a12_v1" max_count="1" prob="0.3"/>
+			<prefab name="xcostum_MayaPyramide(by_Curbolt)a12_v1" max_count="1"/>
+			<prefab name="xcostum_H0bbit(by_Limodor)a12_v1" max_count="1"/>
 		</prefab_rule>
 
 		<!-- Custom Prefabs End here and start mostly vanilla -->
@@ -555,17 +644,6 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<prefab name="business_red_brick_07"/>
 		</prefab_rule>
 
-		<!-- Here we can define our own rule to group up modded buildings and call them from Cell rules above. -->
-
-		<!-- call the prefab_rule name something that clearly defines what it is, so you recognise it when called above -->
-		<!-- Theory: By defining a probability we create an opportunity for the random gen engine to skip over a prefab, this possibly stops two of the same being placed next to each other. -->
-		<prefab_rule name="modtest">
-			<!-- <prefab name="restaurant" max_count="2" prob="0.4" />
-			<prefab name="maccas" max_count="2" prob="0.4" />
-			<prefab name="RGPM_Nicehouse(by_BigC90210)v2" max_count="2" prob="0.4" /> -->
-
-		</prefab_rule>
-
 		<prefab_rule name="businessTan">
 			<prefab name="business_tan_brick_01"/>
 			<prefab name="business_tan_brick_02"/>
@@ -614,7 +692,7 @@ then that will have a chance of appearing in every Cell rather than just at the 
 		<prefab_rule name="parking">
 			<prefab name="parking_lot_01" max_count="1" />
 			<prefab name="parking_lot_02" max_count="1" />
-			<prefab name="parking_garage_01" max_count="1" />
+			<prefab name="parking_garage_01" max_count="2" />
 		</prefab_rule>
 
 		<prefab_rule name="gunStores">

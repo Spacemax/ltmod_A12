@@ -1748,10 +1748,10 @@
     </recipe>
 
     <recipe name="sledgehammer" count="1" scrapable="False" craft_time="5" learn_exp_gain="20" craft_exp_gain="30" >
-        <ingredient name="ingotSteel" count="1" grid="0, -2"/>
-        <ingredient name="ingotSteel" count="1" grid="1, -1"/>
+        <ingredient name="ingotIron" count="1" grid="0, -2"/>
+        <ingredient name="ingotIron" count="1" grid="1, -1"/>
         <ingredient name="stick" count="1" grid="0, 0"/>
-        <ingredient name="ingotSteel" count="1" grid="2, 0"/>
+        <ingredient name="ingotIron" count="1" grid="2, 0"/>
         <ingredient name="stick" count="1" grid="-1, 1"/>
         <ingredient name="stick" count="1" grid="-2, 2"/>
     </recipe>
@@ -2390,6 +2390,7 @@
     </recipe>
 
 	<recipe name="Remington8" count="1" scrapable="True" craft_time="5" craft_exp_gain="2" learn_exp_gain="200" >
+        <ingredient name="flashlight02" count="0" grid="0, -1"/>
         <ingredient name="rem8Barrel" count="1" grid="1, -1"/>
         <ingredient name="rem8Stock" count="1" grid="0, 0"/>
         <ingredient name="rem8Bolt" count="1" grid="1, 0"/>
@@ -2831,6 +2832,10 @@
         <ingredient name="shortSteelPipe" count="1" grid="0, 2"/>
         <ingredient name="shortSteelPipe" count="1" grid="1, 2"/>
         <ingredient name="shortSteelPipe" count="1" grid="2, 2"/>
+    </recipe>
+
+    <recipe name="gasCan" count="1" scrapable="False" craft_time="30" craft_exp_gain="2" learn_exp_gain="20" >
+        <ingredient name="bioDiesel" count="100" grid="0, 0"/>
     </recipe>
 
     <!-- Start new recipes here -->
@@ -3418,5 +3423,20 @@
               <ingredient name="shinglesWood" count="1" grid="-1, 1" />
               <ingredient name="shinglesWood" count="1" grid="0, 0" />
           </recipe>
+
+          <recipe name="steelSledgehammer" count="1" scrapable="False" craft_time="15" learn_exp_gain="20" craft_exp_gain="30" >
+              <ingredient name="ingotSteel" count="1" grid="2, 0"/>
+              <ingredient name="ingotSteel" count="1" grid="1, -1"/>
+              <ingredient name="fineHardwoodHandle" count="1" grid="0, 0"/>
+              <ingredient name="ingotSteel" count="1" grid="0, -2"/>
+              <ingredient name="metalWire" count="1" grid="0, -1"/>
+              <ingredient name="nail" count="1" grid="1, 0"/>
+          </recipe>
+
+          <recipe name="explodingArrow" count="1" scrapable="False" craft_time="1" learn_exp_gain="20" craft_exp_gain="2" >
+          <ingredient name="metalWire" count="1" grid="2, -2"/>
+          <ingredient name="gunPowderCharge" count="1" grid="1, -1"/>
+          <ingredient name="steelArrow" count="1" grid="0, 0"/>
+</recipe>
 
 </recipes>

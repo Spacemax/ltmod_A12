@@ -431,8 +431,8 @@ WEAPON ATTACHABLES
         <property name="Material" value="metal_steel" />
         <property name="HoldType" value="33" />
         <property name="Stacknumber" value="1" />
-        <property name="RepairTools" value="steelStrips" />
-        <property name="Degradation" value="500" param1="true" />
+        <property name="RepairTools" value="metalStrips" />
+        <property name="Degradation" value="300" param1="true" />
         <property name="SoundDestroy" value="metaldestroy1" />
         <property name="FuelValue" value="16" />
         <property name="Weight" value="72" />
@@ -443,8 +443,8 @@ WEAPON ATTACHABLES
             <property name="Range" value="2" />
             <property name="Sphere" value="0.2" />
             <property name="Block_range" value="4" />
-            <property name="DamageEntity" value="90" />
-            <property name="DamageBlock" value="15" />
+            <property name="DamageEntity" value="25" />
+            <property name="DamageBlock" value="5" />
             <property name="Sound_start" value="swoosh" />
             <property name="Stamina_usage" value="15" />
             <property name="Buff" value="criticalBlunt" />
@@ -456,9 +456,9 @@ WEAPON ATTACHABLES
             <property name="DamageBonus.concrete" value="3" />
             <property name="DamageBonus.glass" value="20" />
             <property class="Attributes">
-            <property name="EntityDamage" value="90,160" />
-            <property name="BlockDamage" value="15,25" />
-            <property name="DegradationMax" value="500,900" />
+            <property name="EntityDamage" value="25,55" />
+            <property name="BlockDamage" value="5,17" />
+            <property name="DegradationMax" value="300,600" />
 			         <property name="DegradationRate" value="2,1" />
         </property>
         </property>
@@ -2015,6 +2015,8 @@ WEAPON ATTACHABLES
             <property name="Focused_blockname_5" value="toilet01" />
             <property name="Focused_blockname_6" value="toilet02" />
             <property name="Focused_blockname_7" value="toilet03" />
+            <property name="Focused_blockname_8" value="graniteSink" />
+            <property name="Focused_blockname_9" value="cabinetOldSink" />
             <property name="Sound_start" value="UseActions/bucketfill_water" />
         </property>
         <property name="Group" value="Resources" />
@@ -7230,7 +7232,7 @@ WEAPON ATTACHABLES
             <property name="Class" value="LearnRecipe" />
             <property name="Title" value="Forge Ahead. Advanced Blacksmithing, Copper, Steel Metalworks and more." />
             <property name="Description" value="Teaches you how to use advanced metals." />
-            <property name="Recipes_to_learn" value="Smelter,IngotMoldSteel,IngotMoldBrass,IngotMoldCopper,forgedSteel,steelStrips,shortSteelPipe,steelFibers,steelArrowHeadMold,steelArrow,pickaxeSteel" />
+            <property name="Recipes_to_learn" value="Smelter,IngotMoldSteel,IngotMoldBrass,IngotMoldCopper,forgedSteel,steelStrips,shortSteelPipe,steelFibers,steelArrowHeadMold,steelArrow,pickaxeSteel,steelSledgehammer" />
             <property name="Delay" value="0" />
             <property name="Sound_start" value="Misc/recipe_unlocked" />
         </property>
@@ -8600,7 +8602,7 @@ WEAPON ATTACHABLES
 
     <item id="752" name="pickaxeSteel">
         <property name="Meshfile" value="Items/Tools/pickaxe_steel" />
-        <property name="Material" value="metal_steel" />
+        <property name="Material" value="metal" />
         <property name="HoldType" value="4" />
         <property name="Stacknumber" value="1" />
         <property name="RepairTools" value="steelStrips" />
@@ -8618,7 +8620,7 @@ WEAPON ATTACHABLES
             <property name="DamageEntity" value="10" />
             <property name="DamageBlock" value="2" />
             <property name="Sound_start" value="swoosh" />
-            <property name="Stamina_usage" value="5" />
+            <property name="Stamina_usage" value="4" />
             <property name="DamageBonus.glass" value="25" />
             <property name="DamageBonus.stone" value="2" />
             <property name="DamageBonus.metal" value="2" />
@@ -8627,7 +8629,7 @@ WEAPON ATTACHABLES
         </property>
         <property name="Group" value="Tools/Traps" />
         <property class="Attributes">
-            <property name="EntityDamage" value="6,20" />
+            <property name="EntityDamage" value="10,25" />
             <property name="BlockDamage" value="8,16" />
             <property name="DegradationMax" value="500,900" />
 			<property name="DegradationRate" value="2,1" />
@@ -9743,7 +9745,7 @@ WEAPON ATTACHABLES
            <property name="Delay" value="0.5" />
            <property name="Range" value="200" />
            <property name="Magazine_size" value="1" />
-           <property name="Magazine_items" value="arrow, ironArrow, steelArrow, flamingArrow,arrowBrass" />
+           <property name="Magazine_items" value="arrow, ironArrow, steelArrow, flamingArrow, arrowBrass, explodingArrow" />
            <property name="Reload_time" value=".9" />
            <property name="Bullet_icon" value="uzi" />
            <property name="Sound_start" value="Weapons/Ranged/Bows/Bow/bow_fire" />
@@ -10111,6 +10113,7 @@ WEAPON ATTACHABLES
        <property name="Weight" value="22" />
        <property name="Degradation" value="250" param1="false" />
        <property name="DegradationBreaksAfter" value="false" />
+       <property name="Attachments" value="flashlight02" />
        <property class="Parts">
            <property name="Stock" value="rem8Stock" />
            <property name="Receiver" value="rem8Bolt" />
@@ -10149,6 +10152,11 @@ WEAPON ATTACHABLES
            <property name="Zoom_max_out" value="35" />
            <property name="Zoom_max_in" value="35" />
        </property>
+       <!-- Start: Needed for the attachment flashlight -->
+       <property name="LightSource" value="lightSource" />
+       <property name="ActivateObject" value="Attachments/flashlight/lightSource" />
+       <property name="AttachmentFlashlight" value="flashlight02" />
+       <!-- End: Needed for the attachment flashlight -->
        <property name="Group" value="Ammo/Weapons" />
        <property class="Preview">
            <property name="Zoom" value="1" />
@@ -10640,7 +10648,7 @@ WEAPON ATTACHABLES
            <property name="Class" value="LearnRecipe" />
            <property name="Title" value="Government's Hate her!" />
            <property name="Description" value="Learn how to make Thermite, Kevlar and Kevlar Armor in 3 easy steps." />
-           <property name="Recipes_to_learn" value="kevlar,kevlarStrips,thermite,thermiteCharge,thermicLance,thermiteFuel" />
+           <property name="Recipes_to_learn" value="kevlar,kevlarStrips,thermite,thermiteCharge,thermicLance,thermiteFuel,explodingArrow" />
            <property name="Delay" value="0" />
            <property name="Sound_start" value="Misc/recipe_unlocked" />
        </property>
@@ -12291,5 +12299,116 @@ WEAPON ATTACHABLES
             <property name="Rot" value="90,45,0" />
         </property>
     </item>
+
+    <item id="894" name="steelSledgehammer">
+      <property name="CustomIcon" value="sledgehammer"/>
+      <property name="CustomIconTint" value="99CCFF"/>
+        <property name="Meshfile" value="Items/Tools/sledgehammer_steel" />
+        <property name="Material" value="metal" />
+        <property name="HoldType" value="33" />
+        <property name="Stacknumber" value="1" />
+        <property name="RepairTools" value="steelStrips" />
+        <property name="Degradation" value="500" param1="true" />
+        <property name="SoundDestroy" value="metaldestroy1" />
+        <property name="FuelValue" value="16" />
+        <property name="Weight" value="72" />
+        <property class="Action0">
+            <!-- AttackAction -->
+            <property name="Class" value="Melee" />
+            <property name="Delay" value="1.8" />
+            <property name="Range" value="2" />
+            <property name="Sphere" value="0.2" />
+            <property name="Block_range" value="4" />
+            <property name="DamageEntity" value="90" />
+            <property name="DamageBlock" value="15" />
+            <property name="Sound_start" value="swoosh" />
+            <property name="Stamina_usage" value="10" />
+            <property name="Buff" value="criticalBlunt" />
+            <property name="Buff_chance" value=".7" />
+            <property name="DamageBonus.wood" value=".5" />
+            <property name="DamageBonus.stone" value="1" />
+             <property name="DamageBonus.metal" value=".5" />
+            <property name="DamageBonus.head" value="10" />
+            <property name="DamageBonus.concrete" value="3" />
+            <property name="DamageBonus.glass" value="20" />
+            <property class="Attributes">
+            <property name="EntityDamage" value="90,160" />
+            <property name="BlockDamage" value="15,25" />
+            <property name="DegradationMax" value="500,900" />
+               <property name="DegradationRate" value="2,1" />
+        </property>
+        </property>
+        <property name="CritChance" value=".5" />
+        <property name="Group" value="Tools/Traps" />
+        <property class="Preview">
+            <property name="Zoom" value="-2" />
+            <property name="Pos" value="0,-0.4" />
+            <property name="Rot" value="0,24,0" />
+        </property>
+    </item>
+
+    <item id="895" name="metalWire">
+      <property name="CustomIcon" value="scrapCable"/>
+      <property name="CustomIconTint" value="99CCFF"/>
+       <property name="Meshfile" value="Items/Misc/sackPrefab" />
+   <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+       <property name="Material" value="metal" />
+       <property name="HoldType" value="45" />
+       <property name="Stacknumber" value="50" />
+       <property name="Weight" value="8" />
+       <property name="Group" value="Resources" />
+
+       <property class="Preview">
+           <property name="Zoom" value="28" />
+           <property name="Pos" value="0,-0.05" />
+           <property name="Rot" value="90,45,0" />
+       </property>
+   </item>
+
+     <item id="896" name="explodingArrow">
+       <property name="CustomIcon" value="flamingArrow"/>
+       <property name="CustomIconTint" value="f45800"/>
+        <property name="Meshfile" value="Items/Weapons/Ranged/Bows/WoodenBow/flamingArrowPrefab" />
+        <property name="DropMeshfile" value="Items/Misc/arrow_flaming_dropped" />
+        <property name="HandMeshfile" value="Items/Misc/arrow_flaming_hand" />
+        <property name="HoldType" value="32" />
+        <property name="Material" value="wood" />
+        <property name="Stacknumber" value="250" />
+        <property name="FuelValue" value="8" />
+        <property name="CustomIcon" value="flamingArrow" />
+        <property name="CustomIconTint" value="995555"/>
+        <property name="DamageBonus.head" value="6" />
+        <property name="DamageBonus.glass" value="25" />
+        <property name="DamageBonus.wood" value="2" />
+        <property name="DamageBonus.earth" value="0.1" />
+        <property name="DamageBonus.metal" value="0.1" />
+        <property name="DamageBonus.cloth" value="0.5" />
+        <property class="Action1">
+        <!-- UseAction -->
+        <property name="Class" value="Projectile" />
+        <property name="DamageEntity" value="10" />
+        <property name="DamageBlock" value="5" />
+        <property name="Explosion.ParticleIndex" value="4" />
+        <!-- which prefab/particle is used -->
+        <property name="Explosion.RadiusBlocks" value="2" />
+        <!-- damage radius for blocks -->
+        <property name="Explosion.BlockDamage" value="10" />
+        <!-- damage for blocks in the center of the explosion -->
+        <property name="Explosion.RadiusEntities" value="5" />
+        <!-- damage radius for entities -->
+        <property name="Explosion.EntityDamage" value="10" />
+        <!-- damage for entities in the center of the explosion -->
+        <property name="Velocity" value="60" />
+        <property name="FlyTime" value=".10" />
+        <property name="LifeTime" value="12" />
+        </property>
+        <property name="Group" value="Ammo/Weapons" />
+        <property class="Attributes">
+        <property name="GetQualityFromWeapon" value="true" />
+        <property name="EntityDamage" value="25,55" />
+        <property name="BlockDamage" value=".7,1.2" />
+        <property name="ApplyBuff" value="1, 1" param1="burning" />
+        </property>
+  </item>
 
 </items>

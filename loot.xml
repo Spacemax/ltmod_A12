@@ -341,7 +341,7 @@
 
 	<lootgroup name="bear+hide" count="all">
 		<item name="bearMeat" count="4,7"/>
-		<item name="animalHide" count="5,8"/>
+		<item name="toughHide" count="4,6"/>
 		<item name="femur" count="4"/>
 		<item name="animalFat" count="6,12"/>
 	</lootgroup>
@@ -938,23 +938,23 @@ plentiful loot items in the game.
 		<item name="painkillers" />
 		<item name="paper" count="1,6"/>
 		<item name="cloth" count="1,4"/>
-        <item group="trophyGroup"/>
-        <item name="candleStick"/>
-        <item name="glass"/>
-        <item name="gunPowder" count="1,3" />
-        <item name="doorKnob" count="1" />
-        <item name="oil" count="2,6"/>
-        <item name="femur" count="1,2"/>
-        <item name="shortMetalPipe" count="1"/>
-        <item name="fishingWeight" count="1,3"/>
-        <item name="scrapLead" count="1"/>
-        <item name="woodPlank" count="1"/>
-        <item name="glue" count="1"/>
-        <item name="nail" count="1"/>
-        <item name="casinoCoin" count="1,5"/>
-        <item name="bulletCasing"  count="1,10"/>
-        <item name="feather" count="1,3"/>
-        <item name="ductTape" count="1,3"/>
+    <item group="trophyGroup"/>
+    <item name="candleStick"/>
+    <item name="glass"/>
+    <item name="gunPowder" count="1,3" />
+    <item name="doorKnob" count="1" prob="0.0457" />
+    <item name="oil" count="2,6"/>
+    <item name="femur" count="1,2"/>
+    <item name="shortMetalPipe" count="1"/>
+    <item name="fishingWeight" count="1,3"/>
+    <item name="scrapLead" count="1"/>
+    <item name="woodPlank" count="1"/>
+    <item name="glue" count="1"/>
+    <item name="nail" count="1"/>
+    <item name="casinoCoin" count="1,5"/>
+    <item name="bulletCasing"  count="1,10"/>
+    <item name="feather" count="1,3"/>
+    <item name="ductTape" count="1,3"/>
 		<item group="rottenFood"  count="1" />
 		<item group="seeds" prob="0.0457" />
 	</lootgroup>
@@ -1261,6 +1261,20 @@ plentiful loot items in the game.
           <item group="rareAutomotive" />
           <item group="commonAutomotive" />
         </lootgroup>
+
+        <!-- Uber Loot for gunsafe that needs rare lockpicks to open (not implemented yet) -->
+        <lootgroup name="rareGunSafe" count="1">
+          <item group="ultrarareBooks" prob="0.05" />
+          <item group="kevlarArmorSchematics" prob="0.15"/>
+          <item group="rareBooks" prob="0.20"/>
+          <item group="ultrarareWeaponParts" prob="0.05" />
+          <item group="Mossburg_components" prob="0.15" />
+          <item group="rareWeaponParts" prob="0.05" />
+          <item group="rockDrillParts" prob="0.05" />
+          <item group="augerParts" prob="0.15" />
+          <item group="ultrarareTools" prob="0.15" />
+        </lootgroup>
+
 
 	<lootgroup name="sportingGoods" count="1">
         <item name="flashlight02"/>
