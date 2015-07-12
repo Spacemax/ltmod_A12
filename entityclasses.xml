@@ -192,7 +192,7 @@
         <property name="SoundDeath"   value="Enemies/Base_Zombie_Male/zombiemaledeath" />
         <property name="SoundAttack"  value="Enemies/Base_Zombie_Male/zombiemaleattack" />
 
-        <property name="TimeStayAfterDeath" value="60" />
+        <property name="TimeStayAfterDeath" value="90" />
 
         <property name="AttackTimeoutDay" value="1.5" />    <!-- in s -->
         <property name="AttackTimeoutNight" value="1.1" />
@@ -665,7 +665,7 @@
         <property name="SoundHurt"    value="Animals/stagpain" />
         <property name="SoundDeath"   value="Animals/stagdeath" />
         <property name="LootListOnDeath"  value="12" />
-	    <property name="TimeStayAfterDeath" value="60" />
+	    <property name="TimeStayAfterDeath" value="90" />
 
     <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
 	    <property name="IsEnemyEntity"   value="false" />
@@ -728,7 +728,7 @@
         <property name="SoundGiveUp"  value="Animals/Bear/beargiveup" />
         <property name="SoundFootstepModifier"  value="Animals/Bear/bear_footstep" />
         <property name="LootListOnDeath"  value="65" />
-	    <property name="TimeStayAfterDeath" value="60" />
+	    <property name="TimeStayAfterDeath" value="90" />
 
     <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
 	    <property name="IsEnemyEntity"   value="true" />
@@ -749,7 +749,7 @@
         <property name="SoundDeath"   value="Animals/rabbitdeath" />
         <property name="PanicSpeed"    value="1.5" />
 	    <property name="LootListOnDeath"  value="13" />
-	    <property name="TimeStayAfterDeath" value="60" />
+	    <property name="TimeStayAfterDeath" value="90" />
 	    <property name="CorpseBlockChance" value="0"/>
 
 		<property name="ExperienceGain" value="150"/>
@@ -766,7 +766,7 @@
         <property name="SoundHurt"    value="Animals/pigpain" />
         <property name="SoundDeath"   value="Animals/pigdeath" />
 	    <property name="LootListOnDeath"  value="18" />
-	    <property name="TimeStayAfterDeath" value="60" />
+	    <property name="TimeStayAfterDeath" value="90" />
         <property name="PanicSpeed"    value="1.2" />
 		<property name="PhysicsBody" value="pig" />
 		<property name="ExperienceGain" value="150"/>
@@ -912,7 +912,7 @@
         <property name="SoundDeath"   value="Enemies/Base_Zombie_Male/zombiemaledeath" />
         <property name="SoundAttack"  value="Enemies/Base_Zombie_Male/zombiemaleattack" />
 
-        <property name="TimeStayAfterDeath" value="60" />
+        <property name="TimeStayAfterDeath" value="90" />
 
         <property name="AttackTimeoutDay" value="1.5" />    <!-- in s -->
         <property name="AttackTimeoutNight" value="1.1" />
@@ -1042,7 +1042,7 @@
         <property name="SoundGiveUp"  value="Animals/Bear/beargiveup" />
         <property name="SoundFootstepModifier"  value="Animals/Bear/bear_footstep" />
         <property name="LootListOnDeath"  value="65" />
-      <property name="TimeStayAfterDeath" value="60" />
+      <property name="TimeStayAfterDeath" value="90" />
 
     <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
       <property name="IsEnemyEntity"   value="true" />
@@ -1109,7 +1109,7 @@
         <property name="SoundDeath"   value="Animals/rabbitdeath" />
         <property name="PanicSpeed"    value="1.5" />
         <property name="LootListOnDeath"  value="15" />
-        <property name="TimeStayAfterDeath" value="60" />
+        <property name="TimeStayAfterDeath" value="90" />
         <property name="CorpseBlockChance" value="0"/>
 		<property name="ExperienceGain" value="50"/>
     </entity_class>

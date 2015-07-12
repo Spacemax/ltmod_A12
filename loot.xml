@@ -923,8 +923,8 @@ plentiful loot items in the game.
       <item name="householdChemicals" prob="0.05" />
     	<item name="canEmpty" />
     	<item group="cannedfood" />
-        <item group="seeds" prob="0.05"/>
-        <item name="bottledWater"/>
+      <item group="seeds" prob="0.05"/>
+      <item name="bottledWater"/>
   		<item name="emptyJar" count="1,4"  />
   		<item name="cornMeal" prob="0.05" />
 	</lootgroup>
@@ -1236,25 +1236,26 @@ plentiful loot items in the game.
       		<item name="bandage" prob="0.25" />			<!--25%-->
       	</lootgroup>
 
-        <lootgroup name="rareAutomotive" count="1">
+        <lootgroup name="rareAutomotive" count="4">
             <item name="gasCan" count="1" prob="0.025" />
-			<item group="uncommonTools" prob="0.1" />
+      			<item group="uncommonTools" prob="0.1" />
             <item group="commonTools" 	prob="0.1" />
             <item group="cannedfood" 	prob="0.1" />
             <item group="medicine" 		prob="0.15" />
-			<item group="clothes" 		prob="0.2" />
+      			<item group="clothes" 		prob="0.2" />
             <item group="junk" 			prob="0.2" />
         </lootgroup>
 
-        <lootgroup name="commonAutomotive" count="all">
-          <item name="minibikeWheels" count="0,1" prob="0.05" />
-		  <item name="airFilter" count="0,1"/>
-          <item name="radiator" count="0,1" />
-          <item name="carBattery" count="0,1" />
-          <item name="hubcap" count= "1,4" />
-          <item name="headlight" count="0,2" />
-          <item name="scrapCable" count="0,1"/>
-          <item name="oil" count="0,2" />
+        <!-- Reworking counts and changed group count from All to 3, and changed it to be a random selection -->
+        <lootgroup name="commonAutomotive" count="4">
+          <item name="minibikeWheels" prob="0.10" />
+          <item name="headlight" count="0,2" prob="0.10" />
+          <item name="scrapCable" count="0,2" prob="0.10" />
+    		  <item name="airFilter" prob="0.10" />
+          <item name="radiator" prob="0.10" />
+          <item name="carBattery" prob="0.15" />
+          <item name="oil" count="0,2" prob="0.15" />
+          <item name="hubcap" count="0,4" prob="0.20" />
         </lootgroup>
 
         <lootgroup name="automotive" count="all">

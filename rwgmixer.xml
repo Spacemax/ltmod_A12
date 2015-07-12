@@ -128,10 +128,10 @@ then that will have a chance of appearing in every Cell rather than just at the 
 
 		<hub_rule name="townSmall">
 			<hub_type value="town"/>
-			<width value="146, 146" />
-			<height value="146, 146" />
+			<width value="246, 246" />
+			<height value="246, 246" />
 			<path_material value="asphalt" />
-			<path_radius value="7" />
+			<path_radius value="5" />
 
 			<prefab_rule name="townSmall" prob="1"/>
 		</hub_rule>
@@ -279,8 +279,8 @@ then that will have a chance of appearing in every Cell rather than just at the 
 		</prefab_rule>
 
 		<prefab_rule name="townSmall">
-			<!-- <prefab rule="townBuildings" prob="0.5"/> -->
-			<prefab rule="townBuildings2" prob="1"/>
+			<prefab rule="townBuildings" prob="0.8"/>
+			<prefab rule="townBuildings2" prob="0.2"/>
 		</prefab_rule>
 
 		<prefab_rule name="wildernessPOIs">
@@ -370,6 +370,15 @@ then that will have a chance of appearing in every Cell rather than just at the 
 		</prefab_rule>
 
 		<prefab_rule name="townBuildings2">
+			<prefab name="store_book_sm_01" prob="0.6" />
+			<prefab name="houseranchwhite1"/>
+			<prefab name="houseranchtan1"/>
+			<prefab name="houseranchtan2"/>
+			<prefab name="houseranchblue1"/>
+			<prefab rule="pharmacies" max_count="1"/>
+			<prefab rule="bookStores" max_count="1"/>
+			<prefab rule="groceryStores" max_count="1"/>
+			<prefab rule="garages" max_count="6"/>
 			<!-- mod content -->
 			<prefab name="xcostum_med_clinic_small(by_magoli)a12_v1" max_count="1" prob="0.9" />
 			<prefab name="xcostum_Restaurant(by_Gertle)a12_v1" max_count="1" prob="0.9"  />
@@ -380,22 +389,13 @@ then that will have a chance of appearing in every Cell rather than just at the 
 			<prefab name="xcostum_swimmingbath(by_magoli)a12_v1" max_count="1" prob="0.9"  />
 			<prefab name="xcostum_simpsonshouse(by_magoli)a12_v1" max_count="1" prob="0.9"  />
 			<prefab name="store_pharmacy_sm_01" max_count="1" prob="0.9" />
-			<prefab name="store_book_sm_01" prob="0.6" />
-			<prefab name="houseranchwhite1"/>
-			<prefab name="houseranchtan1"/>
-			<prefab name="houseranchtan2"/>
-			<prefab name="houseranchblue1"/>
-			<!-- <prefab rule="pharmacies" max_count="1"/>
-			<prefab rule="bookStores" max_count="1"/>
-			<prefab rule="groceryStores" max_count="1"/>
-			<prefab rule="garages" max_count="6"/>
 			<prefab rule="signsAndLights"/>
 			<prefab rule="countryHousing" max_count="2"/>
 			<prefab rule="lowerClassHousing" max_count="2" />
 			<prefab rule="middleClassHousing" max_count="2"/>
 			<prefab rule="upperClassHousing" max_count="2"/>
 			<prefab rule="businessBrick" max_count="2"/>
-			<prefab rule="businessTan" max_count="2"/> -->
+			<prefab rule="businessTan" max_count="2"/>
 		</prefab_rule>
 
 		<!--
