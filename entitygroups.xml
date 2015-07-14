@@ -157,13 +157,13 @@
     </entitygroup>
 
   <entitygroup name="ZombiesCave">
+    <entity name="zombieferal" prob="0.01"/>
+    <entity name="GhostBear" prob="0.01"/>
     <entity name="animalBear" prob="0.1"/>
     <entity name="zombiecrawler" prob="0.05"/>
     <entity name="zombie05" prob="0.05"/>
     <entity name="zombie06" prob="0.05"/>
     <entity name="zombie07" prob="0.05"/>
-    <entity name="zombieferal" prob="0.01"/>
-    <entity name="GhostBear" prob="0.01"/>
   </entitygroup>
 
     <entitygroup name="AnimalsSmall">

@@ -848,6 +848,25 @@ plentiful loot items in the game.
 		<item name="herbalAntibioticsRecipe"/>
 	</lootgroup>
 
+  <!-- Books that can be found in a hardware store -->
+  <lootgroup name="hardwareBooks" count="1">
+    <item name="Furukawa780Schematic" prob="0.01" />
+    <item name="handelbarsSchematic" prob="0.01" />
+    <item name="momsEcoFuels" prob="0.01" />
+    <item name="augerSchematic" prob="0.01" />
+    <item name="minibikesForDumbshits" prob="0.01" />
+    <item name="forgeAheadBook" prob="0.05" />
+    <item name="setInConcrete" prob="0.10" />
+    <item name="gasCanSchematic" prob="0.10" />
+    <item name="firstAidKitSchematic" prob="0.10" />
+    <item name="sledgehammerSchematic" prob="0.10" />
+    <item name="ironBootsSchematic" prob="0.10" />
+    <item name="forgeBehindBook" prob="0.10" />
+    <item name="hammerSchematic" prob="0.10" />
+		<item name="huntingKnifeBook" prob="0.10" />
+		<item name="leatherTanning" prob="0.10" />
+  </lootgroup>
+
 	<lootgroup name="gasPumps" >
 		<item name="gasCan"/>
 	</lootgroup>
@@ -1173,24 +1192,30 @@ plentiful loot items in the game.
 	<item name="nailgun" />			<!-- KM:Moved from raretools-->
 	<item group="steelAxe" />
 	<item group="pickaxeSteel" />
+  <item group="rockDrillParts" />
  </lootgroup>
 
 	<lootgroup name="rareTools" count="1">
 		<item name="hammer"/>
 		<item name="sledgehammer"/>
+    <item name="steelSledgehammer"/>
 		<item name="nailgun"/>
+    <item group="augerParts" />
 	</lootgroup>
 
   <lootgroup name="uncommonTools" count="1">
 		<item group="shovel" />
-		<item group="hammer" />
+		<item group="fireaxe" />
+    <item name="fineHardwoodHandle" />
 		<item group="hoe" />			<!--KM:Moved down from rare tools-->
+    <item group="hardwareBooks" />
     </lootgroup>
 
     <lootgroup name="commonTools" count="1">
-		<item group="stoneShovel" />
-		<item group="stoneAxe" />
+		<item group="pickaxeIron" />
+		<item name="leatherGloves" />
 		<item name="wrench" />
+    <item name="ductTape" count="2,4" />
 		<item name="repairKit" count="1,4"/>	<!-- KM:Count dropped by 1 to average at 2, these are really easy to make so alot of them in the game-->
   </lootgroup>
 
@@ -1201,17 +1226,22 @@ plentiful loot items in the game.
     <item group="commonTools" prob="0.55" />
   </lootgroup>
 
-	<lootgroup name="constructionSupplies" count="1">
+	<lootgroup name="constructionSupplies" count="4">
 		<item name="woodFrame" count="8,16" />
 		<item name="rebarFrame" count="4,8" />
+    <item name="forgedIron" count="4,8" />
 		<item name="woodPlank" count="16,32" />
 		<item name="steelDoor1_v1" count="1,2"/>
 		<item name="concreteMix" count="2,4" />
+    <item name="hardwoodPlank" count="2,4" />
+    <item name="sandpaper" count="2,4" />
+    <item name="householdChemicals" count="1,2" />
+    <item name="metalWire" count="1,2" />
 		<item name="cobblestoneFrame" count="8,16" />
 		<item name="cobblestones" count="12,20" />
 	</lootgroup>
 
-  <lootgroup name="workingStiffs" count="1">
+  <lootgroup name="workingStiffs" count="2">
   		<item group="seeds" prob="0.1" />							<!--10%-->
   		<item group="tools" prob="0.3" />							<!--30%-->
   		<item group="constructionSupplies" prob="0.6" />			<!--60%-->

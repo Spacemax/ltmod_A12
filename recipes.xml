@@ -2841,7 +2841,10 @@
     <!-- Start new recipes here -->
 
     <recipe name="cabinetTop" count="1" scrapable="False" craft_time="20" craft_exp_gain="2" learn_exp_gain="20" >
-        <ingredient name="planks4" count="1" grid="0, 0"/>
+        <ingredient name="hardwoodPlank" count="1" grid="1, -1"/>
+        <ingredient name="hardwoodPlank" count="1" grid="-1, 0"/>
+        <ingredient name="hardwoodPlank" count="1" grid="0, 0"/>
+        <ingredient name="hardwoodPlank" count="1" grid="1, 0"/>
     </recipe>
 
     <recipe name="nightstand" count="1" scrapable="False" craft_time="15" craft_exp_gain="2" learn_exp_gain="20" >
@@ -2941,8 +2944,8 @@
         <ingredient name="shortMetalPipe" count="1" grid="1, 1"/>
     </recipe>
 
-    <recipe name="graniteSink" count="1" scrapable="False" craft_time="5" craft_exp_gain="2" learn_exp_gain="20" >
-        <ingredient name="cabinet" count="1" grid="0, 0" />
+    <recipe name="fineSink" count="1" scrapable="False" craft_time="5" craft_exp_gain="2" learn_exp_gain="20" >
+        <ingredient name="fineCabinet" count="1" grid="0, 0" />
         <ingredient name="cookingPot" count="1" grid="0, -1" />
         <ingredient name="forgedIron" count="1" grid="1, -1" />
         <ingredient name="forgedIron" count="1" grid="-1, -1" />
@@ -3437,6 +3440,12 @@
           <ingredient name="metalWire" count="1" grid="2, -2"/>
           <ingredient name="gunPowderCharge" count="1" grid="1, -1"/>
           <ingredient name="steelArrow" count="1" grid="0, 0"/>
-</recipe>
+          </recipe>
+
+          <recipe name="fineCabinet" count="1" scrapable="False" craft_time="20" learn_exp_gain="20" craft_exp_gain="10" >
+              <ingredient name="cobblestones" count="1" grid="0, -1"/>
+              <ingredient name="cabinetTop" count="1" grid="0, 0"/>
+              <ingredient name="nail" count="1" grid="1, 0"/>
+          </recipe>
 
 </recipes>

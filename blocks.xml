@@ -838,6 +838,12 @@
     <property name="Shape" value="Ext3dModel" />
     <property name="Mesh" value="models" />
     <property name="Model" value="Appliances/oven" param1="main_mesh" />
+    <property class="UpgradeBlock" >
+      <property name="ToBlock" value="workingOven" />
+      <property name="Item" value="forgedSteel" />
+      <property name="ItemCount" value="4" />
+      <property name="UpgradeHitCount" value="1" />
+      </property>
     <property name="LootList" value="5" />
     <drop event="Destroy" name="scrapIron" count="1,2" prob="1" />
     <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
@@ -7823,6 +7829,12 @@
     <property name="Class" value="Loot" />
     <property name="Material" value="wood_weak" />
     <property name="Texture" value="346,345,341,345,262,345" />
+    <property class="UpgradeBlock" >
+      <property name="ToBlock" value="workingWallOven" />
+      <property name="Item" value="forgedSteel" />
+      <property name="ItemCount" value="4" />
+      <property name="UpgradeHitCount" value="1" />
+      </property>
     <property name="LootList" value="3" />
     <drop event="Destroy" name="woodDebris" count="1" />
     <drop event="Fall" name="woodDebris" count="1" prob="1.0"  stick_chance=".75" />
@@ -12057,5 +12069,56 @@
     <property name="Place" value="Door" />
     </block>
 
+    <block id="1556" name="fineCabinet">
+      <property name="CustomIcon" value="cabinet"/>
+      <property name="CustomIconTint" value="9c6c0e"/>
+      <property name="Class" value="Loot" />
+      <property name="Material" value="wood_weak" />
+      <property name="Texture" value="261,228,262,228,228,228" />
+      <property name="LootList" value="10" />
+  	<property name="FuelValue" value="12" />
+      <drop event="Destroy" name="woodDebris" count="1" />
+      <drop event="Fall" name="woodDebris" count="1" prob="1.0"  stick_chance=".75" />
+      <property name="Group" value="Decor" />
+    </block>
+
+    <block id="1557" name="fineSink">
+      <property name="CustomIcon" value="graniteSink"/>
+      <property name="CustomIconTint" value="9c6c0e"/>
+      <property name="Class" value="Loot" />
+      <property name="Material" value="wood" />
+      <property name="Texture" value="373,228,262,228,228,228" />
+      <property name="LootList" value="10" />
+      <drop event="Destroy" name="woodDebris" count="1" />
+      <drop event="Fall" name="woodDebris" count="1" prob="1.0"  stick_chance=".75" />
+      <property name="Group" value="Decor" />
+    </block>
+
+    <block id="1558" name="workingOven">
+      <property name="Class" value="Campfire" />
+      <property name="Material" value="metal" />
+      <property name="Shape" value="Ext3dModel" />
+      <property name="Mesh" value="models" />
+      <property name="Model" value="Appliances/oven" param1="main_mesh" />
+      <property name="ParticleName" value="campfire" />
+      <property name="ParticleOffset" value="0.5,0,0.5" />
+      <property name="HeatMapStrength" value="2"/>
+      <property name="HeatMapTime" value="1200"/>
+      <property name="HeatMapFrequency" value="25"/>
+      <drop event="Destroy" name="scrapIron" count="2,6" prob="1" />
+    </block>
+
+  <block id="1559" name="workingWallOven">
+    <property name="Class" value="Campfire" />
+    <property name="Material" value="wood_weak" />
+    <property name="Texture" value="346,345,341,345,262,345" />
+    <property name="ParticleName" value="campfire" />
+    <property name="ParticleOffset" value="0.5,0,0.5" />
+    <property name="HeatMapStrength" value="2"/>
+    <property name="HeatMapTime" value="1200"/>
+    <property name="HeatMapFrequency" value="25"/>
+    <property name="DowngradeBlock" value="wallOven" />
+    <drop event="Destroy" count="0" />
+  </block>
 
 </blocks>
