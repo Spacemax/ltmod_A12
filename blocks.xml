@@ -3250,6 +3250,7 @@
 	<property name="ModelOffset" value="0,-1.2,0" />
     <!-- uses dummy texture id from opaque atlas -->
     <drop event="Destroy" name="hardwood" count="3" prob="1" />
+    <drop event="Destroy" name="trunkPine" count="3" prob="1" />
   </block>
   <block id="567" name="Birch12m">
     <property name="Class" value="ModelTree" />
@@ -3264,6 +3265,7 @@
     <property name="IsPlant" value="true" />
 	<property name="ModelOffset" value="0,-1.2,0" />
     <!-- uses dummy texture id from opaque atlas -->
+    <drop event="Destroy" name="trunkPine" count="2" prob="1" />
     <drop event="Destroy" name="hardwood" count="4" prob="1" />
   </block>
   <block id="568" name="Birch15m">
@@ -3534,6 +3536,7 @@
 	<property name="ModelOffset" value="0,-1.2,0" />
   	<drop event="Destroy" name="hardwood" count="2" prob="0.5" />
     <drop event="Destroy" name="treeSap" count="1,2" prob=".5" />
+    <preperty name="FallOver" value="false" />
   </block>
   <block id="587" name="WinterPine01">
     <property name="Class" value="ModelTree" />
@@ -4349,9 +4352,10 @@
       <property name="GrowthRate" value="60" />
       <property name="FertileLevel" value="1" />
       <property name="IsRandom" value="false" />
-    </property>
+    </property><property name="FallOver" value="false" />
     <!-- uses dummy texture id from opaque atlas -->
     <drop event="Destroy" name="pineSeed" count="1" prob="1" />
+    <property name="FallOver" value="false" />
   </block>
   <block id="675" name="plantedMountainPine6m">
     <property name="Class" value="ModelTree" />
@@ -4483,6 +4487,7 @@
     </property>
     <!-- uses dummy texture id from opaque atlas -->
     <drop event="Destroy" name="mapleSeed" count="1" prob="1" />
+    <property name="FallOver" value="false" />
   </block>
   <block id="681" name="plantedMaple6m">
     <property name="Class" value="ModelTree" />

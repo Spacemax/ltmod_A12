@@ -214,7 +214,7 @@
         <ingredient name="emptyJar" count="1" grid="0, 0"/>
     </recipe>
 
-    <recipe name="arrow" count="5" scrapable="False" craft_time="10" learn_exp_gain="20" craft_exp_gain="15" >
+    <recipe name="arrow" count="5" scrapable="False" craft_time="10" learn_exp_gain="20" craft_exp_gain="5" >
         <ingredient name="rockSmall" count="1" grid="2, -2"/>
         <ingredient name="stick" count="1" grid="1, -1"/>
         <ingredient name="feather" count="1" grid="0, 0"/>
@@ -965,7 +965,7 @@
 
   <!-- removed Vanilla iron armor -->
 
-    <recipe name="keystone" count="1" scrapable="False" craft_time="5" learn_exp_gain="20" craft_exp_gain="2" >
+    <recipe name="keystone" count="2" scrapable="False" craft_time="5" learn_exp_gain="20" craft_exp_gain="2" >
       <ingredient name="ingotBrass" count="1" grid="-1, -2"/>
       <ingredient name="concreteMix" count="1" grid="0, -2"/>
       <ingredient name="ingotSteel" count="1" grid="1, -2"/>
@@ -2493,7 +2493,7 @@
     </recipe>
 
 	   <!-- Altered the bone recipe so it's more rewarding for a less useful resource -->
-    <recipe name="crossbowBolt" count="30" scrapable="False" craft_time="50" craft_exp_gain="2" learn_exp_gain="20" >
+    <recipe name="crossbowBolt" count="30" scrapable="False" craft_time="50" craft_exp_gain="2" learn_exp_gain="15" >
         <ingredient name="femur" count="5" grid="1, -1"/>
         <ingredient name="stick" count="30" grid="0, 0"/>
         <ingredient name="feather" count="15" grid="-1, 1"/>
@@ -2508,6 +2508,16 @@
         <ingredient name="feather" count="15" grid="-1, 1"/>
         <ingredient name="treeSap" count="1" grid="-1, 0"/>
         <ingredient name="yuccaFibers" count="1" grid="-1, -1"/>
+    </recipe>
+
+    <recipe name="explodingCrossbowBolt" count="5" scrapable="False" craft_time="1" learn_exp_gain="20" craft_exp_gain="2" >
+        <ingredient name="gunPowderCharge" count="1" grid="0, -1"/>
+        <ingredient name="steelArrowHead" count="1" grid="1, -1"/>
+        <ingredient name="gunPowderCharge" count="1" grid="-1, 0"/>
+        <ingredient name="stick" count="1" grid="0, 0"/>
+        <ingredient name="gunPowderCharge" count="1" grid="1, 0"/>
+        <ingredient name="feather" count="1" grid="-1, 1"/>
+        <ingredient name="gunPowderCharge" count="1" grid="0, 1"/>
     </recipe>
 
     <recipe name="Mossburg500S" count="1" scrapable="True" craft_time="5" craft_exp_gain="2" learn_exp_gain="200" >

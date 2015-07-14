@@ -779,7 +779,6 @@ plentiful loot items in the game.
 -->
 
 	<lootgroup name="commonBooks">
-		<item name="hammerSchematic"/>
 		<item name="huntingKnifeBook" />
 		<item name="leatherTanning" />
 		<item name="forgeBehindBook" />
@@ -797,7 +796,7 @@ plentiful loot items in the game.
     	<item name="macDyverBook" />
 		<item name="ammunitionNationBook" />
 		<item name="shotgunShellSchematic"/>
-		<item name="9mmBulletSchematic"/>
+    <item name="hammerSchematic"/>
 	</lootgroup>
 
 	<lootgroup name="ironArmorSchematics">
@@ -824,11 +823,6 @@ plentiful loot items in the game.
 		<item name="theEnforcerMagazine" />
 		<item name="smgSchematics" />
 		<item name="medievalWarsAndYou" />
-		<item name="flamingArrowSchematic"/>
-		<item name="sledgehammerSchematic"/>
-		<item name="shotgunSlugSchematic"/>
-		<item name="10mmBulletSchematic"/>
-		<item name="762mmBulletSchematic"/>
 		<item name="augerSchematic" />
 		<item name="firstAidKitSchematic" />
     </lootgroup>
@@ -837,7 +831,6 @@ plentiful loot items in the game.
 		<item name="Mossburg500Schematics" />
 		<item name="momsSurvivalGuide" />
 		<item name="momsEcoFuels" />
-		<item name="gasCanSchematic"/>
 		<item name="sniperRifleSchematic" />
 		<item name="Furukawa780Schematic" />
 		<item name="minibikesForDumbshits"/>
@@ -857,14 +850,12 @@ plentiful loot items in the game.
     <item name="minibikesForDumbshits" prob="0.01" />
     <item name="forgeAheadBook" prob="0.05" />
     <item name="setInConcrete" prob="0.10" />
-    <item name="gasCanSchematic" prob="0.10" />
     <item name="firstAidKitSchematic" prob="0.10" />
-    <item name="sledgehammerSchematic" prob="0.10" />
     <item name="ironBootsSchematic" prob="0.10" />
     <item name="forgeBehindBook" prob="0.10" />
-    <item name="hammerSchematic" prob="0.10" />
-		<item name="huntingKnifeBook" prob="0.10" />
-		<item name="leatherTanning" prob="0.10" />
+    <item name="huntingKnifeBook" prob="0.10" />
+    <item name="hammerSchematic" prob="0.15" />
+		<item name="leatherTanning" prob="0.15" />
   </lootgroup>
 
 	<lootgroup name="gasPumps" >
@@ -1226,7 +1217,7 @@ plentiful loot items in the game.
     <item group="commonTools" prob="0.55" />
   </lootgroup>
 
-	<lootgroup name="constructionSupplies" count="4">
+	<lootgroup name="constructionSupplies" count="3">
 		<item name="woodFrame" count="8,16" />
 		<item name="rebarFrame" count="4,8" />
     <item name="forgedIron" count="4,8" />
@@ -1235,7 +1226,7 @@ plentiful loot items in the game.
 		<item name="concreteMix" count="2,4" />
     <item name="hardwoodPlank" count="2,4" />
     <item name="sandpaper" count="2,4" />
-    <item name="householdChemicals" count="1,2" />
+    <item name="householdChemicals" count="1" />
     <item name="metalWire" count="1,2" />
 		<item name="cobblestoneFrame" count="8,16" />
 		<item name="cobblestones" count="12,20" />

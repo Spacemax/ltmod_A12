@@ -217,7 +217,7 @@ Description of Options:
           <!--<decoration type="prefab" name="tree_pine_01" prob="0" prob_max="2" />-->
             <decorations>
                 <decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/>
-                <decoration type="prefab" name="rock_form01" prob=".0007" rotatemax="7"/>
+                <decoration type="prefab" name="rock_form01" prob=".01" rotatemax="7"/>
                 <decoration type="prefab" name="coal_form01" prob=".0007" rotatemax="7"/>
                 <decoration type="block" blockname="snowstorm1" prob ="0.00004" />
                 <decoration type="block" blockname="lootForest" prob="0.00025"/>
@@ -284,7 +284,7 @@ Description of Options:
             <decorations>
                 <decoration type="block" blockname="lootForest" prob="0.00025"/>
                 <decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/>
-                <decoration type="prefab" name="rock_form01" prob=".0007" rotatemax="7"/>
+                <decoration type="prefab" name="rock_form01" prob=".01" rotatemax="7"/>
                 <decoration type="prefab" name="coal_form01" prob=".0007" rotatemax="7"/>
                 <decoration type="block" blockname="goldenrod" prob="0.003"/>
                 <decoration type="block" blockname="cotton" prob="0.003"/>
@@ -379,7 +379,7 @@ Description of Options:
             <decorations>
                 <decoration type="block" blockname="lootForest" prob="0.00025"/>
                 <decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/>
-                <decoration type="prefab" name="rock_form01" prob=".0007" rotatemax="7"/>
+                <decoration type="prefab" name="rock_form01" prob=".01" rotatemax="7"/>
                 <decoration type="prefab" name="coal_form01" prob=".0007" rotatemax="7"/>
                 <decoration type="block" blockname="goldenrod" prob="0.001"/>
                 <decoration type="block" blockname="cotton" prob="0.001"/>
