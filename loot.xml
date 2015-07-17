@@ -305,6 +305,7 @@
 		<item name="steelArrow" 	count="1,12" prob="0.5"/>
 		<item name="arrowBrass" 	count="1,2" />
 		<item name="brassArrowHead" count="1,2" />
+    <item name="steelArrowHead" prob="0.05" />
 		<item name="arrow" 			count="2,6" />
 		<item name="crossbowBolt" 	count="2,6" />
 		<item name="shotgunShell" 	count="1,8"/>
