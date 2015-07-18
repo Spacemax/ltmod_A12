@@ -1383,5 +1383,81 @@
        <property name="ExperienceGain" value="60"/>
    </entity_class>
 
+   <!-- Extended Zombies A12 -->
+
+     <entity_class name="fatCopBoss" extends="zombie04">
+      <property name="Mesh"                 value="Zombies/FatZombieCopRagdoll" />
+      <property name="Class"  			  value="EntityZombieCop" />
+      <property name="HandItem"             value="xAttack3" />
+      <property name="WalkType"             value="1" />
+      <property name="RightHandJointName"   value="Muzzle" />
+      <property name="ApproachSpeed"      value="0.4" />
+      <property name="NightWanderSpeed"   value="0.4" />
+      <property name="NightApproachSpeed" value="0.6" />
+      <property name="CanClimbLadders"     value="false" />
+      <property name="PhysicsBody" value="FatZombie" />
+
+      <!-- AI properties -->
+      <property name="AITask-1" value="BreakDoor" />
+      <property name="AITask-2" value="BreakBlock" />
+      <property name="AITask-3" value="RangedAttackTarget" param1="1" param2="5" />  <!-- param1: 0 == attack action, 1 == use action, param2: attack length in s -->
+      <property name="AITask-4" value="ApproachAndAttackTarget" param1="EntityPlayer" />
+      <property name="AITask-5" value="ApproachAndAttackTarget" param1="EntityAnimalStag" />
+      <property name="AITask-6" value="ApproachSpot" />
+      <property name="AITask-7" value="Wander" />
+
+      <property name="AITarget-1" value="SetAsTargetIfHurt" param1="EntityPlayer" />
+      <property name="AITarget-2" value="SetNearestEntityAsTarget" param1="EntityPlayer" />
+      <property name="AITarget-3" value="SetNearestEntityAsTarget" param1="EntityAnimalStag" />
+
+      <property name="MaxHealth"    value="3500" />
+      <property name="Weight"       value="270" />
+      <property name="PushFactor"   value="120" />
+
+
+      <property name="SoundRandom"     value="Enemies/Acid_Puking_Hulk/hulkroam" />
+      <property name="SoundAlert"     value="Enemies/Acid_Puking_Hulk/hulkalert" />
+      <property name="SoundAttack"     value="Enemies/Acid_Puking_Hulk/hulkattack" />
+      <property name="SoundHurt"     value="Enemies/Acid_Puking_Hulk/hulkpain" />
+      <property name="SoundDeath"   value="Enemies/Acid_Puking_Hulk/hulkdeath" />
+      <property name="LootListOnDeath"  value="61" />
+      <property name="ExperienceGain" value="500"/>
+    </entity_class>
+
+      <entity_class name="RuleNo1" extends="zombie04">
+        <!-- <property name="Mesh"                 value="Zombies/FatZombieCopRagdoll" /> -->
+        <property name="Mesh"   value="Zombies/FatZombieRagdoll" />
+    <!--         <property name="Class"             value="EntityZombieCop" /> -->
+        <property name="PhysicsBody" value="FatZombie" />
+        <property name="CanClimbVertical"  value="true" />
+        <property name="HandItem"             value="xAttack3" />
+        <property name="WalkType"             value="5" />
+        <property name="RightHandJointName"   value="Bip001 Head" />
+        <property name="ApproachSpeed"      value="0.6" />
+        <property name="NightWanderSpeed"   value="0.3" />
+        <property name="NightApproachSpeed" value="0.8" />
+        <property name="CanClimbLadders"     value="true" />
+          <property name="AITask-1" value="Swim" />
+          <property name="AITask-1" value="BreakDoor" />
+          <property name="AITask-2" value="BreakBlock" />
+      <!-- <property name="AITask-3" value="Territorial" param1="10" /> -->
+          <property name="AITask-3" value="RangedAttackTarget" param1="1" param2="5" />
+          <property name="AITask-4" value="ApproachAndAttackTarget" param1="EntityPlayer" />
+          <property name="AITask-6" value="ApproachSpot" />
+          <property name="AITask-7" value="Wander" />
+
+        <property name="MaxHealth"    value="4000" />
+        <property name="Weight"       value="300" />
+        <property name="PushFactor"   value="120" />
+        <property name="LootListOnDeath"  value="17" />
+
+        <property name="SoundRandom"     value="Enemies/Acid_Puking_Hulk/hulkroam" />
+        <property name="SoundAlert"     value="Enemies/Acid_Puking_Hulk/hulkalert" />
+        <property name="SoundAttack"     value="Enemies/Acid_Puking_Hulk/hulkattack" />
+        <property name="SoundHurt"     value="Player_Male/player1painlg" />
+        <property name="SoundDeath"   value="Enemies/Acid_Puking_Hulk/hulkdeath" />
+        <property name="ExperienceGain" value="500"/>
+    </entity_class>
+
 
 </entity_classes>

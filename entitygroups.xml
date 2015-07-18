@@ -14,8 +14,10 @@
 		<entity name="fatzombie" />
 		<entity name="zombiecrawler" />
     <entity name="Ruby" prob="0.0035" />
-		<entity name="nurseBetty" prob="0.0045" />
-    <entity name="witch" prob="0.0045" />
+		<entity name="nurseBetty" prob="0.0035" />
+    <entity name="witch" prob="0.0035" />
+    <entity name="RuleNo1" prob="0.0015" />
+    <entity name="fatCopBoss" prob="0.0015" />
     </entitygroup>
 
     <entitygroup name="ZombiesNight">
@@ -29,14 +31,16 @@
 		<entity name="zombiegal04" />
 		<entity name="fatzombie" />
     <entity name="shitterzombie" />
-		<entity name="hornet" prob="0.05" />
-		<entity name="zombiedog" prob="0.05" />
+		<entity name="hornet" prob="0.04" />
+		<entity name="zombiedog" prob="0.04" />
 		<entity name="zombiecrawler" />
     <entity name="Ruby" prob="0.0035" />
     <entity name="fatcrawlerzombie" prob="0.03" />
 		<entity name="nurseBetty" prob="0.0045" />
 		<entity name="zombieripper" prob="0.0015" />
 		<entity name="Hellhound" prob="0.0015" />
+    <entity name="RuleNo1" prob="0.0015" />
+    <entity name="fatCopBoss" prob="0.0015" />
     </entitygroup>
 
 
@@ -60,6 +64,8 @@
 		<entity name="zombieripper" prob="0.0015" />
     <entity name="fatcrawlerzombie" prob="0.03" />
 		<entity name="Hellhound" prob="0.0005" />
+    <entity name="RuleNo1" prob="0.0015" />
+    <entity name="fatCopBoss" prob="0.0015" />
     </entitygroup>
 
     <entitygroup name="ZombiesWastelandNight">
@@ -84,6 +90,8 @@
 		<entity name="zombieripper" prob="0.0015" />
     <entity name="witch" prob="0.0015" />
 		<entity name="Hellhound" prob="0.0005" />
+    <entity name="RuleNo1" prob="0.0015" />
+    <entity name="fatCopBoss" prob="0.0015" />
     </entitygroup>
 
     <entitygroup name="ZombiesWastelandNight2">
@@ -124,6 +132,8 @@
 		<entity name="zombieripper" prob="0.0015" />
 		<entity name="Hellhound" prob="0.0005" />
 		<entity name="Gorilla" prob="0.00015"/>
+    <entity name="RuleNo1" prob="0.0015" />
+    <entity name="fatCopBoss" prob="0.0015" />
     </entitygroup>
 
 	<entitygroup name="ZombieScouts">
@@ -148,7 +158,9 @@
     </entitygroup>
 
     <entitygroup name="ZombiesBoss">
-    <entity name="Gorilla" prob="1.5" />
+    <entity name="Gorilla" prob="1.2" />
+    <entity name="RuleNo1" prob="0.2" />
+    <entity name="fatCopBoss" prob="0.1" />
 		<entity name="fatzombiecop" />
     </entitygroup>
 
