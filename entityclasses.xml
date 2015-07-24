@@ -1449,7 +1449,7 @@
         <property name="MaxHealth"    value="4000" />
         <property name="Weight"       value="300" />
         <property name="PushFactor"   value="120" />
-        <property name="LootListOnDeath"  value="17" />
+        <property name="LootListOnDeath"  value="61" />
 
         <property name="SoundRandom"     value="Enemies/Acid_Puking_Hulk/hulkroam" />
         <property name="SoundAlert"     value="Enemies/Acid_Puking_Hulk/hulkalert" />

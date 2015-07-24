@@ -26,13 +26,13 @@
             <block name="trashPile08" prob="0.1" />
             <block name="trashPile09" prob="0.1" />
             <block name="Stump" prob="0.1" />
-			<block name="backpack01" prob="0.03" />
-			<block name="backpack02" prob="0.03" />
-			<block name="backpack03" prob="0.03" />
-			<block name="duffle01" prob="0.03" />
-			<block name="sportsBag01" prob="0.03" />
-			<block name="sportsBag02" prob="0.03" />
-			<block name="purse01" prob="0.03" />
+      			<block name="backpack01" prob="0.03" />
+      			<block name="backpack02" prob="0.03" />
+      			<block name="backpack03" prob="0.03" />
+      			<block name="duffle01" prob="0.03" />
+      			<block name="sportsBag01" prob="0.03" />
+      			<block name="sportsBag02" prob="0.03" />
+      			<block name="purse01" prob="0.03" />
         </placeholder>
 
         <!-- Replace the Wasteland with one of the following -->
@@ -46,14 +46,14 @@
             <block name="trashPile07" prob="0.1" />
             <block name="trashPile08" prob="0.1" />
             <block name="trashPile09" prob="0.05" />
-			<block name="backpack01" prob="0.03" />
-			<block name="backpack02" prob="0.03" />
-			<block name="backpack03" prob="0.03" />
-			<block name="duffle01" prob="0.03" />
-			<block name="sportsBag01" prob="0.03" />
-			<block name="sportsBag02" prob="0.03" />
-			<block name="purse01" prob="0.03" />
-			<block name="deskSafe" prob="0.03" />
+      			<block name="backpack01" prob="0.03" />
+      			<block name="backpack02" prob="0.03" />
+      			<block name="backpack03" prob="0.03" />
+      			<block name="duffle01" prob="0.03" />
+      			<block name="sportsBag01" prob="0.03" />
+      			<block name="sportsBag02" prob="0.03" />
+      			<block name="purse01" prob="0.03" />
+      			<block name="deskSafe" prob="0.03" />
         </placeholder>
 
 		<!-- Replace the lootDesert with one of the following -->
@@ -67,13 +67,13 @@
             <block name="trashPile07" prob="0.1" />
             <block name="trashPile08" prob="0.1" />
             <block name="trashPile09" prob="0.1" />
-			<block name="backpack01" prob="0.03" />
-			<block name="backpack02" prob="0.03" />
-			<block name="backpack03" prob="0.03" />
-			<block name="duffle01" prob="0.03" />
-			<block name="sportsBag01" prob="0.03" />
-			<block name="sportsBag02" prob="0.03" />
-			<block name="purse01" prob="0.03" />
+      			<block name="backpack01" prob="0.03" />
+      			<block name="backpack02" prob="0.03" />
+      			<block name="backpack03" prob="0.03" />
+      			<block name="duffle01" prob="0.03" />
+      			<block name="sportsBag01" prob="0.03" />
+      			<block name="sportsBag02" prob="0.03" />
+      			<block name="purse01" prob="0.03" />
         </placeholder>
 
 		<!-- Replace the lootBurntForest with one of the following -->
@@ -100,13 +100,13 @@
             <block name="trashPile07" prob="0.1" />
             <block name="trashPile08" prob="0.1" />
             <block name="trashPile09" prob="0.1" />
-			<block name="backpack01" prob="0.03" />
-			<block name="backpack02" prob="0.03" />
-			<block name="backpack03" prob="0.03" />
-			<block name="duffle01" prob="0.03" />
-			<block name="sportsBag01" prob="0.03" />
-			<block name="sportsBag02" prob="0.03" />
-			<block name="purse01" prob="0.03" />
+      			<block name="backpack01" prob="0.03" />
+      			<block name="backpack02" prob="0.03" />
+      			<block name="backpack03" prob="0.03" />
+      			<block name="duffle01" prob="0.03" />
+      			<block name="sportsBag01" prob="0.03" />
+      			<block name="sportsBag02" prob="0.03" />
+      			<block name="purse01" prob="0.03" />
         </placeholder>
 
         <!-- Replace the lootHouse with one of the following -->
@@ -124,13 +124,13 @@
             <block name="cardboardBox" />
             <block name="bin" />
             <block name="suitcase" />
-			<block name="backpack01" />
-			<block name="backpack02" />
-			<block name="backpack03" />
-			<block name="duffle01" />
-			<block name="sportsBag01" />
-			<block name="sportsBag02" />
-			<block name="purse01" />
+      			<block name="backpack01" />
+      			<block name="backpack02" />
+      			<block name="backpack03" />
+      			<block name="duffle01" />
+      			<block name="sportsBag01" />
+      			<block name="sportsBag02" />
+      			<block name="purse01" />
         </placeholder>
 
         <!-- Replace the lootStreet with one of the following -->
@@ -139,48 +139,48 @@
         	<block name="trashPile02" />
         	<block name="trashPile03" />
         	<block name="trashPile04" />
-            <block name="trashPile05" />
-            <block name="trashPile06" />
-            <block name="trashPile07" />
-            <block name="trashPile08" />
-            <block name="trashPile09" />
-            <block name="shoppingCart" prob="0.05" />
-            <block name="shoppingCartEmpty" prob="0.05" />
-			<block name="backpack01" prob="0.05" />
-			<block name="backpack02" prob="0.05" />
-			<block name="backpack03" prob="0.05" />
-			<block name="duffle01" prob="0.05" />
-			<block name="sportsBag01" prob="0.05" />
-			<block name="sportsBag02" prob="0.05" />
-			<block name="purse01" prob="0.05" />
+          <block name="trashPile05" />
+          <block name="trashPile06" />
+          <block name="trashPile07" />
+          <block name="trashPile08" />
+          <block name="trashPile09" />
+          <block name="shoppingCart" prob="0.05" />
+          <block name="shoppingCartEmpty" prob="0.05" />
+    			<block name="backpack01" prob="0.05" />
+    			<block name="backpack02" prob="0.05" />
+    			<block name="backpack03" prob="0.05" />
+    			<block name="duffle01" prob="0.05" />
+    			<block name="sportsBag01" prob="0.05" />
+    			<block name="sportsBag02" prob="0.05" />
+    			<block name="purse01" prob="0.05" />
 
         </placeholder>
 
         <!-- Replace the lootYard with one of the following -->
         <placeholder name="lootYard">
-            <block name="trashPile07" prob=".5" />
-            <block name="cardboardBox" prob="0.2" />
-			<block name="backpack01" prob="0.03" />
-			<block name="backpack02" prob="0.03" />
-			<block name="backpack03" prob="0.03" />
-			<block name="duffle01" prob="0.03" />
-			<block name="sportsBag01" prob="0.03" />
-			<block name="sportsBag02" prob="0.03" />
-			<block name="purse01" prob="0.03" />
+          <block name="trashPile07" prob=".5" />
+          <block name="cardboardBox" prob="0.2" />
+    			<block name="backpack01" prob="0.03" />
+    			<block name="backpack02" prob="0.03" />
+    			<block name="backpack03" prob="0.03" />
+    			<block name="duffle01" prob="0.03" />
+    			<block name="sportsBag01" prob="0.03" />
+    			<block name="sportsBag02" prob="0.03" />
+    			<block name="purse01" prob="0.03" />
         </placeholder>
 
       <!-- Replace the lootYard with one of the following -->
       <placeholder name="lootGarage">
-			<block name="garageStorage" prob=".2" />
-            <block name="trashPile02" prob=".5" />
-            <block name="cardboardBox" prob="0.2" />
-			<block name="backpack01" prob="0.03" />
-			<block name="backpack02" prob="0.03" />
-			<block name="backpack03" prob="0.03" />
-			<block name="duffle01" prob="0.03" />
-			<block name="sportsBag01" prob="0.03" />
-			<block name="sportsBag02" prob="0.03" />
-			<block name="purse01" prob="0.03" />
+  			<block name="garageStorage" prob=".2" />
+        <block name="trashPile02" prob=".5" />
+        <block name="cardboardBox" prob="0.2" />
+  			<block name="backpack01" prob="0.03" />
+  			<block name="backpack02" prob="0.03" />
+  			<block name="backpack03" prob="0.03" />
+  			<block name="duffle01" prob="0.03" />
+  			<block name="sportsBag01" prob="0.03" />
+  			<block name="sportsBag02" prob="0.03" />
+  			<block name="purse01" prob="0.03" />
       </placeholder>
 
       <!-- Replaces the lootMP with one of the following -->
@@ -301,19 +301,19 @@
 	<lootgroup name="empty"/>
 
 	<lootgroup name="ammo" count="1">
-		<item name="44MagBullet" 	count="1,6" prob="0.1" />
-		<item name="steelArrow" 	count="1,12" prob="0.5"/>
-		<item name="arrowBrass" 	count="1,2" />
+		<item name="44MagBullet" count="1,6" prob="0.1" />
+		<item name="steelArrow" count="1,12" prob="0.5"/>
+		<item name="arrowBrass" count="1,2" />
 		<item name="brassArrowHead" count="1,2" />
     <item name="steelArrowHead" prob="0.05" />
-		<item name="arrow" 			count="2,6" />
-		<item name="crossbowBolt" 	count="2,6" />
-		<item name="shotgunShell" 	count="1,8"/>
-		<item name="9mmBullet" 		count="1,9"/>
-		<item name="10mmBullet" 	count="1,6"/>
-		<item name="308calBullet" 	count="2,5" />
-		<item name="762mmBullet" 	count="1,5"/>
-		<item name="shotgunSlug" 	count="1,2" />
+		<item name="arrow" count="2,6" />
+		<item name="crossbowBolt" count="2,6" />
+		<item name="shotgunShell" count="1,8"/>
+		<item name="9mmBullet" count="1,9"/>
+		<item name="10mmBullet" count="1,6"/>
+		<item name="308calBullet" count="2,5" />
+		<item name="762mmBullet" count="1,5"/>
+		<item name="shotgunSlug" count="1,2" />
 	</lootgroup>
 
   <!-- KM:Increase drop rate when this group is called, this should populate fridges,coolers with more rotten items in general-->
@@ -367,20 +367,22 @@
 		<item name="femur" count="1"/>
 	</lootgroup>
 
-	<lootgroup name="shotguns">
-	  <item name="sawedOffPumpShotgun"/>
-	  <item name="PumpShotgun" prob="0.25"/>
-	</lootgroup>
-
-	<lootgroup name="shotgun+ammo" count="all">
-		<item group="shotguns"/>
-		<item name="shotgunShell" count="1,6"/>
-	</lootgroup>
-
 	<lootgroup name="pumpshotgun+ammo" count="all">
 		 <item name="PumpShotgun"/>
-		<item name="shotgunShell" count="1,6"/>
+		<item name="shotgunShell" count="20,60"/>
 	</lootgroup>
+
+  <lootgroup name="shotgun+ammo" count="all">
+    <item name="sawedOffPumpShotgun"/>
+    <item name="shotgunShell" count="20,60"/>
+  </lootgroup>
+
+  <lootgroup name="shotguns">
+    <item group="shotgun+ammo"/>
+    <item group="pumpshotgun+ammo" prob="0.25"/>
+  </lootgroup>
+
+
 
 	<lootgroup name="mp5+ammo" count="all">
 		<item name="mp5"/>
@@ -1062,26 +1064,26 @@ plentiful loot items in the game.
 	</lootgroup>
 
   <lootgroup name="heavyArmor">
-  		<item name="ironBoots" 		quality="50, 300"/>
-  		<item name="ironLegArmor" 	quality="50, 300"/>
-  		<item name="ironChestArmor"	quality="50, 300"/>
-  		<item name="ironGloves" 	quality="50, 300"/>
+  		<item name="ironBoots" quality="50, 300"/>
+  		<item name="ironLegArmor" quality="50, 300"/>
+  		<item name="ironChestArmor" quality="50, 300"/>
+  		<item name="ironGloves" quality="50, 300"/>
   	</lootgroup>
 
   	<lootgroup name="rareArmor">
-		  <item name="kevlarBoots" 		quality="50, 300"/>
-          <item name="kevlarLegArmor" 	quality="50, 300"/>
-          <item name="kevlarChestArmor" 	quality="50, 300"/>
-          <item name="kevlarGloves" 		quality="50, 300"/>
-          <item name="kevlarHelmet" 		quality="50, 300"/>
-          <item name="swatHelmet" 		quality="50, 300"/>
+		  <item name="kevlarBoots" quality="50, 300"/>
+          <item name="kevlarLegArmor" quality="50, 300"/>
+          <item name="kevlarChestArmor" quality="50, 300"/>
+          <item name="kevlarGloves" quality="50, 300"/>
+          <item name="kevlarHelmet" quality="50, 300"/>
+          <item name="swatHelmet" quality="50, 300"/>
   	</lootgroup>
 
   	<lootgroup name="Armor" count="1">
-  		<item group="rareArmor" 	prob="0.001" />
-  		<item group="heavyArmor" 	prob="0.049" />
-  		<item group="lightArmor" 	prob="0.25" />
-  		<item group="clothing" 		prob="0.70" />
+  		<item group="rareArmor" prob="0.001" />
+  		<item group="heavyArmor" prob="0.049" />
+  		<item group="lightArmor" prob="0.25" />
+  		<item group="clothing" prob="0.70" />
      </lootgroup>
 
 
@@ -1261,11 +1263,11 @@ plentiful loot items in the game.
         <lootgroup name="rareAutomotive" count="4">
             <item name="gasCan" count="1" prob="0.025" />
       			<item group="uncommonTools" prob="0.1" />
-            <item group="commonTools" 	prob="0.1" />
-            <item group="cannedfood" 	prob="0.1" />
-            <item group="medicine" 		prob="0.15" />
-      			<item group="clothes" 		prob="0.2" />
-            <item group="junk" 			prob="0.2" />
+            <item group="commonTools" prob="0.1" />
+            <item group="cannedfood" prob="0.1" />
+            <item group="medicine" prob="0.15" />
+      			<item group="clothes" prob="0.2" />
+            <item group="junk" prob="0.2" />
         </lootgroup>
 
         <!-- Reworking counts and changed group count from All to 3, and changed it to be a random selection -->
@@ -1335,9 +1337,9 @@ plentiful loot items in the game.
 	</lootgroup>
 
 	<lootgroup name="beverages" count="1">
-			<item name ="coffee" 		prob="0.15" /> 			<!--15%-->
-    		<item name="beer" 			prob="0.15" />			<!--15%-->
-    		<item name="bottledWater" 	prob="0.7" />			<!--70%-->
+			<item name="coffee" prob="0.15" /> 			<!--15%-->
+    		<item name="beer" prob="0.15" />			<!--15%-->
+    		<item name="bottledWater" prob="0.7" />			<!--70%-->
 	</lootgroup>
 
 	<lootgroup name="automotive+tools+junk" count="all">
@@ -1359,6 +1361,40 @@ plentiful loot items in the game.
 		<item name="antibiotics" count="1,3" />
 	</lootgroup>
 
+  <!-- Boss Loot Drops -->
+
+  <lootgroup name="bossLoot" count="1">
+    <item group="ultrarareBooks" prob="0.05" />
+    <item group="kevlarArmorSchematics" prob="0.05"/>
+    <item group="ultrarareWeaponParts" prob="0.05" />
+    <item group="rareArmor" prob="0.10" />
+    <item group="rockDrillParts" prob="0.05" />
+    <item group="Mossburg_components" prob="0.05" />
+    <item group="rareWeaponParts" prob="0.15" />
+    <item group="ultrarareTools" prob="0.15" />
+    <item group="augerParts" prob="0.15" />
+    <item group="rareBooks" prob="0.20"/>
+  </lootgroup>
+
+    <!-- Boss Ammo -->
+  <lootgroup name="bossAmmo" count="1">
+    <item name="44MagBullet" count="30,60" />
+		<item name="steelArrow" count="30,80" />
+		<item name="arrowBrass" count="30,80" />
+		<item name="shotgunShell" count="30,80"/>
+		<item name="9mmBullet" count="30,50"/>
+		<item name="308calBullet" count="40,80" />
+		<item name="762mmBullet" count="20,50"/>
+		<item name="shotgunSlug" count="40,80" />
+    <item name="shotgunShell" count="30,80"/>
+    <item name="explodingArrow" count="30,50"/>
+    <item name="flamingArrow" count="40,80" />
+    <item name="explodingCrossbowBolt" count="20,50"/>
+    <item name="shotgunSlug" count="40,80" />
+    <item group="shotguns"/>
+  </lootgroup>
+
+
     <!-- lootcontainer 1 misc storage, cardboard boxes-->
     <lootcontainer id="1" count="0,2" size="4,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="baseTemplate">
       <item group="books" prob="0.01" />
@@ -1378,17 +1414,17 @@ plentiful loot items in the game.
     <!-- lootcontainer 4 frozen or refridgerated food, spoiled food -->
     <lootcontainer id="4" count="0,4" size="6,3" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="baseTemplate">
       <!-- KM:Food normalized and more rotten food will drop in fridges to simulate spoilage-->
-            <item group="coldfood" 		prob="0.1" />					<!--10%-->
-            <item name="bottledWater" 	prob="0.1" 	count="1,2" />		<!--10%-->
-      		<item name="emptyJar"  		prob="0.2" 	count="1,2" />		<!--20%-->
-      		<item group="rottenFood" 	prob="0.60" />					<!--60%-->
+            <item group="coldfood" prob="0.1" />					<!--10%-->
+            <item name="bottledWater" prob="0.1" count="1,2" />		<!--10%-->
+      		<item name="emptyJar" prob="0.2" count="1,2" />		<!--20%-->
+      		<item group="rottenFood" prob="0.60" />					<!--60%-->
     </lootcontainer>
 
     <!-- lootcontainer 5 stove, cooking pots and pans rotten food -->
     <lootcontainer id="5" count="0,3" size="3,3" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="baseTemplate">
-        <item name="canEmpty"  	count="1,2" />
+        <item name="canEmpty" count="1,2" />
   		<item name="cookingPot" count="0,1" />
-  		<item name="scrapIron" 	count="1,2" />
+  		<item name="scrapIron" count="1,2" />
   		<item group="rottenFood" />
     </lootcontainer>
 
@@ -1410,11 +1446,11 @@ plentiful loot items in the game.
     <!-- lootcontainer 8 kitchen cupboards (lower), cleaning chemicals, plates, silverware, pots and pans -->
     <lootcontainer id="8" count="0,2" size="3,3" sound_open="UseActions/open_cupboard" sound_close="UseActions/close_cupboard" loot_quality_template="baseTemplate">
       <!-- KM:Cupboard added to replace a few items and make it similar to upper cupboards but with a few uniques, prob normalized-->
-      		<item name="wrench" 		prob="0.05" count="1" />			<!--5%-->
-      		<item name="cookingPot" 	prob="0.1" 	count="1" />			<!--10%-->
-      		<item name="scrapLead" 		prob="0.15" count="1" />			<!--15%-->
+      		<item name="wrench" prob="0.05" count="1" />			<!--5%-->
+      		<item name="cookingPot" prob="0.1" count="1" />			<!--10%-->
+      		<item name="scrapLead" prob="0.15" count="1" />			<!--15%-->
       		<item name="shortMetalPipe" prob="0.20" count="1,2" />			<!--20%-->
-      		<item group="cupboard" 		prob="0.5" />						<!--50%-->
+      		<item group="cupboard" prob="0.5" />						<!--50%-->
      </lootcontainer>
 
     <!-- lootcontainer 9 backpack, place where people stash things,  -->
@@ -1429,10 +1465,10 @@ plentiful loot items in the game.
 
     <!-- lootcontainer 11 safes, weapon caches rare good loot -->
     <lootcontainer id="11" count="1,3" size="3,3" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="baseTemplate">
-        <item group="books" 				prob="0.05"/>
-  		<item group="rareMedicine" 			prob="0.2" />
+        <item group="books" prob="0.05"/>
+  		<item group="rareMedicine" prob="0.2" />
   		<item name="casinoCoin" count="2,5" prob="0.25" />
-  		<item group="guns+ammo" 			prob="0.50" />
+  		<item group="guns+ammo" prob="0.50" />
   	</lootcontainer>
 
     <!-- lootcontainer 12 deer -->
@@ -1733,14 +1769,8 @@ plentiful loot items in the game.
   <!-- LT tough zombie and feral loot  -->
       <!-- feral loot  -->
     <lootcontainer id="61" count="1,4" size="3,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
-      <item group="rockDrillParts" 		prob="0.005" />			<!-- 0.5% 	~ 5 part per 1000 boxes opened-->
-    		<item group="augerParts" 			prob="0.02" />			<!-- 1% 	~ 1 part per 100 boxes opened-->
-    		<item group="books" 				prob="0.05" />
-    		<item group="rareMedicine" 			prob="0.1" />
-    		<item group="WeaponParts" 			prob="0.15" />
-    		<item group="Armor" 				prob="0.2"/>
-    		<item group="tools" 				prob="0.2"/>
-    		<item group="ammo" 	count="1,3"		prob="0.2935"/>
+        <item group="bossLoot" prob="0.40"/>
+        <item group="bossAmmo" />
         </lootcontainer>
 
 	<!-- minibike storage  -->
