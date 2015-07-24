@@ -131,7 +131,7 @@ Description of Options:
         <biomemap name="city"               		id="10" />
         <biomemap name="city_wasteland"    id="11" />
 		<biomemap name="wasteland_hub"    id="12" />
-		<biomemap name="caveFloor"			id="13" />n
+		<biomemap name="caveFloor"			id="13" />
 		<biomemap name="caveCeiling"			id="14" />
 
         <!-- No more blockmap table needed as we are referencing the block by its name directly now -->
@@ -226,7 +226,7 @@ Description of Options:
                 <decoration type="block" blockname="rock07" prob =".005" />
                 <decoration type="block" blockname="rockResource" prob =".0005" rotatemax="3"/>
                 <decoration type="block" blockname="rockResource02" prob =".0005" rotatemax="3"/>
-                <decoration type="block" blockname="birdnest" prob ="0.002" />
+                <decoration type="block" blockname="birdnest" prob ="0.007" />
                 <decoration type="block" blockname="snowyGrassDiagonal" prob =".1" />
                 <decoration type="block" blockname="WinterEverGreen" prob="0.003" rotatemax="7"/>
                 <decoration type="block" blockname="WinterPine01" prob="0.003" rotatemax="7"/>

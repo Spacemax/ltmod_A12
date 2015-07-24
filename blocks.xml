@@ -336,7 +336,7 @@
 
     <block id="32" name="woodDebris">
     <property name="Material" value="wood" />
-    <property name="FuelValue" value="48" />
+    <property name="FuelValue" value="30" />
     <property name="Shape" value="Terrain" />
     <property name="Mesh" value="terrain" />
     <property name="Texture" value="438" />
@@ -1955,32 +1955,32 @@
     <drop event="Destroy" count="0" />
   </block>
   <block id="421" name="bedRoll01_1">
-    <property name="Class" value="SleepingBag" />
-    <property name="Material" value="cloth" />
-    <property name="Shape" value="Ext3dModel" />
-    <property name="Mesh" value="models" />
-	<property name="FuelValue" value="6" />
-    <property name="Model" value="CampingGear/bedroll01_1" param1="main_mesh" />
-    <property name="Place" value="Bedroll" />
-    <property name="SiblingBlock" value="bedRoll01_2" />
-    <property name="SiblingDirection" value="0,0,-1" />
-    <property name="IsTerrainDecoration" value="true" />
-    <property name="CanPickup" value="true" />
-    <drop event="Destroy" name="cloth" count="1,3" />
-    <property name="Group" value="Building,Basics" />
-  </block>
-  <block id="422" name="bedRoll01_2">
-    <property name="Class" value="SiblingRemove" />
-    <property name="Material" value="cloth" />
-    <property name="Shape" value="Ext3dModel" />
-    <property name="Mesh" value="models" />
-    <property name="Model" value="CampingGear/bedroll01_2" param1="main_mesh" />
-    <property name="SiblingBlock" value="bedRoll01_1" />
-    <property name="SiblingDirection" value="0,0,1" />
-    <property name="IsTerrainDecoration" value="true" />
-    <property name="IsDeveloper" value="true" />
-    <drop event="Destroy" name="cloth" count="1,3" />
-  </block>
+     <property name="Class" value="SleepingBag" />
+     <property name="Material" value="cloth" />
+     <property name="Shape" value="Ext3dModel" />
+     <property name="Mesh" value="models" />
+ 	<property name="FuelValue" value="6" />
+     <property name="Model" value="CampingGear/bedroll01_1" param1="main_mesh" />
+     <property name="Place" value="NWSE" />
+     <property name="SiblingBlock" value="bedRoll01_2" />
+     <property name="SiblingDirection" value="0,0,-1" />
+     <property name="IsTerrainDecoration" value="true" />
+     <property name="CanPickup" value="true" />
+     <drop event="Destroy" name="cloth" count="1,3" />
+     <property name="Group" value="Building,Basics" />
+   </block>
+   <block id="422" name="bedRoll01_2">
+     <property name="Class" value="SiblingRemove" />
+     <property name="Material" value="cloth" />
+     <property name="Shape" value="Ext3dModel" />
+     <property name="Mesh" value="models" />
+     <property name="Model" value="CampingGear/bedroll01_2" param1="main_mesh" />
+     <property name="SiblingBlock" value="bedRoll01_1" />
+     <property name="SiblingDirection" value="0,0,1" />
+     <property name="IsTerrainDecoration" value="true" />
+     <property name="IsDeveloper" value="true" />
+     <drop event="Destroy" name="cloth" count="1,3" />
+   </block>
   <block id="423" name="backpack01">
     <property name="Class" value="Loot" />
     <property name="Material" value="cloth" />
@@ -4735,18 +4735,18 @@
   </block>
   <block id="703" name="reinforcedTrunkPineTip">
     <property name="Class" value="Damage" />
-    <property name="Damage" value="5" />
-	  <property name="Damage_received" value="5" />
+    <property name="Damage" value="6" />
+	  <property name="Damage_received" value="4" />
     <property name="Material" value="wood+wood" />
     <property name="Shape" value="Cone" />
     <property name="Texture" value="379" />
     <property name="IsTerrainDecoration" value="true" />
     <property class="UpgradeBlock">
-      <property name="ToBlock" value="reinforcedMetalTrunkPineTip" />
-      <property name="Item" value="scrapIron" />
-      <property name="ItemCount" value="4" />
-      <property name="UpgradeHitCount" value="4" />
-    </property>
+          <property name="ToBlock" value="scrapIronSpike" />
+          <property name="Item" value="scrapIron" />
+          <property name="ItemCount" value="4" />
+          <property name="UpgradeHitCount" value="4" />
+        </property>
     <property name="DowngradeBlock" value="trunkPineTip" />
     <drop event="Destroy" count="0" />
   </block>
@@ -5508,7 +5508,7 @@
      <property name="Shape" value="New" />
      <property name="Model" value="Pole1m" />
     <property name="Texture" value="21,21,116,116,116,116" />
-    <property name="FuelValue" value="192" />
+    <property name="FuelValue" value="180" />
     <property class="UpgradeBlock">
       <property name="ToBlock" value="reinforcedWoodTrunk" />
       <property name="Item" value="woodPlank" />
@@ -6725,17 +6725,18 @@
     <property name="Material" value="wood" />
     <property name="Shape" value="TubeHalf" />
     <property name="Texture" value="21,21,241,241,241,241" />
-    <drop event="Destroy" count="0" />
+    <drop event="Destroy" name="scrapIron" count="1,2" prob="1" />
+       <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
   </block>
-  <block id="922" name="tubeHalfMetal1NoDistort">
-    <property name="Material" value="stone" />
+  <block id="922" name="tubeHalfMetal1">
+    <property name="Material" value="metal" />
     <property name="Shape" value="TubeHalf" />
     <property name="Texture" value="282" />
-    <drop event="Destroy" name="destroyedStone" count="1" />
-    <drop event="Fall" name="destroyedStone" count="1" prob="1.0"  stick_chance=".75" />
+    <drop event="Destroy" name="scrapIron" count="1,2" prob="1" />
+        <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
   </block>
-  <block id="923" name="tubeHalfMetal2NoDistort">
-    <property name="Material" value="stone" />
+  <block id="923" name="tubeHalfMetal2">
+    <property name="Material" value="metal" />
     <property name="Shape" value="TubeHalf" />
     <property name="Texture" value="194" />
     <drop event="Destroy" count="0" />
@@ -10364,11 +10365,14 @@
 
   <block id="1334" name="cobblestoneRampFrame">
     <property name="Material" value="wood_weak" />
-    <property name="Shape" value="Ext3dModel" />
-    <property name="Mesh" value="models" />
-    <property name="Model" value="Buildings/cobblestone_ramp_frame" param1="main_mesh" />
-    <property name="Place" value="TowardsPlacerInverted" />
-    <property name="Texture" value="426,426,425,425,425,425" />
+    <!-- <property name="Shape" value="Ext3dModel" /> -->
+  	<property name="Shape" value="New" />
+      <!-- <property name="Mesh" value="models" /> -->
+  	<property name="Mesh" value="cutout" />
+      <!-- <property name="Model" value="Buildings/cobblestone_ramp_frame" param1="main_mesh" /> -->
+  	<property name="Model" value="cobblestone_ramp_frame_shape" />
+      <!-- <property name="Place" value="TowardsPlacerInverted" /> -->
+      <property name="Texture" value="517" />
     <property name="Collide" value="movement,rocket,melee" />
     <property name="FuelValue" value="16" />
     <property name="CanPickup" value="true" />
@@ -10384,10 +10388,11 @@
 
   <block id="1335" name="cobblestoneRampQuarter">
     <property name="Material" value="concrete" />
-    <property name="Shape" value="Ext3dModel" />
-    <property name="Mesh" value="models" />
-    <property name="Model" value="Buildings/cobblestone_ramp_quarter" param1="main_mesh" />
-    <property name="Place" value="TowardsPlacerInverted" />
+    <property name="Shape" value="New" />
+   <property name="Mesh" value="cutout" />
+   <property name="Model" value="cobblestone_ramp_quarter_shape" />
+   <!-- <property name="Place" value="TowardsPlacerInverted" /> -->
+ <property name="Texture" value="517" />
     <property class="UpgradeBlock">
       <property name="ToBlock" value="cobblestoneRampHalf" />
       <property name="Item" value="cobblestones" />
@@ -10400,10 +10405,11 @@
 
   <block id="1336" name="cobblestoneRampHalf">
     <property name="Material" value="concrete" />
-    <property name="Shape" value="Ext3dModel" />
-    <property name="Mesh" value="models" />
-    <property name="Model" value="Buildings/cobblestone_ramp_half" param1="main_mesh" />
-    <property name="Place" value="TowardsPlacerInverted" />
+    <property name="Shape" value="New" />
+     <property name="Mesh" value="cutout" />
+     <property name="Model" value="cobblestone_ramp_quarter_shape" />
+     <!-- <property name="Place" value="TowardsPlacerInverted" /> -->
+ 	<property name="Texture" value="517" />
     <property class="UpgradeBlock">
       <property name="ToBlock" value="cobblestoneWedge" />
       <property name="Item" value="cobblestones" />
@@ -11212,17 +11218,14 @@
     <drop event="Fall" name="scrapMetalPile" prob="1.0"  stick_chance=".75" />
   </block>
 
-  <block id="1422" name="chainlink">
+  <block id="1422" name="chainLink">
     <property name="Material" value="metal" />
-     <property name="Shape" value="New" />
-     <property name="Model" value="chainlink" />
-    <property name="Mesh" value="cutout" />
-    <property name="Texture" value="439" />
-    <property name="Collide" value="movement,rocket,melee" />
-    <property name="Weight" value="32" />
-    <drop event="Destroy" name="scrapIron" count="1,2" prob="1" />
+    <property name="Shape" value="New" />
+	<property name="Mesh" value="cutout" />
+    <property name="Model" value="chainlink_bottom" />
+    <property name="Texture" value="516" />
+    <drop event="Destroy" name="scrapIron" count="1" />
     <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
-    <property name="Group" value="Building" />
   </block>
 
   <block id="1424" name="stairsSteel">
@@ -11310,7 +11313,7 @@
   <property name="Mesh" value="models" />
 <property name="FuelValue" value="6" />
   <property name="Model" value="CampingGear/bedroll01_1" param1="main_mesh" />
-  <property name="Place" value="Bedroll" />
+    <property name="Place" value="NWSE" />
   <property name="SiblingBlock" value="plushSleepingBag_2" />
   <property name="SiblingDirection" value="0,0,-1" />
   <property name="IsTerrainDecoration" value="true" />
@@ -12178,6 +12181,119 @@
     <property name="DowngradeBlock" value="scrapIronSpike" />
     <drop event="Destroy" name="scrapIron" count="1" />
     <drop event="Fall" name="scrapIron" count="1" prob="1.0"  stick_chance=".75" />
+  </block>
+
+  <block id="1562" name="scrapIronSpike">
+    <property name="Class" value="Damage" />
+    <property name="Damage" value="8" />
+	<property name="Damage_received" value="3" />
+    <property name="Material" value="metal_medium" />
+    <property name="Shape" value="Cone" />
+    <property name="Texture" value="307" />
+
+	<!--property name="DontDamageOnTouch" value="true" /-->
+    <!--property name="IsTerrainDecoration" value="true"   DOES NOT WORK ON THIS SHAPE!!! -->
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="reinforcedScrapIronSpike" />
+      <property name="Item" value="scrapIron" />
+      <property name="ItemCount" value="4" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+    <property name="DowngradeBlock" value="reinforcedMetalTrunkPineTip" />
+    <drop event="Destroy" name="scrapIron" count="1" />
+    <drop event="Fall" name="scrapIron" count="1" prob="1.0"  stick_chance=".75" />
+  </block>
+
+ <block id="1563" name="reinforcedScrapIronSpike">
+    <property name="Class" value="Damage" />
+    <property name="Damage" value="9" />
+	<property name="Damage_received" value="2" />
+    <property name="Material" value="metal_medium" />
+    <property name="Shape" value="Cone" />
+    <property name="Texture" value="352" />
+    <property name="Mesh" value="opaque2" />
+	<!--property name="DontDamageOnTouch" value="true" /-->
+    <!--property name="IsTerrainDecoration" value="true"   DOES NOT WORK ON THIS SHAPE!!! -->
+    <property name="DowngradeBlock" value="scrapIronSpike" />
+    <drop event="Destroy" name="scrapIron" count="1" />
+    <drop event="Fall" name="scrapIron" count="1" prob="1.0"  stick_chance=".75" />
+  </block>
+
+  <block id="1564" name="chainLinkFenceBottomPole">
+    <property name="Material" value="metal" />
+    <property name="Shape" value="New" />
+	<property name="Mesh" value="cutout" />
+    <property name="Model" value="chainlink_bottom_pole" />
+    <property name="Texture" value="516" />
+	<property name="Place" value="NWSE" />
+    <drop event="Destroy" name="scrapIron" count="1" />
+    <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
+  </block>
+
+  <block id="1565" name="chainLinkFenceTop">
+    <property name="Material" value="metal" />
+    <property name="Shape" value="New" />
+	<property name="Mesh" value="cutout" />
+    <property name="Model" value="chainlink_top" />
+    <property name="Texture" value="516" />
+	<property name="Place" value="NWSE" />
+    <drop event="Destroy" name="scrapIron" count="1" />
+    <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
+  </block>
+
+  <block id="1566" name="chainLinkFenceTopPole">
+    <property name="Material" value="metal" />
+    <property name="Shape" value="New" />
+	<property name="Mesh" value="cutout" />
+    <property name="Model" value="chainlink_top_pole" />
+    <property name="Texture" value="516" />
+	<property name="Place" value="NWSE" />
+    <drop event="Destroy" name="scrapIron" count="1" />
+    <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
+  </block>
+
+  <block id="1567" name="chainLinkPole">
+    <property name="Material" value="metal" />
+    <property name="Shape" value="New" />
+	<property name="Mesh" value="cutout" />
+    <property name="Model" value="chainlink_pole" />
+    <property name="Texture" value="516" />
+	<property name="Place" value="NWSE" />
+    <drop event="Destroy" name="scrapIron" count="1" />
+    <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
+  </block>
+
+  <block id="1568" name="chainLinkCornerTop">
+    <property name="Material" value="metal" />
+    <property name="Shape" value="New" />
+	<property name="Mesh" value="cutout" />
+    <property name="Model" value="chainlink_corner_top" />
+    <property name="Texture" value="516" />
+	<property name="Place" value="NWSE" />
+    <drop event="Destroy" name="scrapIron" count="1" />
+    <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
+  </block>
+
+  <block id="1569" name="chainLinkCornerBottom">
+    <property name="Material" value="metal" />
+    <property name="Shape" value="New" />
+	<property name="Mesh" value="cutout" />
+    <property name="Model" value="chainlink_corner_bottom" />
+    <property name="Texture" value="516" />
+	<property name="Place" value="NWSE" />
+    <drop event="Destroy" name="scrapIron" count="1" />
+    <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
+  </block>
+
+  <block id="1570" name="chainLinkFenceTopPole2">
+    <property name="Material" value="metal" />
+    <property name="Shape" value="New" />
+	<property name="Mesh" value="cutout" />
+    <property name="Model" value="chainlink_top_pole2" />
+    <property name="Texture" value="516" />
+	<property name="Place" value="NWSE" />
+    <drop event="Destroy" name="scrapIron" count="1" />
+    <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" />
   </block>
 
 </blocks>

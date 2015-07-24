@@ -441,7 +441,7 @@
         <property name="NightWanderSpeed"   value="0.08" />
         <property name="NightApproachSpeed" value="0.75" />
 	    <property name="CanClimbLadders"     value="true" />
-      <property name="PhysicsBody" value="FatZombie" />
+      <property name="PhysicsBody" value="FatZombieCop" />
 
         <!-- AI properties -->
         <property name="AITask-1" value="BreakDoor" />
