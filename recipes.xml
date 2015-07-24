@@ -290,6 +290,30 @@
         <ingredient name="cloth" count="1" grid="2, 2"/>
     </recipe>
 
+    <recipe name="bellows" count="1" scrapable="False" craft_time="10" learn_exp_gain="20" craft_exp_gain="1" >
+       <ingredient name="woodPlank" count="1" grid="-2, -2"/>
+       <ingredient name="woodPlank" count="1" grid="-1, -2"/>
+       <ingredient name="woodPlank" count="1" grid="0, -2"/>
+       <ingredient name="woodPlank" count="1" grid="1, -2"/>
+       <ingredient name="animalHide" count="1" grid="-2, -1"/>
+       <ingredient name="animalHide" count="1" grid="-1, -1"/>
+       <ingredient name="animalHide" count="1" grid="0, -1"/>
+       <ingredient name="animalHide" count="1" grid="1, -1"/>
+       <ingredient name="animalHide" count="1" grid="-2, 0"/>
+       <ingredient name="animalHide" count="1" grid="-1, 0"/>
+       <ingredient name="animalHide" count="1" grid="0, 0"/>
+       <ingredient name="animalHide" count="1" grid="1, 0"/>
+       <ingredient name="shortMetalPipe" count="1" grid="2, 0"/>
+       <ingredient name="animalHide" count="1" grid="-2, 1"/>
+       <ingredient name="animalHide" count="1" grid="-1, 1"/>
+       <ingredient name="animalHide" count="1" grid="0, 1"/>
+       <ingredient name="animalHide" count="1" grid="1, 1"/>
+       <ingredient name="woodPlank" count="1" grid="-2, 2"/>
+       <ingredient name="woodPlank" count="1" grid="-1, 2"/>
+       <ingredient name="woodPlank" count="1" grid="0, 2"/>
+       <ingredient name="woodPlank" count="1" grid="1, 2"/>
+   </recipe>
+
     <recipe name="blueberrySeed" count="1" scrapable="False" craft_time="1" learn_exp_gain="20" craft_exp_gain="5" >
         <ingredient name="blueberries" count="1" grid="0, 0"/>
     </recipe>
@@ -717,16 +741,18 @@
     </recipe>
 
     <recipe name="forge" count="1" scrapable="False" craft_time="30" learn_exp_gain="90" craft_exp_gain="45" >
-        <ingredient name="rockSmall" count="1" grid="-1, -1"/>
-        <ingredient name="rockSmall" count="1" grid="1, -1"/>
-        <ingredient name="rockSmall" count="1" grid="-1, 0"/>
-        <ingredient name="rockSmall" count="1" grid="0, 0"/>
-        <ingredient name="rockSmall" count="1" grid="1, 0"/>
-        <ingredient name="shortMetalPipe" count="1" grid="-2, 1"/>
-        <ingredient name="rockSmall" count="1" grid="-1, 1"/>
-        <ingredient name="rockSmall" count="1" grid="0, 1"/>
-        <ingredient name="rockSmall" count="1" grid="1, 1"/>
-    </recipe>
+            <ingredient name="rockSmall" count="1" grid="-1, -1"/>
+            <ingredient name="clay" count="1" grid="0, -1"/>
+            <ingredient name="rockSmall" count="1" grid="1, -1"/>
+            <ingredient name="bellows" count="1" grid="-2, 0"/>
+            <ingredient name="rockSmall" count="1" grid="-1, 0"/>
+            <ingredient name="rockSmall" count="1" grid="0, 0"/>
+            <ingredient name="rockSmall" count="1" grid="1, 0"/>
+            <ingredient name="shortMetalPipe" count="1" grid="-2, 1"/>
+            <ingredient name="stone" count="1" grid="-1, 1"/>
+            <ingredient name="stone" count="1" grid="0, 1"/>
+            <ingredient name="stone" count="1" grid="1, 1"/>
+        </recipe>
 
     <recipe name="forgedIron" count="4" scrapable="False" craft_time="5" learn_exp_gain="20" craft_exp_gain="5" >
         <ingredient name="ingotIron" count="1" grid="0, 0"/>
@@ -1822,10 +1848,11 @@
         <ingredient name="cobblestones" count="1" grid="-1, 1"/>
     </recipe>
 
-    <recipe name="steelArrow" count="5" scrapable="False" craft_time="5" learn_exp_gain="40" craft_exp_gain="2" >
+    <recipe name="steelArrow" count="5" scrapable="True" craft_time="5" learn_exp_gain="40" craft_exp_gain="2" >
         <ingredient name="steelArrowHead" count="1" grid="2, -2"/>
         <ingredient name="stick" count="1" grid="1, -1"/>
         <ingredient name="feather" count="1" grid="0, 0"/>
+        <ingredient name="metalWire" count="1" grid="0, -1"/>
     </recipe>
 
     <recipe name="steelArrowHeadMold" count="1" scrapable="False" craft_time="5" learn_exp_gain="20" craft_exp_gain="1" >
@@ -2710,12 +2737,12 @@
     </recipe>
 
     <!-- TODO: Most likely need to change this to have steelBoltTip which needs a mold -->
-    <recipe name="steelCrossbowBolt" count="30" scrapable="False" craft_time="30" craft_exp_gain="2" learn_exp_gain="20" >
+    <recipe name="steelCrossbowBolt" count="30" scrapable="True" craft_time="30" craft_exp_gain="2" learn_exp_gain="20" >
         <ingredient name="forgedSteel" count="4" grid="1, -1"/>
         <ingredient name="stick" count="30" grid="0, 0"/>
         <ingredient name="feather" count="15" grid="-1, 1"/>
         <ingredient name="treeSap" count="1" grid="-1, 0"/>
-        <ingredient name="steelStrips" count="5" grid="-1, -1"/>
+        <ingredient name="metalWire" count="5" grid="-1, -1"/>
     </recipe>
 
     <recipe name="crossbow_frame" count="1" scrapable="False" craft_time="25" craft_exp_gain="2" learn_exp_gain="25" >
