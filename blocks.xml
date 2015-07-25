@@ -11760,7 +11760,7 @@
 <property class="UpgradeBlock">
     <property name="ToBlock" value="algae2" />
     <property name="Item" value="coalOre" />
-    <property name="ItemCount" value="32" />
+    <property name="ItemCount" value="20" />
     <property name="UpgradeHitCount" value="2" />
   </property>
   <drop event="Destroy" name="scrapIron" count="2,4" prob="1" />
@@ -11938,7 +11938,7 @@
   <property name="Texture" value="311" />
   <!-- Produced rawSteel is collectable on top of machine -->
   <property name="IsTerrainDecoration" value="true" />
-  <drop event="Harvest" name="bioDiesel" count="100" />
+  <drop event="Harvest" name="bioDiesel" count="150" />
   <drop event="Destroy" name="scrapIron" count="1" prob="0.8" />
 </block>
 

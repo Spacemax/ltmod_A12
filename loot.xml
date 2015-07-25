@@ -1262,10 +1262,11 @@ plentiful loot items in the game.
 
         <lootgroup name="rareAutomotive" count="4">
             <item name="gasCan" count="1" prob="0.025" />
+            <item name="engine_parts" count="1" prob="0.05" />
       			<item group="uncommonTools" prob="0.1" />
             <item group="commonTools" prob="0.1" />
             <item group="cannedfood" prob="0.1" />
-            <item group="medicine" prob="0.15" />
+            <item group="medicine" prob="0.10" />
       			<item group="clothes" prob="0.2" />
             <item group="junk" prob="0.2" />
         </lootgroup>
@@ -1370,27 +1371,26 @@ plentiful loot items in the game.
     <item group="rareArmor" prob="0.10" />
     <item group="rockDrillParts" prob="0.05" />
     <item group="Mossburg_components" prob="0.05" />
-    <item group="rareWeaponParts" prob="0.15" />
+    <item group="rareWeaponParts" prob="0.10" />
     <item group="ultrarareTools" prob="0.15" />
     <item group="augerParts" prob="0.15" />
+    <item name="engine_parts" prob="0.05" />
     <item group="rareBooks" prob="0.20"/>
   </lootgroup>
 
     <!-- Boss Ammo -->
   <lootgroup name="bossAmmo" count="1">
-    <item name="44MagBullet" count="30,60" />
-		<item name="steelArrow" count="30,80" />
-		<item name="arrowBrass" count="30,80" />
-		<item name="shotgunShell" count="30,80"/>
-		<item name="9mmBullet" count="30,50"/>
-		<item name="308calBullet" count="40,80" />
-		<item name="762mmBullet" count="20,50"/>
-		<item name="shotgunSlug" count="40,80" />
-    <item name="shotgunShell" count="30,80"/>
-    <item name="explodingArrow" count="30,50"/>
-    <item name="flamingArrow" count="40,80" />
-    <item name="explodingCrossbowBolt" count="20,50"/>
-    <item name="shotgunSlug" count="40,80" />
+    <item name="44MagBullet" count="15,30" />
+		<item name="steelArrow" count="10,40" />
+		<item name="arrowBrass" count="10,30" />
+		<item name="9mmBullet" count="10,40"/>
+		<item name="308calBullet" count="10,50" />
+		<item name="762mmBullet" count="10,30"/>
+		<item name="shotgunSlug" count="10,30" />
+    <item name="shotgunShell" count="10,30"/>
+    <item name="explodingArrow" count="10,20"/>
+    <item name="flamingArrow" count="10,30" />
+    <item name="explodingCrossbowBolt" count="10,30"/>
     <item group="shotguns"/>
   </lootgroup>
 
@@ -1769,7 +1769,7 @@ plentiful loot items in the game.
   <!-- LT tough zombie and feral loot  -->
       <!-- feral loot  -->
     <lootcontainer id="61" count="1,4" size="3,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
-        <item group="bossLoot" prob="0.40"/>
+        <item group="bossLoot" prob="0.50"/>
         <item group="bossAmmo" />
         </lootcontainer>
 

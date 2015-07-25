@@ -3051,7 +3051,7 @@ WEAPON ATTACHABLES
         <property class="Attributes">
             <property name="EntityDamage" value="5, 40" />
             <property name="Accuracy" value="1, 0.01" />
-            <property name="DegradationMax" value="30,600" />
+            <property name="DegradationMax" value="100,600" />
         </property>
         <property class="Preview">
             <property name="Zoom" value="28" />
@@ -3086,13 +3086,13 @@ WEAPON ATTACHABLES
         <property name="Material" value="metal" />
         <property name="HoldType" value="45" />
         <property name="Stacknumber" value="1" />
-        <property name="Degradation" value="100" param1="false" />
+        <property name="Degradation" value="600" param1="false" />
         <property name="DegradationBreaksAfter" value="false" />
         <property name="Weight" value="24" />
         <property name="Group" value="Resources" />
         <property class="Attributes">
             <property name="FalloffRange" value="10,40" />
-            <property name="DegradationMax" value="30,600" />
+            <property name="DegradationMax" value="100,600" />
         </property>
         <property class="Preview">
             <property name="Zoom" value="28" />
@@ -3107,14 +3107,14 @@ WEAPON ATTACHABLES
         <property name="Material" value="metal" />
         <property name="HoldType" value="45" />
         <property name="Stacknumber" value="1" />
-        <property name="Degradation" value="100" param1="true" />
+        <property name="Degradation" value="600" param1="true" />
         <property name="Weight" value="30" />
         <property name="Group" value="Resources" />
         <property class="Attributes">
             <property name="EntityDamage" value="4, 20" />
             <property name="BlockDamage" value="1,3" />
             <property name="Accuracy" value="1, 0.01" />
-            <property name="DegradationMax" value="30,600" />
+            <property name="DegradationMax" value="100,600" />
         </property>
         <property class="Preview">
             <property name="Zoom" value="28" />
@@ -3130,9 +3130,9 @@ WEAPON ATTACHABLES
         <property name="Weight" value="8" />
         <property name="HoldType" value="45" />
         <property name="Stacknumber" value="1" />
-        <property name="Degradation" value="100" param1="true" />
+        <property name="Degradation" value="600" param1="true" />
         <property class="Attributes">
-            <property name="DegradationMax" value="30,600" />
+            <property name="DegradationMax" value="100,600" />
         </property>
         <property name="FuelValue" value="16" />
         <property name="Group" value="Resources" />
@@ -3156,7 +3156,7 @@ WEAPON ATTACHABLES
             <property name="EntityDamage" value="5, 25" />
             <property name="BlockDamage" value="1,3" />
             <property name="Accuracy" value="1, 0.01" />
-             <property name="DegradationMax" value="30,600" />
+             <property name="DegradationMax" value="100,600" />
         </property>
         <property class="Preview">
             <property name="Zoom" value="28" />
@@ -3175,7 +3175,7 @@ WEAPON ATTACHABLES
         <property name="Group" value="Resources" />
         <property class="Attributes">
             <property name="DegradationRate" value="1,1" />
-             <property name="DegradationMax" value="30,600" />
+             <property name="DegradationMax" value="100,600" />
         </property>
         <property class="Preview">
             <property name="Zoom" value="28" />
@@ -3195,7 +3195,7 @@ WEAPON ATTACHABLES
         <property name="Group" value="Resources" />
         <property class="Attributes">
             <property name="DegradationRate" value="1,1" />
-            <property name="DegradationMax" value="30,600" />
+            <property name="DegradationMax" value="100,600" />
         </property>
         <property class="Preview">
             <property name="Zoom" value="28" />
@@ -3215,7 +3215,7 @@ WEAPON ATTACHABLES
         <property name="Group" value="Resources" />
         <property class="Attributes">
             <property name="FalloffRange" value="10,40" />
-            <property name="DegradationMax" value="30,600" />
+            <property name="DegradationMax" value="100,600" />
         </property>
         <property class="Preview">
             <property name="Zoom" value="28" />
@@ -3236,7 +3236,7 @@ WEAPON ATTACHABLES
         <property class="Attributes">
             <property name="EntityDamage" value="30, 150" />
             <property name="Accuracy" value="1, 0.01" />
-            <property name="DegradationMax" value="30,600" />
+            <property name="DegradationMax" value="100,600" />
         </property>
         <property class="Preview">
             <property name="Zoom" value="28" />
@@ -6919,9 +6919,9 @@ WEAPON ATTACHABLES
         <property class="Action1">
             <!-- UseAction -->
             <property name="Class" value="LearnRecipe" />
-            <property name="Title" value="MacDyvers guide to Scrap Metal Crafting" />
+            <property name="Title" value="MacGyvers guide to making sweet shit out of junk" />
             <property name="Description" value="Teaches you how to buld makeshift things from scrap metal." />
-            <property name="Recipes_to_learn" value="scrapBoots,scrapLegArmor,scrapChestArmor,scrapHelmet,scrapGloves" />
+            <property name="Recipes_to_learn" value="scrapBoots,scrapLegArmor,scrapChestArmor,scrapHelmet,scrapGloves,engine_parts,tunedEngine,engine_partsMold" />
             <property name="Delay" value="0" />
             <property name="Sound_start" value="Misc/recipe_unlocked" />
         </property>
@@ -8167,11 +8167,11 @@ WEAPON ATTACHABLES
         <property name="Weight" value="250" />
         <property name="Group" value="Resources" />
 		<property class="Attributes">
-            <property name="DegradationRate" value="0.1,0.1" />
-            <property name="DegradationMax" value="30,600" />
+            <property name="DegradationRate" value="0.3,0.5" />
+            <property name="DegradationMax" value="300,600" />
 			<property name="VehicleNoise" value="1,0.1" />
-			<property name="VehicleMaxSpeed" value="3,10" />
-			<property name="VehicleAcceleration" value="3,10" />
+			<property name="VehicleMaxSpeed" value="6,9" />
+			<property name="VehicleAcceleration" value="3,8" />
 			<property name="VehicleMetersPerLiter" value="800,1200" />
 			<property name="VehicleIdleSecondsPerLiter" value="600,1200" />
 			<property name="VehicleStartDelayInSeconds" value="1,0.1" />
@@ -10343,17 +10343,17 @@ WEAPON ATTACHABLES
        <property name="Weight" value="250" />
        <property name="Group" value="Resources" />
    <property class="Attributes">
-           <property name="DegradationRate" value="1,1" />
-           <property name="DegradationMax" value="500,900" />
-     <property name="VehicleNoise" value="1,0.1" />
-     <property name="VehicleMaxSpeed" value="8,12" />
-     <property name="VehicleAcceleration" value="6,12" />
-     <property name="VehicleMetersPerLiter" value="900,1400" />
-     <property name="VehicleIdleSecondsPerLiter" value="800,1200" />
-     <property name="VehicleStartDelayInSeconds" value="1,0.1" />
-     <property name="VehicleStartChance" value="0.5,0.99" />
-     <property name="VehicleTankSize" value="4, 10" />
-     <property name="FalloffRange" value="30,60" /><!-- used for auger and chainsaw -->
+           <property name="DegradationRate" value="0.1,0.1" />
+           <property name="DegradationMax" value="800,1200" />
+           <property name="VehicleNoise" value="0.5,0.1" />
+           <property name="VehicleMaxSpeed" value="9,14" />
+           <property name="VehicleAcceleration" value="6,12" />
+           <property name="VehicleMetersPerLiter" value="1600,2200" />
+           <property name="VehicleIdleSecondsPerLiter" value="1200,2400" />
+           <property name="VehicleStartDelayInSeconds" value="0.3,0.1" />
+           <property name="VehicleStartChance" value="0.9,0.99" />
+           <property name="VehicleTankSize" value="6, 16" />
+           <property name="FalloffRange" value="2,3" /><!-- used for auger and chainsaw -->
        </property>
 
      </item>
@@ -11127,7 +11127,7 @@ WEAPON ATTACHABLES
        <property name="Stacknumber" value="1" />
        <property name="Degradation" value="100" param1="true" />
        <property class="Attributes">
-           <property name="DegradationMax" value="30,500" />
+           <property name="DegradationMax" value="300,600" />
        </property>
        <property name="FuelValue" value="16" />
        <property name="Group" value="Resources" />
@@ -12434,5 +12434,65 @@ WEAPON ATTACHABLES
            <property name="Rot" value="90,45,0" />
        </property>
    </item>
+
+   <item id="899" name="tunedEngine">
+     <property name="CustomIcon" value="smallEngine"/>
+     <property name="CustomIconTint" value="eef08e"/>
+  <property name="PartType" value="Receiver" />
+       <property name="Meshfile" value="Items/Tools/smallEngine" />
+  <property name="VehicleSlotType" value="engine" />
+       <property name="Material" value="metal" />
+       <property name="HoldType" value="7" />
+       <property name="Weight" value="250" />
+       <property name="Group" value="Resources" />
+  <property class="Attributes">
+           <property name="DegradationRate" value="0.2,0.1" />
+           <property name="DegradationMax" value="400,700" />
+    <property name="VehicleNoise" value="1,0.1" />
+    <property name="VehicleMaxSpeed" value="7,10" />
+    <property name="VehicleAcceleration" value="3,10" />
+    <property name="VehicleMetersPerLiter" value="1100,1600" />
+    <property name="VehicleIdleSecondsPerLiter" value="1100,1400" />
+    <property name="VehicleStartDelayInSeconds" value="0.5,0.1" />
+    <property name="VehicleStartChance" value="0.8,0.99" />
+    <property name="VehicleTankSize" value="4, 10" />
+    <property name="FalloffRange" value="2,3" /><!-- used for auger and chainsaw -->
+       </property>
+    </item>
+
+       <item id="900" name="engine_parts">
+           <property name="PartType" value="Pump" />
+           <property name="CustomIcon" value="augerParts" />
+                <property name="CustomIconTint" value="eef08e"/>
+           <property name="Meshfile" value="Items/Misc/sackPrefab" />
+      <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+           <property name="Material" value="metal_steel" />
+           <property name="HoldType" value="45" />
+           <property name="Stacknumber" value="1" />
+           <property name="Degradation" value="100" param1="true" />
+           <property name="Weight" value="8" />
+           <property name="Group" value="Resources" />
+           <property class="Preview">
+               <property name="Zoom" value="28" />
+               <property name="Pos" value="0,-0.05" />
+               <property name="Rot" value="90,45,0" />
+           </property>
+       </item>
+
+       <item id="901" name="engine_partsMold">
+         <property name="CustomIcon" value="pistol_barrel_mold" />
+         <property name="CustomIconTint" value="eef08e"/>
+           <property name="Meshfile" value="Items/Crafting/mold" />
+           <property name="Material" value="metal_steel" />
+           <property name="HoldType" value="21" />
+           <property name="Stacknumber" value="1" />
+           <property name="MoldTarget" value="engine_parts" />
+           <property name="Group" value="Forging/Molds" />
+           <property class="Preview">
+               <property name="Zoom" value="18" />
+               <property name="Pos" value="0.1,0" />
+               <property name="Rot" value="10,-45,0" />
+           </property>
+       </item>
 
 </items>
