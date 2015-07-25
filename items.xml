@@ -6920,8 +6920,8 @@ WEAPON ATTACHABLES
             <!-- UseAction -->
             <property name="Class" value="LearnRecipe" />
             <property name="Title" value="MacGyvers guide to making sweet shit out of junk" />
-            <property name="Description" value="Teaches you how to buld makeshift things from scrap metal." />
-            <property name="Recipes_to_learn" value="scrapBoots,scrapLegArmor,scrapChestArmor,scrapHelmet,scrapGloves,engine_parts,tunedEngine,engine_partsMold" />
+            <property name="Description" value="Teaches you how to buld an M1 Abrams Tank from a bubble gum wrapper and a pen." />
+            <property name="Recipes_to_learn" value="scrapBoots,scrapLegArmor,scrapChestArmor,scrapHelmet,scrapGloves,engine_parts,tunedEngine,engine_partsMold,gasCan" />
             <property name="Delay" value="0" />
             <property name="Sound_start" value="Misc/recipe_unlocked" />
         </property>
@@ -9455,7 +9455,6 @@ WEAPON ATTACHABLES
             <property name="Class" value="LearnRecipe" />
             <property name="Title" value="Gas Can Schematic" />
             <property name="Description" value="Learn to craft gas cans." />
-            <property name="Recipes_to_learn" value="gasCan" />
             <property name="Delay" value="0" />
             <property name="Sound_start" value="Misc/recipe_unlocked" />
         </property>

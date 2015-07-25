@@ -770,18 +770,6 @@
         <ingredient name="forgedIron" count="1" grid="1, 1"/>
     </recipe>
 
-    <recipe name="gasCan" count="1" scrapable="False" craft_time="5" learn_exp_gain="90" craft_exp_gain="45" >
-        <ingredient name="bioFuel" count="1" grid="0, 0"/>
-        <ingredient name="bioFuel" count="1" grid="1, 0"/>
-        <ingredient name="bioFuel" count="1" grid="2, 0"/>
-        <ingredient name="grainAlcohol" count="1" grid="0, 1"/>
-        <ingredient name="grainAlcohol" count="1" grid="1, 1"/>
-        <ingredient name="grainAlcohol" count="1" grid="2, 1"/>
-        <ingredient name="grainAlcohol" count="1" grid="0, 2"/>
-        <ingredient name="grainAlcohol" count="1" grid="1, 2"/>
-        <ingredient name="grainAlcohol" count="1" grid="2, 2"/>
-    </recipe>
-
     <!-- Removed Gas Can -->
 
     <recipe name="glassWindowMold" count="1" scrapable="False" craft_time="5" learn_exp_gain="20" craft_exp_gain="2" >
